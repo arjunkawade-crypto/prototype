@@ -1,5 +1,5 @@
 /**
- * TalentVerse - Complete Interactive Application Controller
+ * CareerLens - Complete Interactive Application Controller
  * Dual Persona: Applicant & Organisation
  * Fully enhanced with:
  * 1. Recommended Freelanced Projects in Recommendations tab
@@ -10,7 +10,7 @@
  * 6. Dedicated Settings tab with Saved Items (Jobs, Internships, Projects), Security, and Privacy features
  */
 
-// Multi-Disciplinary Master Candidate Personas (Engineering , Commerce, Design, Law, Healthcare)
+// Multi-Disciplinary Master Candidate Personas (Engineering, Commerce, Design, Law, Healthcare)
 const disciplineProfiles = {
   tech: {
     name: 'Arjun Kawade',
@@ -2509,19 +2509,25 @@ const UI = {
   // -------------------------------------------------------------
   templateRoleSelect() {
     return `
-      <div class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
-        <header class="bg-white border-b border-slate-200 sticky top-0 z-40 px-6 py-4 flex items-center justify-between shadow-xs">
+      <div class="min-h-screen flex flex-col bg-slate-50 text-slate-800 relative overflow-hidden">
+        <!-- Subtle Ambient Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-100/50 via-indigo-50/20 to-transparent -z-10 pointer-events-none blur-3xl"></div>
+
+        <header class="bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 px-6 py-3.5 flex items-center justify-between shadow-2xs">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-xl shadow-sm">
-              TV
+            <div class="w-9 h-9 rounded-xl gradient-brand flex items-center justify-center text-white font-black text-lg shadow-sm">
+              CL
             </div>
-            <span class="font-extrabold text-xl tracking-tight text-slate-900">Talent<span class="text-indigo-600">Verse</span></span>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-xl tracking-tight text-slate-900">Career<span class="text-indigo-600">Lens</span></span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">SIH 2026</span>
+            </div>
           </div>
           <div class="flex items-center gap-2">
-            <button onclick="UI.setPersona('applicant')" class="text-xs font-bold text-indigo-600 px-3 py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100">
+            <button onclick="UI.setPersona('applicant')" class="text-xs font-bold text-indigo-700 px-3.5 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200/60 transition shadow-2xs">
               Applicant Portal
             </button>
-            <button onclick="UI.setPersona('organisation')" class="text-xs font-bold text-white bg-slate-900 px-3 py-2 rounded-lg hover:bg-slate-800">
+            <button onclick="UI.setPersona('organisation')" class="text-xs font-bold text-white bg-slate-900 px-3.5 py-2 rounded-xl hover:bg-slate-800 transition shadow-2xs">
               Organisation Portal
             </button>
           </div>
@@ -2529,22 +2535,27 @@ const UI = {
 
         <main class="flex-1 flex flex-col items-center justify-center px-4 py-12 max-w-5xl mx-auto w-full">
           <div class="text-center max-w-2xl mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/70 text-indigo-700 text-xs font-bold mb-4 shadow-2xs">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Multi-Disciplinary Career & Enterprise Ecosystem
+            </div>
             <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
               Connected Career & <br/><span class="text-transparent bg-clip-text gradient-brand">Hiring Intelligence</span>
             </h1>
             <p class="text-slate-600 text-sm md:text-base">
-              Select your persona below to experience tailored career intelligence or enterprise campus recruiting.
+              Select your persona below to experience tailored career intelligence across 5 disciplines or enterprise campus recruiting.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
             <!-- Applicant Card -->
-            <div onclick="UI.setPersona('applicant')" class="group bg-white border-2 border-slate-200 hover:border-indigo-600 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col justify-between">
+            <div onclick="UI.setPersona('applicant')" class="group bg-white border border-slate-200/90 hover:border-indigo-500 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col justify-between relative overflow-hidden card-interactive">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
               <div>
-                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800">For Candidates</span>
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">For Candidates</span>
                 <h3 class="text-2xl font-black text-slate-900 mt-3 group-hover:text-indigo-600 transition">Applicant & Talent</h3>
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                  For Students, Academicians, and Working Professionals seeking jobs, internships, freelance gigs, and AI upskilling.
+                  For Students, Academicians, and Working Professionals across Tech, Finance, Design, Law & Healthcare.
                 </p>
                 <div class="mt-4 space-y-1.5 text-xs text-slate-600 font-medium">
                   <p>✓ Job & Internship ID AI Skill Gap Analysis</p>
@@ -2560,9 +2571,10 @@ const UI = {
             </div>
 
             <!-- Organisation Card -->
-            <div onclick="UI.setPersona('organisation')" class="group bg-white border-2 border-slate-200 hover:border-purple-600 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col justify-between">
+            <div onclick="UI.setPersona('organisation')" class="group bg-white border border-slate-200/90 hover:border-purple-500 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col justify-between relative overflow-hidden card-interactive">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
               <div>
-                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800">For Employers</span>
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200/60">For Employers</span>
                 <h3 class="text-2xl font-black text-slate-900 mt-3 group-hover:text-purple-600 transition">Organisation & Colleges</h3>
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                   For Companies, Colleges, Placement Cells & Recruiters posting openings and screening talent.
@@ -2591,39 +2603,42 @@ const UI = {
     const p = state.applicant.profile;
     const pType = state.applicant.personaType;
     const activeTab = state.applicant.activeTab || 'recommendations';
-    const tabClass = (t) => activeTab === t ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700';
+    const tabClass = (t) => activeTab === t ? 'border-indigo-600 text-indigo-600 font-black' : 'border-transparent text-slate-500 hover:text-slate-800 font-semibold';
     return `
       <div class="min-h-screen bg-slate-50 text-slate-800 flex flex-col">
-        <!-- Top App Bar -->
-        <header class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 md:px-8 py-3 flex items-center justify-between shadow-xs">
+        <!-- Top App Bar with Frosted Glass -->
+        <header class="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-30 px-4 md:px-8 py-2.5 flex items-center justify-between shadow-2xs">
           <div class="flex items-center gap-4">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="UI.setPersona('select')" title="Back to Persona Selection">
-              <div class="w-8 h-8 rounded-xl gradient-brand text-white flex items-center justify-center font-bold text-sm">TV</div>
-              <span class="font-extrabold text-base text-slate-900">Talent<span class="text-indigo-600">Verse</span></span>
+            <div class="flex items-center gap-2.5 cursor-pointer" onclick="UI.setPersona('select')" title="Back to Persona Selection">
+              <div class="w-8 h-8 rounded-xl gradient-brand text-white flex items-center justify-center font-black text-sm shadow-xs">CL</div>
+              <div class="flex items-center gap-2">
+                <span class="font-black text-base text-slate-900 tracking-tight">Career<span class="text-indigo-600">Lens</span></span>
+                <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200/60">Unified Platform</span>
+              </div>
             </div>
           </div>
 
           <!-- Multi-Disciplinary Domain Switcher (All Fields Filter) -->
-          <div class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
+          <div class="hidden md:flex items-center gap-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200/70 text-xs shadow-2xs">
             ${this.renderDisciplinePills('light')}
           </div>
 
           <div class="flex items-center gap-3">
             <!-- Messages Feature: View list of companies/colleges that messaged -->
-            <button onclick="UI.toggleApplicantMessagesModal()" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 relative transition" title="Recruiter & Campus Messages">
+            <button onclick="UI.toggleApplicantMessagesModal()" class="p-2 rounded-xl bg-slate-100/80 hover:bg-slate-200 text-slate-700 relative transition shadow-2xs" title="Recruiter & Campus Messages">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
               <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-indigo-600 border-2 border-white"></span>
             </button>
 
             <!-- AI Career Advisor Chatbot Trigger -->
-            <button onclick="UI.toggleChatbot()" class="p-2 rounded-xl bg-indigo-50 text-indigo-600 hover:bg-indigo-100 relative transition" title="AI Career Advisor">
+            <button onclick="UI.toggleChatbot()" class="p-2 rounded-xl bg-indigo-50 text-indigo-600 hover:bg-indigo-100 relative transition shadow-2xs" title="AI Career Advisor">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
               <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"></span>
             </button>
 
             <!-- User Profile Avatar -->
-            <div onclick="UI.switchApplicantTab('profile')" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition pl-1">
-              <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center">AK</div>
+            <div onclick="UI.switchApplicantTab('profile')" class="flex items-center gap-2 cursor-pointer hover:opacity-85 transition pl-1">
+              <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-bold text-xs flex items-center justify-center shadow-xs">AK</div>
               <div class="hidden lg:block text-left text-xs">
                 <p class="font-bold text-slate-800 leading-tight">${p.name}</p>
                 <p class="text-[10px] text-emerald-600 font-semibold">ATS: ${p.atsScore}%</p>
@@ -2633,30 +2648,30 @@ const UI = {
         </header>
 
         <!-- 8 Tabs Bar: Recommendations, Tests, Freelancing, Internships, Jobs, Organisations, Profile, Settings -->
-        <div class="bg-white border-b border-slate-200 px-4 md:px-8 sticky top-14 z-20 overflow-x-auto">
+        <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 md:px-8 sticky top-[53px] z-20 overflow-x-auto shadow-2xs">
           <nav class="flex space-x-2 md:space-x-4 min-w-max text-xs font-bold" id="applicant-tab-nav">
-            <button onclick="UI.switchApplicantTab('recommendations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('recommendations')}" data-tab="recommendations">
+            <button onclick="UI.switchApplicantTab('recommendations')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('recommendations')}" data-tab="recommendations">
               Recommendations
             </button>
-            <button onclick="UI.switchApplicantTab('tests')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('tests')}" data-tab="tests">
+            <button onclick="UI.switchApplicantTab('tests')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('tests')}" data-tab="tests">
               Tests & Challenges
             </button>
-            <button onclick="UI.switchApplicantTab('freelancing')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('freelancing')}" data-tab="freelancing">
+            <button onclick="UI.switchApplicantTab('freelancing')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('freelancing')}" data-tab="freelancing">
               Freelancing
             </button>
-            <button onclick="UI.switchApplicantTab('internships')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('internships')}" data-tab="internships">
+            <button onclick="UI.switchApplicantTab('internships')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('internships')}" data-tab="internships">
               Internships
             </button>
-            <button onclick="UI.switchApplicantTab('jobs')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('jobs')}" data-tab="jobs">
+            <button onclick="UI.switchApplicantTab('jobs')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('jobs')}" data-tab="jobs">
               Jobs
             </button>
-            <button onclick="UI.switchApplicantTab('organisations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('organisations')}" data-tab="organisations">
+            <button onclick="UI.switchApplicantTab('organisations')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('organisations')}" data-tab="organisations">
               Organisations
             </button>
-            <button onclick="UI.switchApplicantTab('profile')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('profile')}" data-tab="profile">
+            <button onclick="UI.switchApplicantTab('profile')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('profile')}" data-tab="profile">
               Profile
             </button>
-            <button onclick="UI.switchApplicantTab('settings')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('settings')}" data-tab="settings">
+            <button onclick="UI.switchApplicantTab('settings')" class="applicant-tab-btn py-3 px-3 border-b-2 transition ${tabClass('settings')}" data-tab="settings">
               Settings & Saved
             </button>
           </nav>
@@ -3296,17 +3311,17 @@ const UI = {
           ${recCat === 'freelance' ? `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               ${recFreelance.map(proj => `
-                <div onclick="UI.openFreelanceDetailModal('${proj.id}')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                <div onclick="UI.openFreelanceDetailModal('${proj.id}')" class="bg-white rounded-2xl p-5 border border-slate-200/90 space-y-4 hover:border-indigo-400 hover:shadow-card-hover transition cursor-pointer flex flex-col justify-between card-interactive">
                   <div class="space-y-2 text-xs">
                     <div class="flex justify-between items-center">
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">${proj.id}</span>
-                      <span class="text-xs font-black text-emerald-600">${proj.matchScore}% Skill Fit</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200/60">${proj.id}</span>
+                      <span class="text-xs font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">${proj.matchScore}% Fit</span>
                     </div>
                     <h4 class="font-bold text-sm text-slate-900">${proj.title}</h4>
                     <p class="text-[11px] text-slate-500">${proj.client} • ${proj.duration}</p>
                     <p class="text-slate-600 line-clamp-2 leading-relaxed">${proj.description}</p>
                     <div class="flex flex-wrap gap-1 pt-1">
-                      ${proj.requiredSkills.map(s => `<span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">${s}</span>`).join('')}
+                      ${proj.requiredSkills.map(s => `<span class="text-[10px] bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">${s}</span>`).join('')}
                     </div>
                     <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full scope & AI analysis</p>
                   </div>
@@ -3322,11 +3337,11 @@ const UI = {
           ` : recCat === 'internships' ? `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               ${recInternships.map(intern => `
-                <div onclick="UI.openPostDetailModal('${intern.id}', 'internship')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                <div onclick="UI.openPostDetailModal('${intern.id}', 'internship')" class="bg-white rounded-2xl p-5 border border-slate-200/90 space-y-4 hover:border-indigo-400 hover:shadow-card-hover transition cursor-pointer flex flex-col justify-between card-interactive">
                   <div class="space-y-2 text-xs">
                     <div class="flex justify-between items-center">
-                      <span class="text-[10px] font-mono font-bold text-indigo-700">${intern.id}</span>
-                      <span class="text-xs font-black text-emerald-600">${intern.matchScore}% Match</span>
+                      <span class="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200/60">${intern.id}</span>
+                      <span class="text-xs font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">${intern.matchScore}% Match</span>
                     </div>
                     <h4 class="font-bold text-sm text-slate-900">${intern.title}</h4>
                     <p class="text-[11px] text-slate-500">${intern.company} • ${intern.mode} (${intern.location})</p>
@@ -3335,7 +3350,7 @@ const UI = {
                     <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                   </div>
                   <div onclick="event.stopPropagation()">
-                    <button onclick="UI.applyOneClick('${intern.company} ${intern.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
+                    <button onclick="UI.applyOneClick('${intern.company} ${intern.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
                       One-Click Apply
                     </button>
                   </div>
@@ -3345,11 +3360,11 @@ const UI = {
           ` : `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               ${recJobs.map(job => `
-                <div onclick="UI.openPostDetailModal('${job.id}', 'job')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                <div onclick="UI.openPostDetailModal('${job.id}', 'job')" class="bg-white rounded-2xl p-5 border border-slate-200/90 space-y-4 hover:border-indigo-400 hover:shadow-card-hover transition cursor-pointer flex flex-col justify-between card-interactive">
                   <div class="space-y-2 text-xs">
                     <div class="flex justify-between items-center">
-                      <span class="text-[10px] font-mono font-bold text-indigo-700">${job.id}</span>
-                      <span class="text-xs font-black text-emerald-600">${job.matchScore}% Match</span>
+                      <span class="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200/60">${job.id}</span>
+                      <span class="text-xs font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">${job.matchScore}% Match</span>
                     </div>
                     <h4 class="font-bold text-sm text-slate-900">${job.title}</h4>
                     <p class="text-[11px] text-slate-500">${job.company} • ${job.location}</p>
@@ -3358,7 +3373,7 @@ const UI = {
                     <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                   </div>
                   <div onclick="event.stopPropagation()">
-                    <button onclick="UI.applyOneClick('${job.company} ${job.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
+                    <button onclick="UI.applyOneClick('${job.company} ${job.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
                       One-Click Apply
                     </button>
                   </div>
@@ -7010,7 +7025,7 @@ const UI = {
           <div class="p-4 bg-purple-50 border border-purple-200 rounded-xl flex items-center justify-between">
             <div>
               <p class="font-bold text-purple-900">Dedicated Enterprise Campus Support</p>
-              <p class="text-purple-700">Priority SLA: 1 hour • Email: enterprise-support@talentverse.com</p>
+              <p class="text-purple-700">Priority SLA: 1 hour • Email: enterprise-support@careerlens.com</p>
             </div>
             <button onclick="alert('Support ticket opened.');" class="px-4 py-2 bg-purple-600 text-white font-bold rounded-xl">Contact Support</button>
           </div>
@@ -7037,17 +7052,17 @@ const UI = {
   renderDisciplinePills(theme = 'light') {
     const d = state.selectedDiscipline;
     const disciplines = [
-      { id: 'all', label: 'All Fields', icon: '🌐' },
-      { id: 'tech', label: 'Tech & AI', icon: '💻' },
-      { id: 'finance', label: 'Commerce & Finance', icon: '📈' },
-      { id: 'design', label: 'UI/UX Design', icon: '🎨' },
-      { id: 'law', label: 'Law & Governance', icon: '⚖️' },
-      { id: 'healthcare', label: 'Healthcare & Bio', icon: '🧬' }
+      { id: 'all', label: 'All Fields', icon: '🌐', lightActive: 'bg-slate-900 text-white shadow-xs', darkActive: 'bg-white text-slate-900 shadow-xs' },
+      { id: 'tech', label: 'Tech & AI', icon: '💻', lightActive: 'bg-blue-600 text-white shadow-xs', darkActive: 'bg-blue-500 text-white shadow-xs' },
+      { id: 'finance', label: 'Commerce & Finance', icon: '📈', lightActive: 'bg-emerald-600 text-white shadow-xs', darkActive: 'bg-emerald-500 text-white shadow-xs' },
+      { id: 'design', label: 'UI/UX Design', icon: '🎨', lightActive: 'bg-purple-600 text-white shadow-xs', darkActive: 'bg-purple-500 text-white shadow-xs' },
+      { id: 'law', label: 'Law & Governance', icon: '⚖️', lightActive: 'bg-amber-600 text-white shadow-xs', darkActive: 'bg-amber-500 text-white shadow-xs' },
+      { id: 'healthcare', label: 'Healthcare & Bio', icon: '🧬', lightActive: 'bg-rose-600 text-white shadow-xs', darkActive: 'bg-rose-500 text-white shadow-xs' }
     ];
 
     if (theme === 'dark') {
       return disciplines.map(item => `
-        <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? 'bg-purple-600 text-white shadow-xs' : 'text-slate-300 hover:text-white hover:bg-slate-700/60'}">
+        <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? item.darkActive : 'text-slate-300 hover:text-white hover:bg-slate-700/60'}">
           <span>${item.icon}</span>
           <span>${item.label}</span>
         </button>
@@ -7055,7 +7070,7 @@ const UI = {
     }
 
     return disciplines.map(item => `
-      <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'}">
+      <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? item.lightActive : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'}">
         <span>${item.icon}</span>
         <span>${item.label}</span>
       </button>
@@ -7222,7 +7237,7 @@ const UI = {
           </div>
 
           <div class="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/30 flex items-center justify-between text-xs">
-            <span class="text-emerald-200">✨ <strong>Pre-Flight Clear:</strong> This certificate is stamped with an official TalentVerse verification hash and will bypass recruiter manual audits.</span>
+            <span class="text-emerald-200">✨ <strong>Pre-Flight Clear:</strong> This certificate is stamped with an official CareerLens verification hash and will bypass recruiter manual audits.</span>
             <span class="font-mono text-[10px] text-emerald-300 truncate max-w-xs">Hash: ${auditReport.registry.verifiedHash.substring(0, 18)}...</span>
           </div>
         </div>
