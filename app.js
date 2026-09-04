@@ -10,11 +10,616 @@
  * 6. Dedicated Settings tab with Saved Items (Jobs, Internships, Projects), Security, and Privacy features
  */
 
+// Multi-Disciplinary Master Candidate Personas (Engineering, Commerce, Design, Law, Healthcare)
+const disciplineProfiles = {
+  tech: {
+    name: 'Arjun Kawade',
+    role: 'Aspiring AI/ML Engineer & Systems Developer',
+    email: 'arjun.k@university.edu',
+    phone: '+91 98765 43210',
+    field: 'Engineering & Technology',
+    domain: 'Artificial Intelligence & Machine Learning',
+    domainSkills: ['PyTorch', 'TensorFlow', 'Python', 'LLM Fine-tuning', 'FastAPI', 'Computer Vision', 'Docker', 'NLP'],
+    commonSkills: ['Problem Solving', 'Team Leadership', 'Effective Communication', 'Agile/Scrum', 'Critical Thinking'],
+    education: 'B.Tech in Computer Science & Engineering, IIT Bombay (2022 - 2026), CGPA: 8.9/10',
+    experience: 'Machine Learning Research Intern @ AI Labs (6 months)',
+    resumeName: 'Arjun_Kawade_Tech_Resume.pdf',
+    atsScore: 92,
+    socials: {
+      github: 'github.com/arjunkawade',
+      linkedin: 'linkedin.com/in/arjunkawade',
+      portfolio: 'arjun.dev',
+      twitter: 'twitter.com/arjuncodes'
+    },
+    rankings: [
+      { domain: 'Artificial Intelligence & ML', score: 94, rank: 142, total: 12400, percentile: '98.8%' },
+      { domain: 'Data Structures & Algorithms', score: 92, rank: 185, total: 15600, percentile: '98.2%' },
+      { domain: 'Quantitative Aptitude & Logic', score: 88, rank: 310, total: 18200, percentile: '96.5%' },
+      { domain: 'Technical Communication & Soft Skills', score: 86, rank: 420, total: 9800, percentile: '95.7%' }
+    ],
+    badges: [
+      { icon: '🔥', title: '8-Day Streak Master', desc: 'Active daily coding solver' },
+      { icon: '🏆', title: 'Top 5% Coder', desc: 'Algorithms leaderboard' },
+      { icon: '🌟', title: 'Verified PyTorch Pro', desc: 'Domain benchmark verified' },
+      { icon: '📜', title: 'ATS Champion', desc: '92+ ATS resume score' },
+      { icon: '💡', title: 'Top Rated Freelancer', desc: '5.0 ★ Client rating' }
+    ],
+    completedFreelance: [
+      { title: 'Multi-Modal Document Parsing Agent', client: 'FinTech Corp', budget: '$1,800', rating: '5.0 ★', review: 'Exceptional delivery on LangChain OCR extraction!' },
+      { title: 'RAG Chatbot for Legal Case Law', client: 'JurisAI Tech', budget: '$1,200', rating: '4.9 ★', review: 'Fast turnaround with clean vector search integration.' },
+      { title: 'Next.js 15 SaaS Metrics Dashboard', client: 'CloudMetrics Inc', budget: '$450', rating: '5.0 ★', review: 'Super clean responsive code and Tailwind components.' }
+    ],
+    saved: {
+      jobs: [
+        { id: 'JOB-MSFT-901', title: 'Applied AI Engineer', company: 'Microsoft', salary: '₹24 - ₹36 LPA', location: 'Bangalore / Hybrid' },
+        { id: 'JOB-RZP-402', title: 'Machine Learning Engineer', company: 'Razorpay', salary: '₹20 - ₹28 LPA', location: 'Bangalore' }
+      ],
+      internships: [
+        { id: 'INT-MSFT-101', title: 'AI Research Intern (GenAI)', company: 'Microsoft', stipend: '₹80,000 / mo', deadline: 'Sep 20' },
+        { id: 'INT-GOOG-102', title: 'Software Engineering Intern', company: 'Google', stipend: '₹1,10,000 / mo', deadline: 'Sep 28' }
+      ],
+      projects: [
+        { id: 'PROJ-FREELANCE-01', title: 'Fine-tune Llama 3 for Legal RAG', client: 'LegalTech Corp', budget: '$1,400', duration: '3 weeks' }
+      ]
+    }
+  },
+
+  finance: {
+    name: 'Arjun Kawade',
+    role: 'Quantitative Finance & Investment Banking Scholar',
+    email: 'arjun.finance@srcc.edu',
+    phone: '+91 98765 43210',
+    field: 'Commerce & Financial Markets',
+    domain: 'Investment Banking & Quantitative Risk',
+    domainSkills: ['DCF Valuation', 'Financial Modeling', 'Bloomberg Terminal', 'Equity Research', 'Excel/VBA', 'Python for Finance', 'Credit Risk Auditing', 'SEBI Compliance'],
+    commonSkills: ['Analytical Thinking', 'Stakeholder Communication', 'Executive Presentation', 'Negotiation', 'Team Leadership'],
+    education: 'B.Com (Hons) / Post-Grad in Financial Markets, SRCC & NMIMS (2022 - 2026), CGPA: 9.1/10',
+    experience: 'Equity Research Analyst Intern @ Motilal Oswal (6 months)',
+    resumeName: 'Arjun_Kawade_Finance_Resume.pdf',
+    atsScore: 94,
+    socials: {
+      github: 'github.com/arjunkawade-fin',
+      linkedin: 'linkedin.com/in/arjun-kawade-finance',
+      portfolio: 'arjun-finance.com',
+      twitter: 'twitter.com/arjun_quant'
+    },
+    rankings: [
+      { domain: 'Financial Modeling & DCF Valuation', score: 95, rank: 48, total: 9200, percentile: '99.4%' },
+      { domain: 'Quantitative Risk & Statistics', score: 91, rank: 92, total: 11400, percentile: '99.1%' },
+      { domain: 'Corporate Accounting & Tax Auditing', score: 89, rank: 140, total: 14800, percentile: '98.0%' },
+      { domain: 'Executive Pitching & Soft Skills', score: 93, rank: 64, total: 8500, percentile: '99.2%' }
+    ],
+    badges: [
+      { icon: '📈', title: 'CFA Level 1 Candidate', desc: 'Quantitative ethics & asset pricing' },
+      { icon: '🏆', title: 'Goldman Sachs Case Winner', desc: 'LBO Valuation championship' },
+      { icon: '🌟', title: 'Top 1% Financial Modeler', desc: 'Verified spreadsheet benchmark' },
+      { icon: '📜', title: 'SEBI Certified Analyst', desc: 'Research analyst NISM-Series-XV' },
+      { icon: '💼', title: 'Wall Street Prep Honors', desc: 'M&A and dynamic 3-statement model' }
+    ],
+    completedFreelance: [
+      { title: '3-Statement LBO Financial Model for Solar Venture', client: 'GreenEnergy PE', budget: '$1,500', rating: '5.0 ★', review: 'Flawless debt waterfall and IRR sensitivity table!' },
+      { title: 'FinTech Startup Investor Pitch Deck & Valuation', client: 'PayGlobal Labs', budget: '$1,200', rating: '4.9 ★', review: 'Clear comps table and realistic DCF terminal multiples.' },
+      { title: 'Automated Portfolio Beta & VaR Risk Tracker', client: 'Aegis Capital', budget: '$600', rating: '5.0 ★', review: 'Super clean Excel VBA macros connecting to Yahoo Finance.' }
+    ],
+    saved: {
+      jobs: [
+        { id: 'JOB-GOLD-601', title: 'Quantitative Investment Analyst', company: 'Goldman Sachs', salary: '₹22 - ₹32 LPA', location: 'Mumbai / Hybrid' }
+      ],
+      internships: [
+        { id: 'INT-HDFC-201', title: 'Corporate Banking & Credit Risk Analyst Intern', company: 'HDFC Bank', stipend: '₹55,000 / mo', deadline: 'Oct 10' }
+      ],
+      projects: [
+        { id: 'PROJ-FL-FIN-01', title: '3-Statement LBO Financial Model', client: 'GreenEnergy PE', budget: '$1,500', duration: '3 weeks' }
+      ]
+    }
+  },
+
+  design: {
+    name: 'Arjun Kawade',
+    role: 'Lead Product & Design Systems Architect',
+    email: 'arjun.design@nid.edu',
+    phone: '+91 98765 43210',
+    field: 'Design & Creative Arts',
+    domain: 'User Experience & Design Systems',
+    domainSkills: ['Figma', 'Design Systems', 'Wireframing', 'Micro-Interactions', 'Usability Testing', 'Heuristic Evaluation', 'Accessibility (WCAG AAA)', 'Design Tokens'],
+    commonSkills: ['User Empathy', 'Cross-Functional Collaboration', 'Design Critique', 'Storyboarding', 'Creative Problem Solving'],
+    education: 'B.Des in Interaction & Digital Product Design, National Institute of Design (NID Ahmedabad, 2022 - 2026), CGPA: 9.2/10',
+    experience: 'Product Design Fellow @ Swiggy Design Studio (6 months)',
+    resumeName: 'Arjun_Kawade_Design_Resume.pdf',
+    atsScore: 93,
+    socials: {
+      github: 'github.com/arjunkawade-design',
+      linkedin: 'linkedin.com/in/arjun-designer',
+      portfolio: 'arjun.design',
+      twitter: 'twitter.com/arjun_pixels'
+    },
+    rankings: [
+      { domain: 'Design Systems & Token Architecture', score: 96, rank: 32, total: 7800, percentile: '99.5%' },
+      { domain: 'Mobile Interaction & Micro-Prototypes', score: 93, rank: 74, total: 9100, percentile: '99.1%' },
+      { domain: 'Usability Heuristics & WCAG AAA', score: 90, rank: 112, total: 8400, percentile: '98.6%' },
+      { domain: 'User Research & Journey Mapping', score: 94, rank: 58, total: 7200, percentile: '99.2%' }
+    ],
+    badges: [
+      { icon: '🎨', title: 'Figma Community Leader', desc: 'Published design system library' },
+      { icon: '🏆', title: 'NID Best Interaction Award', desc: 'Accessible healthcare UI honours' },
+      { icon: '🌟', title: 'WCAG AAA Certified', desc: 'Universal design & accessibility pro' },
+      { icon: '✨', title: 'Design Sprint Facilitator', desc: 'Stanford d.school methodology' },
+      { icon: '📱', title: 'Top 1% Mobile Designer', desc: 'Haptic & micro-interaction master' }
+    ],
+    completedFreelance: [
+      { title: 'HealthTech Patient Monitoring App Full Redesign', client: 'CarePulse Health', budget: '$2,200', rating: '5.0 ★', review: 'Transformed our clinical UX with flawless accessibility.' },
+      { title: 'Multi-Brand Enterprise Design Tokens Library', client: 'OmniCloud SaaS', budget: '$1,800', rating: '4.9 ★', review: 'Saved our engineering team 120+ frontend build hours.' },
+      { title: 'E-Commerce Checkout Flow Friction Optimization', client: 'LuxeCart Retail', budget: '$950', rating: '5.0 ★', review: 'Reduced cart drop-off by 14% on mobile web!' }
+    ],
+    saved: {
+      jobs: [
+        { id: 'JOB-FIG-701', title: 'Product & Systems Designer', company: 'Figma Labs', salary: '₹20 - ₹30 LPA', location: 'Bangalore / Remote' }
+      ],
+      internships: [
+        { id: 'INT-ZOM-202', title: 'UI/UX Interaction Design Intern', company: 'Zomato', stipend: '₹60,000 / mo', deadline: 'Oct 02' }
+      ],
+      projects: [
+        { id: 'PROJ-FL-DES-01', title: 'HealthTech Patient Portal UX', client: 'CarePulse Health', budget: '$2,200', duration: '3 weeks' }
+      ]
+    }
+  },
+
+  law: {
+    name: 'Arjun Kawade',
+    role: 'Corporate Technology & Cyber Law Scholar',
+    email: 'arjun.law@nls.ac.in',
+    phone: '+91 98765 43210',
+    field: 'Law & Corporate Governance',
+    domain: 'Technology Law & Data Protection',
+    domainSkills: ['DPDP Act 2023 Compliance', 'Tech Contract Drafting', 'Intellectual Property (IP)', 'Due Diligence', 'IT Act 2000', 'Cross-Border Data Governance', 'Arbitration'],
+    commonSkills: ['Legal Research & Writing', 'Oral Advocacy', 'Analytical Reasoning', 'Statutory Interpretation', 'Client Negotiation'],
+    education: 'B.A. LL.B (Hons), National Law School of India University (NLSIU Bangalore, 2021 - 2026), CGPA: 8.8/10',
+    experience: 'Judicial Clerk & Tech Policy Research Fellow @ Supreme Court Observers (6 months)',
+    resumeName: 'Arjun_Kawade_Law_Resume.pdf',
+    atsScore: 91,
+    socials: {
+      github: 'github.com/arjunkawade-legal',
+      linkedin: 'linkedin.com/in/arjun-law-nlsiu',
+      portfolio: 'arjun-juris.in',
+      twitter: 'twitter.com/arjun_lex'
+    },
+    rankings: [
+      { domain: 'DPDP Act 2023 & Cyber Governance', score: 94, rank: 28, total: 6400, percentile: '99.5%' },
+      { domain: 'Technology Contract Drafting & SLA', score: 92, rank: 54, total: 7200, percentile: '99.2%' },
+      { domain: 'IP Law & Patent Infringement Analysis', score: 89, rank: 98, total: 8100, percentile: '98.7%' },
+      { domain: 'Constitutional Moot & Oral Advocacy', score: 95, rank: 22, total: 5800, percentile: '99.6%' }
+    ],
+    badges: [
+      { icon: '⚖️', title: 'NLSIU Moot Court Winner', desc: 'National Tech Law Arbitration champion' },
+      { icon: '📜', title: 'Certified DPO (Data Protection)', desc: 'Indian DPDP Act certified' },
+      { icon: '🏆', title: 'Top 2% Legal Researcher', desc: 'Manupatra & SCC Online benchmark' },
+      { icon: '🌟', title: 'WIPO IP Fellow', desc: 'Patent drafting & licensing honor' },
+      { icon: '💼', title: 'Corporate M&A Legal Due Diligence', desc: 'Enterprise procurement verified' }
+    ],
+    completedFreelance: [
+      { title: 'SaaS Master Services Agreement (MSA) & SLA Suite', client: 'ApexCloud Technologies', budget: '$1,600', rating: '5.0 ★', review: 'Bulletproof liability indemnification and IP clauses.' },
+      { title: 'DPDP Act 2023 Data Protection Audit & Policy Overhaul', client: 'FinServe Fintech', budget: '$1,400', rating: '5.0 ★', review: 'Mapped our entire consent architecture to statutory norms.' },
+      { title: 'Cross-Border AI Training Data Licensing Memo', client: 'LexAI Venture Labs', budget: '$850', rating: '4.9 ★', review: 'Thorough citation of global copyright fair-use precedents.' }
+    ],
+    saved: {
+      jobs: [
+        { id: 'JOB-AZB-801', title: 'Corporate Technology & IP Associate', company: 'AZB & Partners', salary: '₹18 - ₹26 LPA', location: 'New Delhi / Mumbai' }
+      ],
+      internships: [
+        { id: 'INT-SEBI-203', title: 'Legal Compliance & Regulatory Affairs Intern', company: 'SEBI India', stipend: '₹40,000 / mo', deadline: 'Oct 12' }
+      ],
+      projects: [
+        { id: 'PROJ-FL-LAW-01', title: 'SaaS Master Services Agreement Suite', client: 'ApexCloud Technologies', budget: '$1,600', duration: '2 weeks' }
+      ]
+    }
+  },
+
+  healthcare: {
+    name: 'Arjun Kawade',
+    role: 'Clinical Data Scientist & Bioinformatics Researcher',
+    email: 'arjun.health@aiims.edu',
+    phone: '+91 98765 43210',
+    field: 'Healthcare & Life Sciences',
+    domain: 'Bioinformatics & Clinical Trial Analytics',
+    domainSkills: ['Biostatistics', 'Python / Biopython', 'R for Genomics', 'CDISC / SDTM Standards', 'NGS Data Pipelines', 'Survival Analysis (Kaplan-Meier)', 'Molecular Dynamics'],
+    commonSkills: ['Scientific Rigor', 'Clinical Trial Protocols', 'Data Integrity & Ethics', 'Peer-Review Writing', 'Cross-Disciplinary Collaboration'],
+    education: 'B.Tech / M.Sc in Biotechnology & Bio-Computing, AIIMS & IIT Delhi (2022 - 2026), CGPA: 9.0/10',
+    experience: 'Clinical Genomics Research Intern @ Tata Memorial Centre (6 months)',
+    resumeName: 'Arjun_Kawade_Bio_Resume.pdf',
+    atsScore: 92,
+    socials: {
+      github: 'github.com/arjunkawade-bio',
+      linkedin: 'linkedin.com/in/arjun-biotech',
+      portfolio: 'arjun-bio.dev',
+      twitter: 'twitter.com/arjun_genome'
+    },
+    rankings: [
+      { domain: 'Clinical Biostatistics & Survival Analysis', score: 93, rank: 41, total: 5400, percentile: '99.2%' },
+      { domain: 'Genomics & NGS Sequencing Pipelines', score: 91, rank: 62, total: 6200, percentile: '99.0%' },
+      { domain: 'Clinical Regulatory Standards (CDISC/FDA)', score: 88, rank: 94, total: 7100, percentile: '98.6%' },
+      { domain: 'Molecular Modeling & Scientific Publishing', score: 94, rank: 35, total: 4800, percentile: '99.2%' }
+    ],
+    badges: [
+      { icon: '🧬', title: 'AIIMS Research Fellow', desc: 'Genomic oncology bioinformatics' },
+      { icon: '🏆', title: 'National Bio-Hackathon Winner', desc: 'Target protein discovery model' },
+      { icon: '📜', title: 'Certified CDISC / SDTM Specialist', desc: 'Clinical data interchange standards' },
+      { icon: '🌟', title: 'Top 1% Biostatistician', desc: 'Cox proportional hazards verified' },
+      { icon: '💡', title: 'NCBI BLAST Pipeline Author', desc: 'Open-source genomic variant analyzer' }
+    ],
+    completedFreelance: [
+      { title: 'RNA-Seq Differential Expression Analysis Pipeline', client: 'OncoGenomics Labs', budget: '$1,900', rating: '5.0 ★', review: 'Delivered clean DESeq2 and pathway enrichment graphs!' },
+      { title: 'Phase II Oncology Clinical Trial Statistical Analysis Plan', client: 'BioPharma Global', budget: '$2,400', rating: '5.0 ★', review: 'Accepted by regulatory ethics committee with zero revisions.' },
+      { title: 'Automated Patient Vitals Anomaly Detection Script', client: 'TeleHealth Networks', budget: '$1,100', rating: '4.9 ★', review: 'Clean real-time scoring in Python with CDISC compliance.' }
+    ],
+    saved: {
+      jobs: [
+        { id: 'JOB-APOL-901', title: 'Clinical Data Analyst & Bio-Statistician', company: 'Apollo HealthTech', salary: '₹16 - ₹25 LPA', location: 'Hyderabad / Chennai' }
+      ],
+      internships: [
+        { id: 'INT-BIO-204', title: 'Genomics & Bioinformatics Research Intern', company: 'Biocon Research', stipend: '₹48,000 / mo', deadline: 'Oct 18' }
+      ],
+      projects: [
+        { id: 'PROJ-FL-BIO-01', title: 'RNA-Seq Differential Expression Pipeline', client: 'OncoGenomics Labs', budget: '$1,900', duration: '3 weeks' }
+      ]
+    }
+  }
+};
+
+// Target Job Descriptions by Discipline for Skill Gap Analyzer
+const fieldJDs = {
+  tech: `Senior AI / ML Engineer
+Required:
+- 3+ years experience with Python, PyTorch or JAX
+- Hands-on experience with High-Throughput LLM Serving (Triton Inference Server, TensorRT-LLM, vLLM)
+- Strong knowledge of Vector Databases (Pinecone, Milvus, Qdrant) and Advanced RAG pipelines
+- Familiarity with Docker, Kubernetes, and model quantizations (AWQ, GPTQ)
+- M.Tech / B.Tech in CS or related field.`,
+
+  finance: `Quantitative Investment Analyst - Private Wealth & Global Markets
+Required:
+- Strong foundations in Financial Accounting, 3-Statement Modeling, and DCF Valuation
+- Proficiency in Python/R for quantitative time-series regression and asset pricing
+- Advanced Microsoft Excel / VBA for scenario stress-testing and LBO modeling
+- Working knowledge of SEBI regulations, capital adequacy (Basel III), and credit appraisal
+- Degree in Finance, Commerce, Economics, or CFA Level 1 candidate.`,
+
+  design: `Lead Product & Systems Designer - Enterprise Web & Mobile
+Required:
+- 3+ years architecting scalable multi-brand Design Systems and token hierarchies in Figma
+- Deep mastery of WCAG 2.1 AAA accessibility guidelines, color contrast, and assistive tech
+- Experience conducting qualitative usability testing, heuristic evaluations, and user journeys
+- Ability to create interactive micro-prototypes (ProtoPie / Framer) with haptic motion curves
+- Bachelor's or Master's degree in Design (B.Des/M.Des) or equivalent human-computer interaction background.`,
+
+  law: `Technology & Cyber Governance Legal Associate
+Required:
+- In-depth understanding of the Indian Digital Personal Data Protection (DPDP) Act 2023 and IT Act 2000
+- Proven track record drafting Master Services Agreements (MSA), SaaS SLAs, and IP licensing contracts
+- Expertise in conducting cross-border data transfer audits and data fiduciary compliance reviews
+- Strong oral advocacy, contract negotiation skills, and statutory interpretation ability
+- LL.B / B.A. LL.B from a recognized National Law University with Bar Council enrollment.`,
+
+  healthcare: `Clinical Data Scientist & Bio-Statistician
+Required:
+- Advanced statistical training (survival analysis, Kaplan-Meier curves, Cox proportional hazards)
+- Proficiency in Python/Biopython or R for high-throughput genomic variant calling (NGS)
+- Comprehensive knowledge of CDISC (SDTM/ADaM) clinical data exchange regulatory standards
+- Experience writing Statistical Analysis Plans (SAP) for FDA / CDSCO drug clinical trial submissions
+- Master's or B.Tech degree in Bioinformatics, Biotechnology, Biostatistics, or related life sciences.`
+};
+
+// Future Market Scope & Growth Predictions by Discipline (2026 - 2028)
+const fieldFutureSkills = {
+  tech: [
+    {
+      title: 'Autonomous Multi-Agent Swarms & Cognitive Workflows',
+      growth: '+186% Demand',
+      tools: 'LangGraph, CrewAI, AutoGen & Multi-Agent Consensus Architecture',
+      ctc: '₹24 - ₹38 LPA ($175k - $210k)',
+      citation: '"Enterprise adoption of multi-agent autonomous swarms grew by 210% following commercial rollouts of Claude Computer Use and OpenAI Operator. Software architectures are shifting from code generation to autonomous verification workflows." — Bloomberg Tech & Gartner 2026 Report'
+    },
+    {
+      title: 'Edge AI & Small Language Models (SLMs)',
+      growth: '+142% Demand',
+      tools: 'Apple MLX, ONNX Runtime, NPU Compilation, 4-bit Quantization (AWQ/GPTQ)',
+      ctc: '₹20 - ₹34 LPA ($160k - $190k)',
+      citation: '"With Apple Silicon neural engines and Qualcomm Snapdragon X Elite NPUs standard in enterprise hardware, 65% of AI workloads execute on-device to eliminate cloud inference API costs." — Reuters & Apple Silicon Briefing'
+    }
+  ],
+  finance: [
+    {
+      title: 'Algorithmic Carbon Credit Derivatives & ESG Auditing',
+      growth: '+380% Demand',
+      tools: 'Satellite Biomass Telemetry, Green Bond Structuring, Automated ESG Disclosures',
+      ctc: '₹26 - ₹42 LPA ($185k - $230k)',
+      citation: '"Mandatory SEBI BRSR Core disclosures and European CBAM carbon border tariffs have triggered an unprecedented demand for quant analysts who can model satellite vegetation data against carbon forward futures." — Financial Times & Morgan Stanley ESG Survey'
+    },
+    {
+      title: 'Real-Time Graph AI Forensic Payment Ledgers',
+      growth: '+290% Demand',
+      tools: 'Sub-millisecond Graph Neural Networks, Synthetic Identity Forensics, UPI Fast-Audit',
+      ctc: '₹22 - ₹36 LPA ($165k - $205k)',
+      citation: '"With instantaneous cross-border settlement between India UPI and Singapore PayNow, automated forensic AI auditing now intercepts fraudulent synthetic transaction chains before settlement finality." — Reserve Bank of India FinTech Report 2026'
+    }
+  ],
+  design: [
+    {
+      title: 'Spatial Computing UI (VisionOS & WebXR)',
+      growth: '+320% Demand',
+      tools: 'Gaze-and-Pinch 3D Ergonomics, Volumetric Canvas Prototyping, Ambient Spatial Audio',
+      ctc: '₹22 - ₹35 LPA ($160k - $195k)',
+      citation: '"Spatial interfaces in enterprise CAD, laparoscopic surgical headsets, and immersive simulation have made volumetric depth hierarchies the fastest-growing design proficiency of 2026." — Design Systems World & Fast Company'
+    },
+    {
+      title: 'Neuro-Adaptive Dynamic Accessibility (WCAG 3.0)',
+      growth: '+240% Demand',
+      tools: 'Dynamic Contrast Scaling, Cognitive Load Reduction, Motor-Tremor Compensating UI',
+      ctc: '₹18 - ₹30 LPA ($140k - $175k)',
+      citation: '"Global enforcement of the European Accessibility Act (EAA) and Supreme Court digital accessibility mandates require enterprise platforms to adapt interaction timing dynamically based on user motor telemetry." — Smashing Magazine & W3C Council'
+    }
+  ],
+  law: [
+    {
+      title: 'AI Hallucination Liability & Algorithmic Tort Precedents',
+      growth: '+410% Demand',
+      tools: 'Statutory Liability Allocation, Model Card Evidentiary Auditing, Autonomous Agent Negligence',
+      ctc: '₹20 - ₹34 LPA ($150k - $190k)',
+      citation: '"Following pivotal high court rulings on corporate fiduciary negligence arising from automated underwriting models, legal counsel specializing in algorithm accountability represent the highest billing rate tier." — Bar & Bench & Harvard Law Review'
+    },
+    {
+      title: 'Cross-Border Sovereign Data Treaties & DPDP Compliance',
+      growth: '+275% Demand',
+      tools: 'India DPDP Act 2023, EU AI Act Enforcement, Sovereign Cloud Localization Governance',
+      ctc: '₹18 - ₹32 LPA ($140k - $180k)',
+      citation: '"Fines under the DPDP Act reaching up to ₹250 crore per breach have positioned Certified Data Protection Officers (CDPOs) at the core of all multinational corporate venture rounds in India." — LiveMint & Legal 500 Asia'
+    }
+  ],
+  healthcare: [
+    {
+      title: 'In-Silico Molecular Docking & Generative Ligand Design',
+      growth: '+390% Demand',
+      tools: 'AlphaFold 3, Small-Molecule Diffusion Models, Binding Affinity Predictors',
+      ctc: '₹24 - ₹40 LPA ($170k - $215k)',
+      citation: '"Generative molecular transformers have collapsed pre-clinical discovery timelines from 4.5 years to 60 days, causing pharmaceutical conglomerates to aggressively recruit bioinformatics researchers with deep learning proficiencies." — Nature Biotechnology 2026'
+    },
+    {
+      title: 'Federated Clinical Trial Analytics & CDISC Interoperability',
+      growth: '+260% Demand',
+      tools: 'Privacy-Preserving Decentralized ML, CDISC SDTM/ADaM, HIPAA/DISHA Architecture',
+      ctc: '₹20 - ₹32 LPA ($150k - $185k)',
+      citation: '"With multicenter clinical trials adopting federated analytics, patient record transfer is replaced by edge model aggregation, accelerating regulatory approval cycles by 38%." — BioPharma Dive & CDISC Global Summit'
+    }
+  ]
+};
+
+// ATS Resume Diagnostic Breakdown by Discipline (Strengths, Weaknesses, Suggestions)
+const fieldResumeDiagnostics = {
+  tech: {
+    strengths: [
+      { title: 'Strong Action Verbs', desc: 'High density of executive impact verbs ("Engineered", "Fine-tuned", "Benchmarked", "Containerized").' },
+      { title: 'Quantified Metrics', desc: 'Measurable outcomes documented ("reduced latency by 32%", "98.2% tabular accuracy", "doubled throughput").' },
+      { title: 'Domain Alignment', desc: 'Deep learning and PyTorch skills directly align with top 5% AI industry demand.' },
+      { title: 'ATS Compatibility', desc: 'Single-column layout with clean standard headers parsable by Workday and Greenhouse.' }
+    ],
+    weaknesses: [
+      { title: 'Hardware Acceleration Gaps', desc: 'Lacks explicit mentions of TensorRT-LLM, Triton Server, or CUDA kernel optimizations.' },
+      { title: 'Cluster Scale Ambiguity', desc: 'Lists Docker and Kubernetes, but lacks quantified node or GPU cluster counts.' },
+      { title: 'Summary Lead', desc: 'Executive summary is slightly generic and could emphasize low-latency inference milestones earlier.' }
+    ],
+    suggestions: [
+      { title: 'Quantify Tokens/Sec', desc: 'Add token generation throughput benchmarks to your Llama-3 fine-tuning project bullets.' },
+      { title: 'Add Production Links', desc: 'Embed clickable GitHub repository links and Hugging Face model cards for your multi-modal agent.' },
+      { title: 'Specify Hardware Target', desc: 'Mention testbed environments (e.g. NVIDIA A100 / RTX 4090 or Apple Silicon M-series).' }
+    ]
+  },
+  finance: {
+    strengths: [
+      { title: '3-Statement Financial Modeling', desc: 'Flawless balance sheet, cash flow, and income statement dynamic linkage verified with zero plug errors.' },
+      { title: 'DCF & Valuation Rigor', desc: 'Quantified WACC assumptions, sensitivity tables, and comparable company multiples explicitly documented.' },
+      { title: 'Regulatory Compliance', desc: 'Active NISM-Series-XV Research Analyst certification and SEBI capital adequacy compliance knowledge.' },
+      { title: 'Quant Scripting Proficiency', desc: 'Python for algorithmic portfolio beta tracking and Excel VBA macro automation verified.' }
+    ],
+    weaknesses: [
+      { title: 'High-Frequency Analytics', desc: 'Lacks explicit time-series backtesting on live order-book Level 2/3 market microstructure datasets.' },
+      { title: 'ESG BRSR Metrics', desc: 'Does not cite SEBI BRSR Core carbon audit methodologies for sustainable green debt underwriting.' },
+      { title: 'Monte Carlo Simulations', desc: 'Could expand portfolio VaR stress-testing to include 10,000-iteration stochastic drift paths.' }
+    ],
+    suggestions: [
+      { title: 'Detail Bloomberg Functions', desc: 'List specific terminal commands and equity screening formulas (e.g. BQL, EQS, DES, FA).' },
+      { title: 'Highlight LBO IRR Waterfall', desc: 'Quantify equity sponsor internal rate of return (IRR) and debt paydown milestones in private equity models.' },
+      { title: 'Add CFA Candidate Milestone', desc: 'Emphasize CFA Level 1 ethics and quantitative methods percentile rankings.' }
+    ]
+  },
+  design: {
+    strengths: [
+      { title: 'Design Systems Token Hierarchy', desc: 'Engineered scalable multi-brand token structures across Figma and React frontend handoff.' },
+      { title: 'WCAG 2.1 AAA Accessibility', desc: 'Demonstrated color contrast ratios, screen reader testing, and motor-accessibility rubrics.' },
+      { title: 'Micro-Interactions & Haptics', desc: 'Advanced ProtoPie / Framer prototypes featuring realistic easing curves and spatial gesture flows.' },
+      { title: 'Usability Heuristics Mastery', desc: 'Structured Nielsen Norman Group 10-heuristic compliance audits reducing user navigation friction.' }
+    ],
+    weaknesses: [
+      { title: 'Quantified Conversion Impact', desc: 'Portfolio descriptions could further emphasize business uplift (e.g. cart completion +14%, bounce rate -18%).' },
+      { title: 'Spatial UI Prototyping', desc: 'Lacks explicit VisionOS / WebXR 3D spatial canvas prototypes and volumetric gaze interactions.' },
+      { title: 'Design Ops CI/CD Pipeline', desc: 'Does not mention automated Figma token sync to GitHub actions or Style Dictionary pipelines.' }
+    ],
+    suggestions: [
+      { title: 'Embed Live Interactive Links', desc: 'Add direct clickable links to Figma Community design systems and public Framer prototypes.' },
+      { title: 'Quantify Engineering Time Saved', desc: 'State design token efficiency metrics (e.g. "reduced frontend design QA cycles by 65%").' },
+      { title: 'Document Usability Sample Size', desc: 'Cite participant cohort demographics and quantitative SUS (System Usability Scale) scores.' }
+    ]
+  },
+  law: {
+    strengths: [
+      { title: 'DPDP Act 2023 Authority', desc: 'In-depth statutory interpretation of Indian Digital Personal Data Protection Act compliance and data fiduciary mandates.' },
+      { title: 'SaaS Contract Architecture', desc: 'Robust drafting of Master Services Agreements (MSA), Service Level Agreements (SLA), and enterprise indemnity clauses.' },
+      { title: 'Cross-Border Privacy Treaties', desc: 'Demonstrated alignment with EU GDPR Standard Contractual Clauses (SCC) and cross-border data transfer protocols.' },
+      { title: 'National Law School Honors', desc: 'First-class academic record from NLSIU Bangalore with proven moot court oral advocacy credentials.' }
+    ],
+    weaknesses: [
+      { title: 'Algorithmic Tort Precedents', desc: 'Lacks case briefs on emerging autonomous AI negligence liabilities and deepfake evidential admissibility.' },
+      { title: 'Antitrust & Platform Competition', desc: 'Could include more exposure to Competition Commission of India (CCI) digital market regulations.' },
+      { title: 'IP Dual-Licensing Models', desc: 'Brief overview of open-source dual licensing (AGPL vs MIT) could be expanded with commercial case studies.' }
+    ],
+    suggestions: [
+      { title: 'Cite Bar Council Enrollment', desc: 'Explicitly state State Bar Council provisional enrollment index number and advocate credential.' },
+      { title: 'Add Data Fiduciary Audit Scope', desc: 'Quantify past compliance audits (e.g. "Reviewed consent architecture for 4.2M registered user database").' },
+      { title: 'Publish Case Law Commentary', desc: 'Link to published articles on LiveLaw, Bar & Bench, or university law journal whitepapers.' }
+    ]
+  },
+  healthcare: {
+    strengths: [
+      { title: 'CDISC Regulatory Standards', desc: 'Proven implementation of SDTM and ADaM clinical data structures compliant with FDA / CDSCO submission standards.' },
+      { title: 'NGS Genomic Pipeline Execution', desc: 'End-to-end variant calling, FASTQ preprocessing, and RNA-Seq differential expression analysis in Python/R.' },
+      { title: 'Survival Analysis Precision', desc: 'Mastery of Kaplan-Meier time-to-event curves, log-rank testing, and Cox proportional hazards regression.' },
+      { title: 'Interdisciplinary Synthesis', desc: 'Dual foundation in clinical biostatistics and molecular biology from AIIMS and IIT Delhi.' }
+    ],
+    weaknesses: [
+      { title: 'FDA 21 CFR Part 11 Audit Trails', desc: 'Lacks explicit documentation of electronic record cryptographic signature verification pipelines.' },
+      { title: 'AlphaFold 3 Ligand Docking', desc: 'Could expand generative protein-ligand binding affinity predictions using diffusion transformers.' },
+      { title: 'Federated Clinical Trials', desc: 'Lacks decentralized privacy-preserving machine learning frameworks across hospital nodes.' }
+    ],
+    suggestions: [
+      { title: 'Cite Clinical Trial Identifiers', desc: 'Reference anonymized ClinicalTrials.gov (NCT) phase identification numbers for retrospective studies.' },
+      { title: 'Detail Bioconductor Libraries', desc: 'List specific bioinformatics packages utilized (DESeq2, Biostrings, GenomicRanges, edgeR).' },
+      { title: 'Include Statistical Power Analyses', desc: 'Mention sample size calculations and statistical power determinations for Phase II randomized trials.' }
+    ]
+  }
+};
+
+// Skill Gap Analysis Breakdowns by Discipline
+const fieldGapBreakdowns = {
+  tech: {
+    matchedCount: 5,
+    matchPct: '78%',
+    matched: ['Python', 'PyTorch', 'FastAPI', 'Docker', 'Computer Vision / NLP'],
+    missingCount: 3,
+    missing: ['Triton Inference Server', 'TensorRT-LLM / vLLM', 'Kubernetes (K8s)'],
+    certifications: [
+      { title: 'NVIDIA DLI: Large Language Model Serving', desc: 'Est: 2 weeks • Covers Triton & TensorRT' },
+      { title: 'AWS Certified Machine Learning (MLS-C01)', desc: 'Est: 4 weeks • SageMaker & Cloud ML' }
+    ],
+    courses: [
+      { title: 'Vector Databases & Agentic RAG', desc: 'DeepLearning.AI • Free (10 hours)' },
+      { title: 'High-Throughput Inference with vLLM', desc: 'Open Source Course • 1 week' }
+    ],
+    project: {
+      title: '"Triton & vLLM Streaming Gateway"',
+      desc: 'Deploy a local Dockerized Triton inference container with KV cache quantization, exposing an OpenAI-compatible streaming API.',
+      effort: 'Estimated Effort: ~1 weekend'
+    }
+  },
+  finance: {
+    matchedCount: 5,
+    matchPct: '82%',
+    matched: ['DCF Valuation', '3-Statement Financial Modeling', 'Excel/VBA', 'Bloomberg Terminal', 'Equity Research'],
+    missingCount: 3,
+    missing: ['Python for Quant Risk (VaR)', 'SEBI BRSR Core Disclosures', 'LBO Stress-Testing Macros'],
+    certifications: [
+      { title: 'CFA Institute: Quantitative Investment & Ethics', desc: 'Est: 3 weeks • Asset pricing & portfolio risk' },
+      { title: 'NISM-Series-XV: Research Analyst Certification', desc: 'Est: 2 weeks • SEBI statutory compliance' }
+    ],
+    courses: [
+      { title: 'Advanced LBO Modeling & Debt Sculpting', desc: 'Wall Street Prep • 12 hours' },
+      { title: 'Stochastic Portfolio Beta & VaR Modeling', desc: 'Coursera / Wharton • 2 weeks' }
+    ],
+    project: {
+      title: '"Automated LBO Waterfall & Sensitivity Engine"',
+      desc: 'Build a dynamic 3-statement LBO model in Excel/Python with automated debt amortization waterfall and Monte Carlo IRR sensitivity tables.',
+      effort: 'Estimated Effort: ~3 days'
+    }
+  },
+  design: {
+    matchedCount: 5,
+    matchPct: '85%',
+    matched: ['Figma Design Systems', 'Wireframing', 'WCAG 2.1 AAA Accessibility', 'Micro-Interactions', 'Heuristic Evaluation'],
+    missingCount: 3,
+    missing: ['Spatial UI / VisionOS Prototyping', 'Design Token CI/CD CLI', 'Quantitative SUS Metric Analytics'],
+    certifications: [
+      { title: 'Nielsen Norman Group UX Master Certification', desc: 'Est: 3 weeks • Enterprise usability heuristics' },
+      { title: 'W3C Certified Web Accessibility Specialist (WAS)', desc: 'Est: 2 weeks • Universal design compliance' }
+    ],
+    courses: [
+      { title: 'Spatial Computing & Volumetric Canvas Design', desc: 'Design Systems World • 8 hours' },
+      { title: 'Design Tokens & Automated Frontend Hand-off', desc: 'Figma Community Academy • 1 week' }
+    ],
+    project: {
+      title: '"Multi-Brand Accessible Design System & Token Studio"',
+      desc: 'Publish an open-source Figma component library with semantic color/spacing tokens and live WCAG AAA contrast validator plugins.',
+      effort: 'Estimated Effort: ~1 weekend'
+    }
+  },
+  law: {
+    matchedCount: 4,
+    matchPct: '76%',
+    matched: ['DPDP Act 2023 Compliance', 'SaaS SLA & MSA Drafting', 'IT Act 2000', 'Legal Due Diligence'],
+    missingCount: 3,
+    missing: ['EU AI Act Statutory Risk Classification', 'Cross-Border Data Transfer Treaties', 'Autonomous Agent Liability Allocation'],
+    certifications: [
+      { title: 'Certified Information Privacy Professional (CIPP/A)', desc: 'Est: 4 weeks • Asian data governance' },
+      { title: 'WIPO Advanced Intellectual Property Law Course', desc: 'Est: 3 weeks • Digital copyright & software patents' }
+    ],
+    courses: [
+      { title: 'DPDP Act Sovereign Data Compliance Frameworks', desc: 'National Law School of India • 15 hours' },
+      { title: 'Algorithmic Tort & AI Corporate Governance', desc: 'Harvard Law Executive Program • 2 weeks' }
+    ],
+    project: {
+      title: '"Enterprise AI Governance & DPDP Audit Dossier"',
+      desc: 'Draft a comprehensive data protection impact assessment (DPIA) and algorithmic liability indemnity rider for enterprise AI deployment.',
+      effort: 'Estimated Effort: ~4 days'
+    }
+  },
+  healthcare: {
+    matchedCount: 5,
+    matchPct: '80%',
+    matched: ['CDISC SDTM / ADaM', 'Python / Biopython', 'Survival Analysis (Kaplan-Meier)', 'Clinical Trial Protocol Analytics', 'R Statistical Modeling'],
+    missingCount: 3,
+    missing: ['AlphaFold 3 Molecular Docking', 'FDA 21 CFR Part 11 Electronic Audits', 'Next-Gen Sequencing (NGS) Variant Calling'],
+    certifications: [
+      { title: 'CDISC Certified SDTM / ADaM Data Specialist', desc: 'Est: 3 weeks • Regulatory submission schemas' },
+      { title: 'NIH Clinical Research & Biostatistics Certification', desc: 'Est: 4 weeks • GCP & bioethics standards' }
+    ],
+    courses: [
+      { title: 'High-Throughput Genomic Variant Analysis', desc: 'EMBL-EBI / Coursera • 12 hours' },
+      { title: 'Deep Learning for In-Silico Molecular Discovery', desc: 'Nature Biotechnology Institute • 2 weeks' }
+    ],
+    project: {
+      title: '"Reproducible RNA-Seq Differential Expression Pipeline"',
+      desc: 'Construct a reproducible DESeq2/Python pipeline generating volcano plots, pathway enrichment charts, and regulatory FDA summary tables.',
+      effort: 'Estimated Effort: ~1 weekend'
+    }
+  }
+};
+
 // Global Application State
 const state = {
   currentPersona: 'select', // 'select' | 'applicant' | 'organisation'
   authModalOpen: false,
   authRole: 'applicant',
+  selectedDiscipline: 'all', // 'all' | 'tech' | 'finance' | 'design' | 'law' | 'healthcare'
+
+  // Live Coding Assessment Sandbox State (Monaco Experience)
+  codingModal: {
+    isOpen: false,
+    challengeId: 'dp-tree-reroot',
+    language: 'python',
+    code: '',
+    timeLeft: 2694,
+    timerInterval: null,
+    testCaseTab: 0,
+    consoleOutput: null,
+    pasteWarning: false,
+    isRunning: false
+  },
+
+  // Student Pre-Flight Certificate Integrity Verifier State
+  studentPreflight: {
+    selectedCert: 'stanford-ai',
+    isScanning: false,
+    progress: 0,
+    currentStage: '',
+    scanCompleted: false,
+    auditReport: null
+  },
 
   // Applicant State
   applicant: {
@@ -149,11 +754,12 @@ Required:
     }
   },
 
-  // Database of Jobs & Internships with Unique IDs
+  // Database of Jobs & Internships with Unique IDs (Multi-Disciplinary Across All Fields)
   jobsDatabase: [
     {
       id: 'JOB-MSFT-901',
       title: 'Applied AI Engineer',
+      discipline: 'tech',
       company: 'Microsoft',
       type: 'Full-time',
       location: 'Bangalore / Hybrid',
@@ -167,6 +773,7 @@ Required:
     {
       id: 'JOB-RZP-402',
       title: 'Machine Learning Engineer',
+      discipline: 'tech',
       company: 'Razorpay',
       type: 'Full-time',
       location: 'Bangalore',
@@ -180,6 +787,7 @@ Required:
     {
       id: 'JOB-GOOG-301',
       title: 'Deep Learning Software Engineer',
+      discipline: 'tech',
       company: 'Google',
       type: 'Full-time',
       location: 'Hyderabad / Remote',
@@ -193,6 +801,7 @@ Required:
     {
       id: 'JOB-IITB-501',
       title: 'Assistant Professor / Senior Research Fellow',
+      discipline: 'tech',
       company: 'IIT Bombay',
       type: 'Academic / Faculty',
       location: 'Mumbai, India',
@@ -202,6 +811,62 @@ Required:
       cutoffScore: 85,
       description: 'Faculty position in Computer Science & Engineering department. Responsibilities include teaching graduate courses, supervising PhD/M.Tech scholars, and driving sponsored AI research projects.',
       interviewTips: 'Deliver a research seminar on your recent publications and present a 5-year academic research vision.'
+    },
+    {
+      id: 'JOB-GOLD-601',
+      title: 'Quantitative Investment Analyst',
+      discipline: 'finance',
+      company: 'Goldman Sachs',
+      type: 'Full-time',
+      location: 'Mumbai / Bangalore',
+      salary: '₹22 - ₹32 LPA',
+      matchScore: 94,
+      requiredSkills: ['Financial Modeling', 'DCF Valuation', 'Python/R', 'Equity Research', 'Excel Macro'],
+      cutoffScore: 82,
+      description: 'Perform quantitative equity valuations, build predictive cash-flow models, and execute risk stress-tests for private wealth and institutional portfolios.',
+      interviewTips: 'Expect questions on DCF assumptions, WACC calculation, multi-factor risk regression, and accounting ratios.'
+    },
+    {
+      id: 'JOB-FIG-701',
+      title: 'Product & Systems Designer',
+      discipline: 'design',
+      company: 'Figma Labs',
+      type: 'Full-time',
+      location: 'Bangalore / Remote',
+      salary: '₹20 - ₹30 LPA',
+      matchScore: 92,
+      requiredSkills: ['Figma', 'Design Systems', 'Heuristic Evaluation', 'Design Tokens', 'User Research'],
+      cutoffScore: 80,
+      description: 'Lead design systems architecture, component tokenization, and accessibility (WCAG 2.1 AAA) across enterprise design and developer handoff workflows.',
+      interviewTips: 'Bring a case study demonstrating token architecture, interaction micro-prototypes, and cross-functional engineering alignment.'
+    },
+    {
+      id: 'JOB-AZB-801',
+      title: 'Corporate Technology & IP Associate',
+      discipline: 'law',
+      company: 'AZB & Partners',
+      type: 'Full-time',
+      location: 'New Delhi / Mumbai',
+      salary: '₹18 - ₹26 LPA',
+      matchScore: 89,
+      requiredSkills: ['Contract Drafting', 'IT Act 2000', 'IP Law', 'DPDP Act Compliance', 'Legal Due Diligence'],
+      cutoffScore: 84,
+      description: 'Counsel multinational enterprises on technology procurement contracts, AI intellectual property rights, and compliance with the Digital Personal Data Protection (DPDP) Act.',
+      interviewTips: 'Review Indian DPDP compliance frameworks, cross-border data transfer mandates, and patent infringement precedents.'
+    },
+    {
+      id: 'JOB-APOL-901',
+      title: 'Clinical Data Analyst & Bio-Statistician',
+      discipline: 'healthcare',
+      company: 'Apollo HealthTech',
+      type: 'Full-time',
+      location: 'Hyderabad / Chennai',
+      salary: '₹16 - ₹25 LPA',
+      matchScore: 91,
+      requiredSkills: ['Biostatistics', 'R / Python', 'Clinical Trial Analytics', 'CDISC / SDTM', 'Epidemiology'],
+      cutoffScore: 80,
+      description: 'Analyze multi-center randomized clinical trial datasets, conduct survival analysis (Kaplan-Meier), and prepare CDISC regulatory submission packages for drug efficacy trials.',
+      interviewTips: 'Be ready to discuss Cox proportional hazards models, handling missing clinical records, and FDA/CDSCO statistical guidelines.'
     }
   ],
 
@@ -209,6 +874,7 @@ Required:
     {
       id: 'INT-MSFT-101',
       title: 'AI Research Intern (GenAI)',
+      discipline: 'tech',
       company: 'Microsoft',
       mode: 'Hybrid',
       location: 'Bangalore',
@@ -224,6 +890,7 @@ Required:
     {
       id: 'INT-GOOG-102',
       title: 'Software Engineering Intern',
+      discipline: 'tech',
       company: 'Google',
       mode: 'On-site',
       location: 'Hyderabad',
@@ -239,6 +906,7 @@ Required:
     {
       id: 'INT-AMZN-103',
       title: 'Cloud & DevOps Intern',
+      discipline: 'tech',
       company: 'Amazon Web Services',
       mode: 'Remote',
       location: 'Bangalore / Remote',
@@ -254,6 +922,7 @@ Required:
     {
       id: 'INT-IISC-104',
       title: 'Visiting Academic Research Fellow',
+      discipline: 'tech',
       company: 'IISc Bangalore',
       mode: 'On-site',
       location: 'Bangalore, India',
@@ -265,6 +934,70 @@ Required:
       cutoffScore: 80,
       description: 'Collaborate with the Department of Computational and Data Sciences on theoretical deep learning, optimization, and AI ethics.',
       interviewTips: 'Be prepared to explain the mathematical derivation behind backpropagation and modern loss surfaces.'
+    },
+    {
+      id: 'INT-HDFC-201',
+      title: 'Corporate Banking & Credit Risk Analyst Intern',
+      discipline: 'finance',
+      company: 'HDFC Bank',
+      mode: 'On-site',
+      location: 'Mumbai',
+      stipend: '₹55,000 / month',
+      duration: '6 Months',
+      deadline: 'Oct 10, 2026',
+      matchScore: 93,
+      requiredSkills: ['Financial Ratios', 'Credit Risk Modeling', 'SEBI Guidelines', 'Excel/VBA'],
+      cutoffScore: 78,
+      description: 'Evaluate balance sheets, debt-service coverage ratios (DSCR), and corporate working capital creditworthiness for large commercial loans.',
+      interviewTips: 'Review credit appraisal metrics, Basel III capital requirements, and working capital cycle analysis.'
+    },
+    {
+      id: 'INT-ZOM-202',
+      title: 'UI/UX Interaction Design Intern',
+      discipline: 'design',
+      company: 'Zomato',
+      mode: 'Hybrid',
+      location: 'Gurugram',
+      stipend: '₹60,000 / month',
+      duration: '3 Months',
+      deadline: 'Oct 02, 2026',
+      matchScore: 95,
+      requiredSkills: ['Figma', 'Wireframing', 'Micro-Interactions', 'Usability Testing', 'Prototyping'],
+      cutoffScore: 82,
+      description: 'Design mobile-first checkout flows and delivery tracking experiences. Conduct user testing sessions and iterate on friction points.',
+      interviewTips: 'Showcase mobile UI prototypes with attention to haptic feedback, motion curves, and checkout conversion rates.'
+    },
+    {
+      id: 'INT-SEBI-203',
+      title: 'Legal Compliance & Regulatory Affairs Intern',
+      discipline: 'law',
+      company: 'Securities and Exchange Board of India (SEBI)',
+      mode: 'On-site',
+      location: 'Mumbai',
+      stipend: '₹40,000 / month',
+      duration: '6 Months',
+      deadline: 'Oct 12, 2026',
+      matchScore: 88,
+      requiredSkills: ['Securities Law', 'Insider Trading Regulations', 'Legal Research', 'Due Diligence'],
+      cutoffScore: 80,
+      description: 'Assist the Legal Affairs Division in researching market manipulation cases, drafting advisory circulars, and reviewing IPO draft offer documents.',
+      interviewTips: 'Brush up on SEBI (Prohibition of Insider Trading) Regulations and SEBI (LODR) governance clauses.'
+    },
+    {
+      id: 'INT-BIO-204',
+      title: 'Genomics & Bioinformatics Research Intern',
+      discipline: 'healthcare',
+      company: 'Biocon Research',
+      mode: 'On-site',
+      location: 'Bangalore',
+      stipend: '₹48,000 / month',
+      duration: '6 Months',
+      deadline: 'Oct 18, 2026',
+      matchScore: 90,
+      requiredSkills: ['Bioinformatics', 'Next-Gen Sequencing (NGS)', 'Python/Biopython', 'BLAST'],
+      cutoffScore: 80,
+      description: 'Process whole-genome sequencing datasets, perform variant calling, and analyze protein folding stability using AlphaFold and molecular dynamics.',
+      interviewTips: 'Review FASTQ/BAM file pipelines, variant call formats (VCF), and structural biology algorithms.'
     }
   ],
 
@@ -273,6 +1006,7 @@ Required:
     {
       id: 'PROJ-FL-01',
       title: 'Fine-tune Llama 3 for Legal RAG',
+      discipline: 'tech',
       client: 'LegalTech Corp',
       budget: '$1,400',
       type: 'Fixed Budget',
@@ -291,6 +1025,7 @@ Required:
     {
       id: 'PROJ-FL-02',
       title: 'Multi-Modal Document OCR Extraction',
+      discipline: 'tech',
       client: 'FinTech Venture Labs',
       budget: '$1,800',
       type: 'Milestone Based',
@@ -309,6 +1044,7 @@ Required:
     {
       id: 'PROJ-FL-03',
       title: 'Interactive Next.js SaaS Analytics UI',
+      discipline: 'tech',
       client: 'CloudMetrics Inc',
       budget: '$2,200',
       type: 'Fixed Budget',
@@ -323,14 +1059,167 @@ Required:
       ],
       clientRating: '5.0 ★ (12 reviews)',
       interviewTips: 'Discuss state management strategies with Zustand or React Query and optimizing client re-renders with large datasets.'
+    },
+    {
+      id: 'PROJ-FL-FIN-01',
+      title: '3-Statement LBO Financial Model for Solar Venture',
+      discipline: 'finance',
+      client: 'GreenEnergy PE',
+      budget: '$1,500',
+      type: 'Fixed Budget',
+      duration: '3 weeks',
+      matchScore: 96,
+      requiredSkills: ['Financial Modeling', 'DCF Valuation', 'Excel/VBA', 'LBO Waterfall'],
+      description: 'Build an investor-grade 3-statement LBO model for a 250MW utility-scale solar asset. Requires dynamic debt amortization waterfalls, tax depreciation schedules, and IRR sensitivity tables.',
+      deliverables: [
+        'Dynamic Excel LBO Model with VBA macros',
+        '10-year P&L and Balance Sheet forecast',
+        'Executive investment memo with sensitivity matrix'
+      ],
+      clientRating: '5.0 ★ (14 reviews)',
+      interviewTips: 'Review debt-service coverage ratio (DSCR) calculations and tax equity capital structures.'
+    },
+    {
+      id: 'PROJ-FL-FIN-02',
+      title: 'FinTech Startup Investor Pitch Deck & Valuation',
+      discipline: 'finance',
+      client: 'PayGlobal Labs',
+      budget: '$1,200',
+      type: 'Milestone Based',
+      duration: '2 weeks',
+      matchScore: 92,
+      requiredSkills: ['DCF Valuation', 'Comparable Comps', 'Equity Research', 'Investor Deck'],
+      description: 'Create a Series A financial valuation model and investor deck. Model unit economics, customer acquisition cost (CAC) payback, and conduct trading comps against listed peers.',
+      deliverables: [
+        'Trading and transaction comparable multiples table',
+        'Discounted cash flow model with WACC breakdown',
+        '20-slide investor financial presentation'
+      ],
+      clientRating: '4.9 ★ (28 reviews)',
+      interviewTips: 'Focus on valuation multiples (EV/ARR, P/E) in high-growth payment technology firms.'
+    },
+    {
+      id: 'PROJ-FL-DES-01',
+      title: 'HealthTech Patient Monitoring App Full Redesign',
+      discipline: 'design',
+      client: 'CarePulse Health',
+      budget: '$2,200',
+      type: 'Fixed Budget',
+      duration: '3 weeks',
+      matchScore: 97,
+      requiredSkills: ['Figma', 'Design Systems', 'WCAG AAA', 'Usability Testing', 'Prototyping'],
+      description: 'Redesign the patient clinical monitoring mobile app to meet WCAG 2.1 AAA accessibility requirements for low-vision and elderly patients. Implement high-contrast micro-interactions and haptic feedbacks.',
+      deliverables: [
+        'Comprehensive Figma design system with tokens',
+        'Interactive mobile prototypes in ProtoPie',
+        'User usability test report with 20 clinical trial subjects'
+      ],
+      clientRating: '5.0 ★ (31 reviews)',
+      interviewTips: 'Demonstrate accessible color palettes, touch target sizes, and cognitive load reduction methods.'
+    },
+    {
+      id: 'PROJ-FL-DES-02',
+      title: 'Multi-Brand Enterprise Design Tokens Library',
+      discipline: 'design',
+      client: 'OmniCloud SaaS',
+      budget: '$1,800',
+      type: 'Milestone Based',
+      duration: '2 weeks',
+      matchScore: 94,
+      requiredSkills: ['Design Tokens', 'Figma', 'Design Systems', 'Micro-Interactions'],
+      description: 'Structure scalable multi-theme design tokens across web and mobile platforms. Automate token export pipelines to Style Dictionary and synchronize with React component libraries.',
+      deliverables: [
+        'Figma Variables library with semantic tokens',
+        'JSON token hierarchy for Style Dictionary',
+        'Documentation site with Storybook preview'
+      ],
+      clientRating: '4.9 ★ (19 reviews)',
+      interviewTips: 'Discuss semantic vs global token nomenclature and dark/light mode token aliasing.'
+    },
+    {
+      id: 'PROJ-FL-LAW-01',
+      title: 'Cross-Border AI Data Privacy & DPDP Compliance Audit',
+      discipline: 'law',
+      client: 'LexNova Global',
+      budget: '$2,100',
+      type: 'Fixed Budget',
+      duration: '3 weeks',
+      matchScore: 95,
+      requiredSkills: ['DPDP Act 2023', 'Data Privacy', 'IT Act 2000', 'Legal Compliance', 'Due Diligence'],
+      description: 'Audit an enterprise AI customer analytics platform against India’s Digital Personal Data Protection Act 2023 and cross-border data transfer mandates. Draft data fiduciary agreements and user consent notices.',
+      deliverables: [
+        'Data Protection Impact Assessment (DPIA) report',
+        'Notice and consent compliance checklist',
+        'Master Data Transfer and Processing Agreement'
+      ],
+      clientRating: '5.0 ★ (11 reviews)',
+      interviewTips: 'Prepare analysis of data principal rights, significant data fiduciary classifications, and penalty ceilings under DPDP.'
+    },
+    {
+      id: 'PROJ-FL-LAW-02',
+      title: 'SaaS Master Services Agreement & SLA Framework',
+      discipline: 'law',
+      client: 'CloudSentry Technologies',
+      budget: '$1,600',
+      type: 'Milestone Based',
+      duration: '2 weeks',
+      matchScore: 91,
+      requiredSkills: ['Contract Drafting', 'SLA Framework', 'IP Licensing', 'Commercial Law'],
+      description: 'Draft a standard enterprise B2B SaaS Master Services Agreement (MSA), Service Level Agreement (SLA), and Intellectual Property indemnity schedule for an enterprise cloud monitoring startup.',
+      deliverables: [
+        'B2B SaaS Master Services Agreement',
+        'SLA with 99.9% uptime credit schedule',
+        'Mutual Non-Disclosure Agreement (NDA)'
+      ],
+      clientRating: '4.8 ★ (16 reviews)',
+      interviewTips: 'Focus on limitation of liability, intellectual property warranty, and disaster recovery escalation clauses.'
+    },
+    {
+      id: 'PROJ-FL-BIO-01',
+      title: 'RNA-Seq Differential Expression Analysis Pipeline',
+      discipline: 'healthcare',
+      client: 'OncoGenomics Labs',
+      budget: '$1,900',
+      type: 'Fixed Budget',
+      duration: '3 weeks',
+      matchScore: 96,
+      requiredSkills: ['Bioinformatics', 'Python/Biopython', 'R / DESeq2', 'Genomics', 'Survival Analysis'],
+      description: 'Develop an automated RNA-Seq differential expression analysis script for breast cancer oncology clinical samples. Generate publication-ready volcano plots, PCA clusters, and KEGG pathway enrichment maps.',
+      deliverables: [
+        'Automated Python/R DESeq2 differential analysis script',
+        'Volcano plots and heatmaps with p-adjusted cutoffs',
+        'Gene ontology enrichment summary report'
+      ],
+      clientRating: '5.0 ★ (22 reviews)',
+      interviewTips: 'Be prepared to explain Benjamini-Hochberg false discovery rate (FDR) corrections and read count normalization.'
+    },
+    {
+      id: 'PROJ-FL-BIO-02',
+      title: 'Phase II Oncology Clinical Trial Statistical Analysis Plan',
+      discipline: 'healthcare',
+      client: 'BioPharma Global',
+      budget: '$2,400',
+      type: 'Milestone Based',
+      duration: '4 weeks',
+      matchScore: 94,
+      requiredSkills: ['Clinical Data', 'CDISC SDTM', 'Biostatistics', 'Statistical Analysis Plan', 'Kaplan-Meier'],
+      description: 'Author a comprehensive Statistical Analysis Plan (SAP) for an exploratory Phase II oncology drug trial. Formulate primary and secondary endpoints, sample size power calculations, and interim safety monitoring rules.',
+      deliverables: [
+        'Formal Statistical Analysis Plan (SAP) document',
+        'Mock regulatory summary tables (TLFs)',
+        'CDISC SDTM and ADaM dataset specifications'
+      ],
+      clientRating: '5.0 ★ (15 reviews)',
+      interviewTips: 'Discuss log-rank tests, censoring conventions in Kaplan-Meier survival curves, and CDISC SDTM mapping.'
     }
   ],
 
-  // Organisations Database (Both Companies and Colleges)
+  // Organisations Database (Both Companies and Colleges across All Fields)
   organisationsDatabase: [
     {
       id: 'org-msft',
       name: 'Microsoft Corporation',
+      discipline: 'tech',
       type: 'company',
       category: 'Enterprise Tech & Cloud',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
@@ -347,6 +1236,7 @@ Required:
     {
       id: 'org-goog',
       name: 'Google',
+      discipline: 'tech',
       type: 'company',
       category: 'Global Internet & AI Leader',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
@@ -363,6 +1253,7 @@ Required:
     {
       id: 'org-rzp',
       name: 'Razorpay',
+      discipline: 'tech',
       type: 'company',
       category: 'FinTech Unicorn',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg',
@@ -379,6 +1270,7 @@ Required:
     {
       id: 'org-iitb',
       name: 'Indian Institute of Technology (IIT) Bombay',
+      discipline: 'tech',
       type: 'college',
       category: 'Premier Institute of National Importance',
       logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/IIT_Bombay_Logo.svg/250px-IIT_Bombay_Logo.svg.png',
@@ -395,6 +1287,7 @@ Required:
     {
       id: 'org-iisc',
       name: 'Indian Institute of Science (IISc) Bangalore',
+      discipline: 'tech',
       type: 'college',
       category: 'Premier Scientific Research University',
       logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Indian_Institute_of_Science_2019_logo.svg/220px-Indian_Institute_of_Science_2019_logo.svg.png',
@@ -411,6 +1304,7 @@ Required:
     {
       id: 'org-stanford',
       name: 'Stanford University',
+      discipline: 'tech',
       type: 'college',
       category: 'Global Research University',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/150px-Stanford_Cardinal_logo.svg.png',
@@ -423,6 +1317,159 @@ Required:
       eventsCount: 8,
       culture: 'Entrepreneurial mindset, interdisciplinary scholarship, and transformative global impact.',
       process: ['1. Academic CV & Recommendation Letters', '2. Job Talk Presentation', '3. Faculty 1-on-1 Interviews', '4. Department Consensus']
+    },
+    {
+      id: 'org-gold',
+      name: 'Goldman Sachs',
+      discipline: 'finance',
+      type: 'company',
+      category: 'Global Investment Bank',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Goldman_Sachs.svg',
+      locations: ['Mumbai', 'Bangalore', 'New York', 'London'],
+      about: 'A leading global investment banking, securities, and investment management firm providing financial services to corporations, financial institutions, and governments.',
+      hiringFor: 'Students & Quantitative Analysts',
+      domains: ['Investment Banking', 'Quantitative Risk', 'Asset Management', 'Global Markets'],
+      jobsCount: 14,
+      internshipsCount: 6,
+      eventsCount: 4,
+      culture: 'Meritocracy, intellectual curiosity, high performance, and client excellence.',
+      process: ['1. Online Aptitude & Math Test', '2. Technical Modeling & DCF Valuation', '3. Superday Interviews (3 rounds)', '4. Managing Director Review']
+    },
+    {
+      id: 'org-hdfc',
+      name: 'HDFC Bank',
+      discipline: 'finance',
+      type: 'company',
+      category: 'Premier Commercial Banking Institution',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg',
+      locations: ['Mumbai', 'Delhi', 'Bangalore'],
+      about: 'India’s largest private sector bank, delivering pioneering corporate, retail, and treasury banking solutions across the subcontinent.',
+      hiringFor: 'Management Trainees & Credit Analysts',
+      domains: ['Corporate Credit', 'Treasury & Forex', 'Risk Management'],
+      jobsCount: 22,
+      internshipsCount: 9,
+      eventsCount: 5,
+      culture: 'Integrity, prudent risk underwriting, operational discipline, and customer focus.',
+      process: ['1. Online Financial Assessment', '2. Credit Appraisal Case Study', '3. Panel Interview', '4. HR Discussion']
+    },
+    {
+      id: 'org-srcc',
+      name: 'Shri Ram College of Commerce (SRCC)',
+      discipline: 'finance',
+      type: 'college',
+      category: 'Premier Commerce & Economics Institute',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/Shri_Ram_College_of_Commerce_logo.png/220px-Shri_Ram_College_of_Commerce_logo.png',
+      locations: ['New Delhi, India'],
+      about: 'India’s foremost institution for undergraduate and postgraduate education in commerce, economics, and corporate financial analysis.',
+      hiringFor: 'Faculty, Research Scholars & Fellows',
+      domains: ['Financial Econometrics', 'Corporate Accounting', 'Capital Markets Research'],
+      jobsCount: 4,
+      internshipsCount: 6,
+      eventsCount: 8,
+      culture: 'Academic pre-eminence, thought leadership in Indian economic policy, and alumni prestige.',
+      process: ['1. Academic CV & Paper Review', '2. Faculty Research Colloquium', '3. Academic Council Interview']
+    },
+    {
+      id: 'org-figma',
+      name: 'Figma Labs',
+      discipline: 'design',
+      type: 'company',
+      category: 'Collaborative Design Platform',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
+      locations: ['Bangalore / Remote', 'San Francisco', 'London'],
+      about: 'Building the industry-standard collaborative design platform empowering millions of designers and engineers worldwide.',
+      hiringFor: 'Product Designers & Design Engineers',
+      domains: ['Design Systems', 'Interaction Design', 'Accessibility', 'Spatial UI'],
+      jobsCount: 7,
+      internshipsCount: 4,
+      eventsCount: 3,
+      culture: 'Empathy, radical transparency, craftsmanship, and community building.',
+      process: ['1. Portfolio Review', '2. Interactive Design Exercise', '3. Cross-functional Engineering Alignment', '4. Design Leadership Chat']
+    },
+    {
+      id: 'org-nid',
+      name: 'National Institute of Design (NID)',
+      discipline: 'design',
+      type: 'college',
+      category: 'Institute of National Importance in Design',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/National_Institute_of_Design_Logo.svg/250px-National_Institute_of_Design_Logo.svg.png',
+      locations: ['Ahmedabad', 'Gandhinagar', 'Bengaluru'],
+      about: 'Internationally acclaimed as one of the foremost multidisciplinary institutions in the field of design education, applied research, and design systems.',
+      hiringFor: 'Design Educators & Research Associates',
+      domains: ['Interaction Design', 'Universal Accessibility', 'Industrial Design'],
+      jobsCount: 5,
+      internshipsCount: 5,
+      eventsCount: 6,
+      culture: 'Hands-on exploration, social human-centered design, and craft mastery.',
+      process: ['1. Design Portfolio Dossier', '2. Studio Workshop Demonstration', '3. Faculty Panel Review']
+    },
+    {
+      id: 'org-azb',
+      name: 'AZB & Partners',
+      discipline: 'law',
+      type: 'company',
+      category: 'Premier Indian Corporate Law Firm',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Law_Court.svg/200px-Law_Court.svg.png',
+      locations: ['Mumbai', 'New Delhi', 'Bangalore'],
+      about: 'A tier-1 Indian law firm counseling multinational corporations, financial institutions, and tech conglomerates on cross-border M&A, regulatory affairs, and technology law.',
+      hiringFor: 'Legal Associates & Interns',
+      domains: ['Technology & IP Law', 'Corporate Governance', 'DPDP & Privacy Compliance'],
+      jobsCount: 9,
+      internshipsCount: 6,
+      eventsCount: 4,
+      culture: 'Excellence in legal advocacy, meticulous drafting, statutory rigor, and client dedication.',
+      process: ['1. Legal Writing & CV Screening', '2. Statutory Case Scenario Assessment', '3. Partner Technical Interview']
+    },
+    {
+      id: 'org-nlsiu',
+      name: 'National Law School of India University (NLSIU)',
+      discipline: 'law',
+      type: 'college',
+      category: 'Premier National Law University of India',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/NLSIU_Logo.png/220px-NLSIU_Logo.png',
+      locations: ['Bangalore, India'],
+      about: 'The pioneer of five-year integrated legal education in India and consistently ranked #1 National Law University.',
+      hiringFor: 'Law Faculty & Postdoctoral Research Fellows',
+      domains: ['Cyber Law & DPDP Act', 'Constitutional Law', 'Corporate & Financial Law'],
+      jobsCount: 4,
+      internshipsCount: 5,
+      eventsCount: 7,
+      culture: 'Intellectual rigor, social justice advocacy, and legal scholarship of the highest order.',
+      process: ['1. Academic Dossier & Publication Audit', '2. Faculty Research Lecture', '3. Governing Council Approval']
+    },
+    {
+      id: 'org-apollo',
+      name: 'Apollo HealthTech',
+      discipline: 'healthcare',
+      type: 'company',
+      category: 'Integrated Healthcare & Clinical Intelligence',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Red_Cross_icon.svg/200px-Red_Cross_icon.svg.png',
+      locations: ['Hyderabad', 'Chennai', 'Bangalore'],
+      about: 'Pioneering healthcare delivery, clinical informatics, and AI-assisted diagnostics across 70+ hospital facilities in Asia.',
+      hiringFor: 'Bio-Statisticians & Clinical Data Scientists',
+      domains: ['Clinical Trial Analytics', 'Epidemiology', 'CDISC SDTM Data Exchange'],
+      jobsCount: 11,
+      internshipsCount: 5,
+      eventsCount: 3,
+      culture: 'Clinical excellence, patient privacy, scientific rigor, and evidence-based care.',
+      process: ['1. Clinical Data & Stats Assessment', '2. Case Study on Survival Analysis', '3. Medical Director & HR Panel']
+    },
+    {
+      id: 'org-aiims',
+      name: 'All India Institute of Medical Sciences (AIIMS)',
+      discipline: 'healthcare',
+      type: 'college',
+      category: 'Apex National Medical & Research Institute',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/62/All_India_Institute_of_Medical_Sciences%2C_New_Delhi_logo.png/220px-All_India_Institute_of_Medical_Sciences%2C_New_Delhi_logo.png',
+      locations: ['New Delhi, India'],
+      about: 'India’s premier medical research and training institution, leading scientific breakthroughs in genomics, translational medicine, and epidemiological studies.',
+      hiringFor: 'Bioinformatics Researchers & Clinical Fellows',
+      domains: ['Genomic Sequencing', 'Bioinformatics & Molecular Modeling', 'Translational Medicine'],
+      jobsCount: 6,
+      internshipsCount: 8,
+      eventsCount: 9,
+      culture: 'Medical excellence, ethical human subjects research, and nation-wide healthcare impact.',
+      process: ['1. Academic Research CV & Publications', '2. Research Proposal Defense', '3. Standing Selection Committee']
     }
   ],
 
@@ -556,6 +1603,8 @@ Required:
         role: 'AI Research Intern',
         oppId: 'ai-intern',
         status: 'Shortlisted',
+        credentialTrust: 'verified',
+        trustScore: 98,
         appliedDate: 'Sep 02, 2026',
         matchScore: 94,
         skillMatch: '91%',
@@ -566,10 +1615,61 @@ Required:
         matchedSkills: ['PyTorch', 'Python', 'NLP', 'Computer Vision', 'FastAPI'],
         missingSkills: ['Triton Server', 'Docker'],
         projects: ['Multi-Modal OCR Agent with Vector Search', 'Fine-Tuned Llama 3 Legal Reasoning'],
-        certifications: ['NVIDIA DLI: LLM Acceleration', 'Verified PyTorch Pro'],
+        certifications: [
+          {
+            id: 'CERT-901-A',
+            title: 'NVIDIA DLI: LLM Acceleration & Inference Serving',
+            issuer: 'NVIDIA Deep Learning Institute',
+            issueDate: 'May 2026',
+            credentialId: 'NVD-LLM-884920',
+            verificationUrl: 'https://learn.nvidia.com/verify/NVD-LLM-884920',
+            status: 'verified',
+            trustScore: 99,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Arjun_NVIDIA_LLM_Acceleration.pdf',
+              engine: 'NVIDIA Enterprise CA (PDF/A-2b compliant)',
+              createdDate: '2026-05-14 10:22:15 UTC',
+              modifiedDate: '2026-05-14 10:22:15 UTC (Original unmodified)',
+              tamperingDetected: false,
+              fontIntegrity: 'Vector Fonts (Segoe UI Semibold, Type-1 match)',
+              layerCheck: 'Original Single-Layer Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'AI Engineering & Aptitude Screening (ASSESS-01)',
+              score: '94% (Top 1.2% in Cohort)',
+              alignment: 'Strong Correlation — validated by high test benchmark'
+            }
+          },
+          {
+            id: 'CERT-901-B',
+            title: 'Verified PyTorch Pro Specialist',
+            issuer: 'Linux Foundation / PyTorch Org',
+            issueDate: 'Mar 2026',
+            credentialId: 'LF-PT-2026-9031',
+            verificationUrl: 'https://openprofile.dev/c/LF-PT-2026-9031',
+            status: 'verified',
+            trustScore: 97,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Arjun_PyTorch_Pro_Specialist.pdf',
+              engine: 'Linux Foundation Credential Service v3.2',
+              createdDate: '2026-03-20 14:30:00 UTC',
+              modifiedDate: '2026-03-20 14:30:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Matched (Noto Sans Type-0 font)',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'Technical Coding: PyTorch Operators',
+              score: '92%',
+              alignment: 'Strong Correlation'
+            }
+          }
+        ],
         portfolioLinks: { github: 'github.com/arjunkawade', linkedin: 'linkedin.com/in/arjunkawade', site: 'arjun.dev' },
-        aiSummary: 'Top 1.1% algorithmic talent from IIT Bombay. Strong transformer mathematical foundation. Highly recommended for core GenAI model deployment and low-latency serving.',
-        notes: 'Exceptional deep learning foundation. Strong communicator. Recommended for accelerated coding interview.'
+        aiSummary: 'Top 1.1% algorithmic talent from IIT Bombay. Strong transformer mathematical foundation. All credentials 100% cryptographically verified.',
+        notes: 'Exceptional deep learning foundation. Strong communicator. Both credentials verified at source.'
       },
       {
         id: 'APP-902',
@@ -580,6 +1680,8 @@ Required:
         role: 'AI Research Intern',
         oppId: 'ai-intern',
         status: 'Qualified',
+        credentialTrust: 'verified',
+        trustScore: 100,
         appliedDate: 'Aug 30, 2026',
         matchScore: 96,
         skillMatch: '95%',
@@ -590,10 +1692,61 @@ Required:
         matchedSkills: ['PyTorch', 'TensorFlow', 'LLMs', 'Docker', 'Python', 'CUDA'],
         missingSkills: ['Kubernetes'],
         projects: ['Autonomous Swarm Multi-Agent Negotiation', 'Diffusion Models for Medical Imaging'],
-        certifications: ['DeepLearning.AI Multi-Agent RAG', 'AWS ML Specialty'],
+        certifications: [
+          {
+            id: 'CERT-902-A',
+            title: 'DeepLearning.AI Multi-Agent RAG Specialist',
+            issuer: 'DeepLearning.AI & Coursera',
+            issueDate: 'Jun 2026',
+            credentialId: 'DLAI-RAG-99301',
+            verificationUrl: 'https://learn.deeplearning.ai/verify/DLAI-RAG-99301',
+            status: 'verified',
+            trustScore: 99,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Priya_DeepLearning_RAG.pdf',
+              engine: 'DeepLearning.AI Issuer Authority v2',
+              createdDate: '2026-06-11 08:15:00 UTC',
+              modifiedDate: '2026-06-11 08:15:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Matched (Inter Type-0)',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'Coding Test: Agentic Workflows & RAG',
+              score: '98% (Rank #1 in Cohort)',
+              alignment: 'Perfect Correlation'
+            }
+          },
+          {
+            id: 'CERT-902-B',
+            title: 'AWS Certified Machine Learning - Specialty',
+            issuer: 'Amazon Web Services (Credly / Acclaim)',
+            issueDate: 'Apr 2026',
+            credentialId: 'AWS-MLS-2026-0041',
+            verificationUrl: 'https://www.credly.com/badges/AWS-MLS-2026-0041',
+            status: 'verified',
+            trustScore: 100,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'AWS_ML_Specialty_Badge.pdf',
+              engine: 'Credly Cryptographic Badge Authority v4',
+              createdDate: '2026-04-05 12:00:00 UTC',
+              modifiedDate: '2026-04-05 12:00:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Vector Cryptographic Block (SHA-256 Validated)',
+              layerCheck: 'Secure Tamper-Evident Vector'
+            },
+            competenceCheck: {
+              testName: 'AWS & Cloud Deployment Screening',
+              score: '95%',
+              alignment: 'Strong Correlation'
+            }
+          }
+        ],
         portfolioLinks: { github: 'github.com/priyasharma', linkedin: 'linkedin.com/in/priyasharma' },
-        aiSummary: 'Master’s degree researcher with published paper at NeurIPS workshop. Scored in top 0.5% in technical coding.',
-        notes: 'Outstanding technical assessment score (98%). Fast-track candidate.'
+        aiSummary: 'Master’s degree researcher from IISc with published paper at NeurIPS workshop. Scored in top 0.5% in technical coding. 100% verified credentials.',
+        notes: 'Outstanding technical assessment score (98%). Both certificates verified on Credly and DeepLearning.AI.'
       },
       {
         id: 'APP-903',
@@ -604,6 +1757,8 @@ Required:
         role: 'AI Research Intern',
         oppId: 'ai-intern',
         status: 'Under Review',
+        credentialTrust: 'flagged',
+        trustScore: 32,
         appliedDate: 'Sep 05, 2026',
         matchScore: 82,
         skillMatch: '80%',
@@ -614,10 +1769,68 @@ Required:
         matchedSkills: ['Python', 'PyTorch', 'SQL', 'FastAPI'],
         missingSkills: ['LLM Fine-tuning', 'Vector Databases', 'Docker'],
         projects: ['Stock Sentiment Prediction with BERT', 'Customer Churn XGBoost'],
-        certifications: ['Coursera Machine Learning Specialization'],
+        certifications: [
+          {
+            id: 'CERT-903-A',
+            title: 'Advanced Generative AI & Large Language Models Master',
+            issuer: 'Stanford Online / DeepLearning Academy',
+            issueDate: 'Jan 2026',
+            credentialId: 'STF-GENAI-77402',
+            verificationUrl: 'https://online.stanford.edu/verify/STF-GENAI-77402',
+            status: 'flagged',
+            trustScore: 24,
+            issuerVerified: false,
+            flagReasons: [
+              'PDF Metadata Flag: File created/edited with Adobe Photoshop 2025 v26.1 (Windows)',
+              'Timestamp Mismatch: ModDate (March 12, 2026) is 61 days post-issuance',
+              'Visual & Layer Tampering: Candidate name rendered as raster pixel patch over original vector text',
+              'Registry Lookup Failed: Credential ID STF-GENAI-77402 does not exist in Stanford Online public directory',
+              'Competence Discrepancy: Candidate scored 48% on Portal AI Screening test despite claimed Advanced Master certificate'
+            ],
+            fileMetadata: {
+              fileName: 'Stanford_GenAI_Master_Certificate.pdf',
+              engine: 'Adobe Photoshop 2025 v26.1 (Windows 64-bit)',
+              createdDate: '2026-01-10 11:00:00 UTC',
+              modifiedDate: '2026-03-12 18:42:10 UTC (Edited 61 days later)',
+              tamperingDetected: true,
+              fontIntegrity: 'Anomalous: Arial raster patch overlaying vector Segoe UI',
+              layerCheck: 'High Risk: Flattened raster patch covering original recipient name'
+            },
+            competenceCheck: {
+              testName: 'AI Engineering & Aptitude Screening (ASSESS-01)',
+              score: '48% (Bottom 25% in Cohort)',
+              alignment: 'Severe Discrepancy: Assessment score does not match claimed master credential'
+            }
+          },
+          {
+            id: 'CERT-903-B',
+            title: 'Coursera Machine Learning Specialization',
+            issuer: 'Coursera / Stanford University',
+            issueDate: 'Nov 2025',
+            credentialId: 'COURSERA-ML-4921',
+            verificationUrl: 'https://coursera.org/verify/COURSERA-ML-4921',
+            status: 'unverified',
+            trustScore: 65,
+            issuerVerified: false,
+            fileMetadata: {
+              fileName: 'Coursera_ML_Spec.pdf',
+              engine: 'Coursera PDF Generator v1.4',
+              createdDate: '2025-11-20 16:00:00 UTC',
+              modifiedDate: '2025-11-20 16:00:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Clean vector font',
+              layerCheck: 'Single stream'
+            },
+            competenceCheck: {
+              testName: 'Foundational ML Knowledge',
+              score: '62%',
+              alignment: 'Moderate'
+            }
+          }
+        ],
         portfolioLinks: { github: 'github.com/rahulpatel' },
-        aiSummary: 'Solid core computer science foundations. Needs additional hands-on experience with modern LLM serving frameworks.',
-        notes: 'Promising candidate; evaluate quantitative test score.'
+        aiSummary: 'Solid core computer science foundations, but high forensic risk detected on Stanford GenAI credential. Immediate verification required before proceeding.',
+        notes: '⚠️ Attention: 1 certificate flagged for Adobe Photoshop tampering. Do not advance to Round 2 without original digital badge verification.'
       },
       {
         id: 'APP-904',
@@ -628,6 +1841,8 @@ Required:
         role: 'Data Analyst - Growth Intelligence',
         oppId: 'data-analyst',
         status: 'Shortlisted',
+        credentialTrust: 'verified',
+        trustScore: 96,
         appliedDate: 'Sep 04, 2026',
         matchScore: 92,
         skillMatch: '93%',
@@ -638,10 +1853,61 @@ Required:
         matchedSkills: ['SQL', 'Python', 'Power BI', 'Statistical Modeling', 'Tableau'],
         missingSkills: ['Snowflake'],
         projects: ['Cohort Retention & LTV Modeling', 'Supply Chain Bottleneck Simulation'],
-        certifications: ['Google Data Analytics Professional', 'Microsoft Power BI Certified'],
+        certifications: [
+          {
+            id: 'CERT-904-A',
+            title: 'Google Data Analytics Professional Certificate',
+            issuer: 'Google Career Certificates (Coursera)',
+            issueDate: 'Feb 2026',
+            credentialId: 'GOOG-DA-551029',
+            verificationUrl: 'https://coursera.org/verify/professional-cert/GOOG-DA-551029',
+            status: 'verified',
+            trustScore: 98,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Neha_Google_Data_Analytics.pdf',
+              engine: 'Google Credential Rendering Engine v2',
+              createdDate: '2026-02-18 11:20:00 UTC',
+              modifiedDate: '2026-02-18 11:20:00 UTC (Clean)',
+              tamperingDetected: false,
+              fontIntegrity: 'Google Sans (Matched vector)',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'SQL & Business Analytics Benchmark',
+              score: '94%',
+              alignment: 'Strong Correlation'
+            }
+          },
+          {
+            id: 'CERT-904-B',
+            title: 'Microsoft Certified: Power BI Data Analyst Associate',
+            issuer: 'Microsoft Learn / Pearson VUE',
+            issueDate: 'Apr 2026',
+            credentialId: 'MS-PL300-8812',
+            verificationUrl: 'https://learn.microsoft.com/en-us/users/nehamishra/credentials/MS-PL300-8812',
+            status: 'verified',
+            trustScore: 97,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Microsoft_PowerBI_Cert.pdf',
+              engine: 'Microsoft Learn Credential Authority',
+              createdDate: '2026-04-22 15:40:00 UTC',
+              modifiedDate: '2026-04-22 15:40:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Segoe UI (Original vector)',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'BI Dashboard Optimization',
+              score: '92%',
+              alignment: 'Strong Correlation'
+            }
+          }
+        ],
         portfolioLinks: { linkedin: 'linkedin.com/in/nehamishra' },
-        aiSummary: 'Exceptional mathematical and SQL background. Strong visualization aesthetics and business storytelling.',
-        notes: 'Ranked top in cohort for SQL optimization problem.'
+        aiSummary: 'Exceptional mathematical and SQL background. Strong visualization aesthetics and business storytelling. Verified Google and Microsoft credentials.',
+        notes: 'Ranked top in cohort for SQL optimization problem. All credentials authentic.'
       },
       {
         id: 'APP-905',
@@ -652,6 +1918,8 @@ Required:
         role: 'Senior Frontend Engineer (Next.js)',
         oppId: 'frontend-dev',
         status: 'Qualified',
+        credentialTrust: 'verified',
+        trustScore: 98,
         appliedDate: 'Aug 29, 2026',
         matchScore: 95,
         skillMatch: '96%',
@@ -662,10 +1930,36 @@ Required:
         matchedSkills: ['React', 'Next.js 15', 'TypeScript', 'Tailwind', 'GraphQL', 'WebSockets'],
         missingSkills: ['Rust/Wasm'],
         projects: ['Real-Time Collaborative Canvas', 'Micro-Frontend Component Library'],
-        certifications: ['Meta Certified Frontend Architect'],
+        certifications: [
+          {
+            id: 'CERT-905-A',
+            title: 'Meta Certified Frontend Architect',
+            issuer: 'Meta / Coursera Credential',
+            issueDate: 'Jan 2026',
+            credentialId: 'META-FE-90184',
+            verificationUrl: 'https://coursera.org/verify/META-FE-90184',
+            status: 'verified',
+            trustScore: 99,
+            issuerVerified: true,
+            fileMetadata: {
+              fileName: 'Meta_Frontend_Architect.pdf',
+              engine: 'Meta Credential Generator',
+              createdDate: '2026-01-25 10:00:00 UTC',
+              modifiedDate: '2026-01-25 10:00:00 UTC (Original)',
+              tamperingDetected: false,
+              fontIntegrity: 'Optimized vector subsets',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'Frontend Architecture & State Machine',
+              score: '96%',
+              alignment: 'Strong Correlation'
+            }
+          }
+        ],
         portfolioLinks: { github: 'github.com/sidroy', site: 'sidroy.dev' },
-        aiSummary: 'Extensive production experience scaling Next.js applications and WebSocket feeds. Deep familiarity with Web Vitals.',
-        notes: 'Senior candidate with exceptional code structure and component reusability.'
+        aiSummary: 'Extensive production experience scaling Next.js applications and WebSocket feeds. Verified Meta credential.',
+        notes: 'Senior candidate with exceptional code structure. Meta certification verified on Coursera.'
       },
       {
         id: 'APP-906',
@@ -676,6 +1970,8 @@ Required:
         role: 'Product Design & UI/UX Intern',
         oppId: 'uiux-intern',
         status: 'Under Review',
+        credentialTrust: 'unverified',
+        trustScore: 72,
         appliedDate: 'Sep 03, 2026',
         matchScore: 90,
         skillMatch: '88%',
@@ -686,10 +1982,36 @@ Required:
         matchedSkills: ['Figma', 'Design Systems', 'User Research', 'Prototyping', 'Accessibility (WCAG)'],
         missingSkills: ['Framer'],
         projects: ['AI Copilot Human-Computer Interaction Guidelines', 'Neomorphic Banking App Redesign'],
-        certifications: ['Nielsen Norman Group UX Master'],
+        certifications: [
+          {
+            id: 'CERT-906-A',
+            title: 'Nielsen Norman Group UX Master Certification',
+            issuer: 'Nielsen Norman Group (NN/g)',
+            issueDate: 'Jul 2026',
+            credentialId: 'NNG-UX-10492',
+            verificationUrl: 'https://nngroup.com/verify/NNG-UX-10492',
+            status: 'unverified',
+            trustScore: 70,
+            issuerVerified: false,
+            fileMetadata: {
+              fileName: 'NNG_UX_Master.pdf',
+              engine: 'NN/g Automated PDF Generator',
+              createdDate: '2026-07-10 14:15:00 UTC',
+              modifiedDate: '2026-07-10 14:15:00 UTC (Clean)',
+              tamperingDetected: false,
+              fontIntegrity: 'Standard font subset',
+              layerCheck: 'Clean Vector Stream'
+            },
+            competenceCheck: {
+              testName: 'Design Systems & UX Heuristics Quiz',
+              score: '88%',
+              alignment: 'High'
+            }
+          }
+        ],
         portfolioLinks: { site: 'ananya.design', behance: 'behance.net/ananyaverma' },
-        aiSummary: 'Stellar design portfolio with strong emphasis on accessibility, micro-interactions, and AI prompt UX design.',
-        notes: 'Clean visual polish; invite for Design Sprint.'
+        aiSummary: 'Stellar design portfolio with strong emphasis on accessibility and micro-interactions. Self-reported NN/g certificate in review.',
+        notes: 'Clean visual polish; pending verification of NN/g certification link.'
       }
     ],
 
@@ -877,6 +2199,274 @@ Required:
   }
 };
 
+// Coding Challenge & Test Runner Definition (Monaco Simulation)
+const codingChallenge = {
+  id: 'dp-tree-reroot',
+  title: 'Dynamic Programming: Tree Rerooting & Distance Sums',
+  difficulty: 'Hard',
+  difficultyColor: 'text-rose-400 bg-rose-950/60 border border-rose-800/60',
+  benchmark: 'LeetCode 834 / Codeforces Div.1',
+  xpReward: 50,
+  timeLimit: '2.0s',
+  memoryLimit: '256 MB',
+  description: `You are given an undirected connected tree with <code>n</code> nodes labeled from <code>0</code> to <code>n - 1</code> and an array <code>edges</code> where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an undirected edge between nodes <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> in the tree.<br><br>Return an array <code>ans</code> of length <code>n</code> where <code>ans[i]</code> is the sum of the distances between the <code>i</code><sup>th</sup> node and all other nodes in the tree.`,
+  example1: {
+    input: 'n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]',
+    output: '[8, 12, 6, 10, 10, 10]',
+    explanation: 'For node 0: dist(0,0)+dist(0,1)+dist(0,2)+dist(0,3)+dist(0,4)+dist(0,5) = 0 + 1 + 1 + 2 + 2 + 2 = 8.\nFor node 2: dist(2,0)+dist(2,1)+dist(2,2)+dist(2,3)+dist(2,4)+dist(2,5) = 1 + 2 + 0 + 1 + 1 + 1 = 6.'
+  },
+  example2: {
+    input: 'n = 1, edges = []',
+    output: '[0]',
+    explanation: 'A tree with a single root has distance sum 0.'
+  },
+  testCases: [
+    {
+      id: 1,
+      title: 'Sample Case 1 (Balanced Tree)',
+      input: 'n = 6\nedges = [[0,1],[0,2],[2,3],[2,4],[2,5]]',
+      expected: '[8, 12, 6, 10, 10, 10]'
+    },
+    {
+      id: 2,
+      title: 'Sample Case 2 (Single Vertex)',
+      input: 'n = 1\nedges = []',
+      expected: '[0]'
+    },
+    {
+      id: 3,
+      title: 'Hidden Case 3 (High Diameter Tree)',
+      input: 'n = 1000\nedges = [[0,1],[1,2],...,[998,999]]',
+      expected: '[Hidden: 1000 Elements Array]'
+    }
+  ],
+  templates: {
+    python: `from typing import List
+from collections import defaultdict
+
+class Solution:
+    def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
+        tree = defaultdict(list)
+        for u, v in edges:
+            tree[u].append(v)
+            tree[v].append(u)
+            
+        count = [1] * n
+        ans = [0] * n
+        
+        # Post-order DFS: calculate subtree sizes and base root distance
+        def dfs_base(node, parent):
+            for neighbor in tree[node]:
+                if neighbor != parent:
+                    dfs_base(neighbor, node)
+                    count[node] += count[neighbor]
+                    ans[node] += ans[neighbor] + count[neighbor]
+                    
+        # Pre-order DFS: reroot tree to calculate distance for all nodes in O(1)
+        def dfs_reroot(node, parent):
+            for neighbor in tree[node]:
+                if neighbor != parent:
+                    ans[neighbor] = ans[node] - count[neighbor] + (n - count[neighbor])
+                    dfs_reroot(neighbor, node)
+                    
+        dfs_base(0, -1)
+        dfs_reroot(0, -1)
+        return ans`,
+    cpp: `#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> sumOfDistancesInTree(int n, vector<vector<int>>& edges) {
+        vector<vector<int>> tree(n);
+        for (const auto& edge : edges) {
+            tree[edge[0]].push_back(edge[1]);
+            tree[edge[1]].push_back(edge[0]);
+        }
+        vector<int> count(n, 1), ans(n, 0);
+        dfsBase(0, -1, tree, count, ans);
+        dfsReroot(0, -1, n, tree, count, ans);
+        return ans;
+    }
+private:
+    void dfsBase(int u, int p, const vector<vector<int>>& tree, vector<int>& count, vector<int>& ans) {
+        for (int v : tree[u]) {
+            if (v != p) {
+                dfsBase(v, u, tree, count, ans);
+                count[u] += count[v];
+                ans[u] += ans[v] + count[v];
+            }
+        }
+    }
+    void dfsReroot(int u, int p, int n, const vector<vector<int>>& tree, const vector<int>& count, vector<int>& ans) {
+        for (int v : tree[u]) {
+            if (v != p) {
+                ans[v] = ans[u] - count[v] + (n - count[v]);
+                dfsReroot(v, u, n, tree, count, ans);
+            }
+        }
+    }
+};`,
+    java: `import java.util.*;
+
+class Solution {
+    public int[] sumOfDistancesInTree(int n, int[][] edges) {
+        List<List<Integer>> tree = new ArrayList<>();
+        for (int i = 0; i < n; i++) tree.add(new ArrayList<>());
+        for (int[] e : edges) {
+            tree.get(e[0]).add(e[1]);
+            tree.get(e[1]).add(e[0]);
+        }
+        int[] count = new int[n];
+        Arrays.fill(count, 1);
+        int[] ans = new int[n];
+        dfsBase(0, -1, tree, count, ans);
+        dfsReroot(0, -1, n, tree, count, ans);
+        return ans;
+    }
+    private void dfsBase(int u, int p, List<List<Integer>> tree, int[] count, int[] ans) {
+        for (int v : tree.get(u)) {
+            if (v != p) {
+                dfsBase(v, u, tree, count, ans);
+                count[u] += count[v];
+                ans[u] += ans[v] + count[v];
+            }
+        }
+    }
+    private void dfsReroot(int u, int p, int n, List<List<Integer>> tree, int[] count, int[] ans) {
+        for (int v : tree.get(u)) {
+            if (v != p) {
+                ans[v] = ans[u] - count[v] + (n - count[v]);
+                dfsReroot(v, u, n, tree, count, ans);
+            }
+        }
+    }
+}`,
+    javascript: `/**
+ * @param {number} n
+ * @param {number[][]} edges
+ * @return {number[]}
+ */
+var sumOfDistancesInTree = function(n, edges) {
+    const tree = Array.from({ length: n }, () => []);
+    for (const [u, v] of edges) {
+        tree[u].push(v);
+        tree[v].push(u);
+    }
+    const count = new Array(n).fill(1);
+    const ans = new Array(n).fill(0);
+    
+    function dfsBase(node, parent) {
+        for (const neighbor of tree[node]) {
+            if (neighbor !== parent) {
+                dfsBase(neighbor, node);
+                count[node] += count[neighbor];
+                ans[node] += ans[neighbor] + count[neighbor];
+            }
+        }
+    }
+    
+    function dfsReroot(node, parent) {
+        for (const neighbor of tree[node]) {
+            if (neighbor !== parent) {
+                ans[neighbor] = ans[node] - count[neighbor] + (n - count[neighbor]);
+                dfsReroot(neighbor, node);
+            }
+        }
+    }
+    
+    dfsBase(0, -1);
+    dfsReroot(0, -1);
+    return ans;
+};`
+  }
+};
+
+// Pre-Flight Student Certificates Dataset for Integrity Verifier
+const studentCertificates = {
+  'stanford-ai': {
+    id: 'stanford-ai',
+    title: 'Stanford Deep Learning Specialization',
+    issuer: 'Stanford Online / Coursera',
+    issuedDate: 'May 14, 2026',
+    credentialId: 'STAN-DL-2026-94812',
+    fileSize: '418 KB',
+    isGenuine: true,
+    metadata: {
+      producer: 'Stanford Open Learning Certificate Engine v4.2',
+      author: 'Stanford Center for Professional Development',
+      creationDate: '2026-05-14T08:21:40Z',
+      tamperFlag: false,
+      tamperDetail: 'Cryptographic SHA-256 stream intact. Zero post-generation vector modifications detected.'
+    },
+    ela: {
+      score: '99.4% Uniformity',
+      status: 'Clean Compression Grid',
+      detail: 'No localized re-compression anomalies detected across typography or signature blocks.'
+    },
+    registry: {
+      issuer: 'DigiLocker India & Credly Global Ledger',
+      recordFound: true,
+      verifiedHash: '0x8f9c2d1b74a83e0915fbc72384a1e956bcda3421908e23547192837465019283',
+      issuedTo: 'Arjun Kawade'
+    }
+  },
+  'aws-cloud': {
+    id: 'aws-cloud',
+    title: 'AWS Certified Solutions Architect - Associate',
+    issuer: 'Amazon Web Services (AWS Training & Certification)',
+    issuedDate: 'June 28, 2026',
+    credentialId: 'AWS-SAA-88492019',
+    fileSize: '512 KB',
+    isGenuine: true,
+    metadata: {
+      producer: 'Amazon Credential Services PDF Generator',
+      author: 'AWS Certification Team',
+      creationDate: '2026-06-28T14:10:12Z',
+      tamperFlag: false,
+      tamperDetail: 'Digital signature matches Amazon Root CA 1. Valid certificate chain verified.'
+    },
+    ela: {
+      score: '98.8% Uniformity',
+      status: 'Clean Compression Grid',
+      detail: 'Consistent Discrete Cosine Transform (DCT) matrix across badge, seal, and candidate name.'
+    },
+    registry: {
+      issuer: 'Credly Sovereign Ledger',
+      recordFound: true,
+      verifiedHash: '0x3a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef01',
+      issuedTo: 'Arjun Kawade'
+    }
+  },
+  'google-tampered': {
+    id: 'google-tampered',
+    title: 'Google Data Analytics Professional Certificate',
+    issuer: 'Google Career Certificates',
+    issuedDate: 'July 19, 2026',
+    credentialId: 'GOOG-DA-991204',
+    fileSize: '624 KB',
+    isGenuine: false,
+    metadata: {
+      producer: 'Adobe Photoshop 25.4 (Macintosh)',
+      author: 'Unknown / Non-standard raster patch',
+      creationDate: '2026-07-22T04:12:00Z',
+      tamperFlag: true,
+      tamperDetail: '⚠️ EXIF inspection reveals document was re-saved in Adobe Photoshop with modified text layer "Arjun Kawade".'
+    },
+    ela: {
+      score: '42.1% (Severe Anomaly)',
+      status: 'High Local Error Contrast Detected',
+      detail: 'Candidate name and issue date show 3.8x higher compression error than underlying certificate template.'
+    },
+    registry: {
+      issuer: 'Coursera / Google Credential Registry',
+      recordFound: false,
+      verifiedHash: 'RECORD_NOT_FOUND',
+      issuedTo: 'Mismatch (Original issued to "Devin R.")'
+    }
+  }
+};
+
 // UI Rendering Engine
 const UI = {
   init() {
@@ -1000,6 +2590,8 @@ const UI = {
   templateApplicantPortal() {
     const p = state.applicant.profile;
     const pType = state.applicant.personaType;
+    const activeTab = state.applicant.activeTab || 'recommendations';
+    const tabClass = (t) => activeTab === t ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700';
     return `
       <div class="min-h-screen bg-slate-50 text-slate-800 flex flex-col">
         <!-- Top App Bar -->
@@ -1009,6 +2601,11 @@ const UI = {
               <div class="w-8 h-8 rounded-xl gradient-brand text-white flex items-center justify-center font-bold text-sm">TV</div>
               <span class="font-extrabold text-base text-slate-900">Talent<span class="text-indigo-600">Verse</span></span>
             </div>
+          </div>
+
+          <!-- Multi-Disciplinary Domain Switcher (All Fields Filter) -->
+          <div class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
+            ${this.renderDisciplinePills('light')}
           </div>
 
           <div class="flex items-center gap-3">
@@ -1038,28 +2635,28 @@ const UI = {
         <!-- 8 Tabs Bar: Recommendations, Tests, Freelancing, Internships, Jobs, Organisations, Profile, Settings -->
         <div class="bg-white border-b border-slate-200 px-4 md:px-8 sticky top-14 z-20 overflow-x-auto">
           <nav class="flex space-x-2 md:space-x-4 min-w-max text-xs font-bold" id="applicant-tab-nav">
-            <button onclick="UI.switchApplicantTab('recommendations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="recommendations">
+            <button onclick="UI.switchApplicantTab('recommendations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('recommendations')}" data-tab="recommendations">
               Recommendations
             </button>
-            <button onclick="UI.switchApplicantTab('tests')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="tests">
+            <button onclick="UI.switchApplicantTab('tests')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('tests')}" data-tab="tests">
               Tests & Challenges
             </button>
-            <button onclick="UI.switchApplicantTab('freelancing')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="freelancing">
+            <button onclick="UI.switchApplicantTab('freelancing')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('freelancing')}" data-tab="freelancing">
               Freelancing
             </button>
-            <button onclick="UI.switchApplicantTab('internships')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="internships">
+            <button onclick="UI.switchApplicantTab('internships')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('internships')}" data-tab="internships">
               Internships
             </button>
-            <button onclick="UI.switchApplicantTab('jobs')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="jobs">
+            <button onclick="UI.switchApplicantTab('jobs')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('jobs')}" data-tab="jobs">
               Jobs
             </button>
-            <button onclick="UI.switchApplicantTab('organisations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="organisations">
+            <button onclick="UI.switchApplicantTab('organisations')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('organisations')}" data-tab="organisations">
               Organisations
             </button>
-            <button onclick="UI.switchApplicantTab('profile')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="profile">
+            <button onclick="UI.switchApplicantTab('profile')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('profile')}" data-tab="profile">
               Profile
             </button>
-            <button onclick="UI.switchApplicantTab('settings')" class="applicant-tab-btn py-3 px-2 border-b-2 transition" data-tab="settings">
+            <button onclick="UI.switchApplicantTab('settings')" class="applicant-tab-btn py-3 px-2 border-b-2 transition ${tabClass('settings')}" data-tab="settings">
               Settings & Saved
             </button>
           </nav>
@@ -1151,6 +2748,96 @@ const UI = {
     const resumeTab = state.applicant.resumeStudioTab;
     const gapMode = state.applicant.gapInputMode;
     const recCat = state.applicant.recommendationCategory;
+    const disc = state.selectedDiscipline;
+    const profileKey = disc === 'all' ? 'tech' : disc;
+    const diag = fieldResumeDiagnostics[profileKey] || fieldResumeDiagnostics['tech'];
+    const gap = fieldGapBreakdowns[profileKey] || fieldGapBreakdowns['tech'];
+    const futureSkills = fieldFutureSkills[profileKey] || fieldFutureSkills['tech'];
+
+    // Dynamic discipline recommendations
+    const recFreelance = (disc === 'all' ? state.freelanceDatabase : state.freelanceDatabase.filter(f => f.discipline === disc)).slice(0, 3);
+    const recInternships = (disc === 'all' ? state.internshipsDatabase : state.internshipsDatabase.filter(i => i.discipline === disc)).slice(0, 3);
+    const recJobs = (disc === 'all' ? state.jobsDatabase : state.jobsDatabase.filter(j => j.discipline === disc)).slice(0, 3);
+
+    // Dynamic market demand radar for discipline
+    const domainRadars = {
+      tech: {
+        accel: [
+          'High-Throughput Inference Engines (Triton, vLLM)',
+          'Autonomous Multi-Agent Consensus Swarms',
+          'Model Parameter Efficient Tuning (LoRA, QLoRA)',
+          'On-Device SLMs (Apple MLX, ONNX Runtime)'
+        ],
+        commo: [
+          'Manual Web Scrapers (replaced by vision agents)',
+          'Boilerplate CRUD Without AI Autogeneration',
+          'Basic Keyword-Only SQL Search (replaced by vector)',
+          'Manual Data Annotation (replaced by synthetic RLHF)'
+        ],
+        advice: `You already possess a top-tier deep learning and systems foundation. To position yourself for the top compensation bracket in 2027+, build 1 project deploying an open-source model to an edge device with Triton and write a blog on your findings.`
+      },
+      finance: {
+        accel: [
+          'Carbon Credit Derivatives & Satellite ESG Telemetry',
+          'Real-Time Graph AI Forensic Payment Ledgers',
+          'Dynamic 3-Statement LBO Debt Amortization Modeling',
+          'Python/R Algorithmic Asset Pricing & VaR Stress-Tests'
+        ],
+        commo: [
+          'Manual Paper Ledger Reconciliation',
+          'Static Historical Ratio Lookups (now auto-streamed)',
+          'Basic Formula Excel Models Without Macro Automation',
+          'Legacy Cheque Clearing & T+2 Settlement Ops'
+        ],
+        advice: `Your quantitative modeling and DCF valuation foundation is outstanding (top 0.6% rank). Expand into SEBI BRSR Core carbon asset auditing and algorithmic time-series regression to capture private equity leadership roles.`
+      },
+      design: {
+        accel: [
+          'Spatial UI & Volumetric Canvas Design (VisionOS / WebXR)',
+          'Neuro-Adaptive Dynamic Accessibility (WCAG 3.0)',
+          'Multi-Brand Design Tokens Automated to GitHub CI/CD',
+          'Haptic Micro-Prototypes with Realistic Easing Curves'
+        ],
+        commo: [
+          'Static Vector Icon Tracing (automated by Generative UI)',
+          'Non-Responsive Desktop-Only Web Mockups',
+          'Manual Style Guide PDF Spec Sheets',
+          'Un-tokenized One-Off UI Wireframes'
+        ],
+        advice: `Your design token hierarchy and WCAG AAA compliance scores are exemplary (top 0.5% rank). Build 1 volumetric 3D prototype for spatial headsets in ProtoPie/Framer to unlock premier global design studio offers.`
+      },
+      law: {
+        accel: [
+          'Digital Personal Data Protection (DPDP) Act Compliance',
+          'Autonomous Agent Negligence & Algorithmic Tort Precedents',
+          'Cross-Border Sovereign Cloud Data Treaties',
+          'AI Model Card Evidentiary Auditing & DPIA Frameworks'
+        ],
+        commo: [
+          'Standard NDA Copy-Pasting (automated by legal LLMs)',
+          'Manual Case Citation Indexing & Physical Court Filings',
+          'Boilerplate Terms of Service Without Privacy Granularity',
+          'Generic Employment Contract Template Generation'
+        ],
+        advice: `Your statutory interpretation of the DPDP Act 2023 and SaaS MSA drafting puts you in the top 0.8% of legal associates. Deepen expertise in autonomous agent accountability and model liability to command elite venture counsel retainers.`
+      },
+      healthcare: {
+        accel: [
+          'In-Silico Molecular Docking (AlphaFold 3 Diffusion)',
+          'Federated Clinical Trial Analytics & CDISC SDTM/ADaM',
+          'High-Throughput RNA-Seq Differential Expression Pipelines',
+          'Real-Time Biosensor Telemetry & Survival Analytics'
+        ],
+        commo: [
+          'Manual Clinical Trial Paper Data Logging',
+          'Static Gel Electrophoresis Image Scanning',
+          'Un-standardized Custom Lab Spreadsheets',
+          'Slow Sanger Sequencing Batch Hand-Transcription'
+        ],
+        advice: `Your CDISC regulatory compliance and NGS bioinformatics acumen is exceptional (top 0.9% rank). Focus on reproducible DESeq2 oncology pipelines and privacy-preserving federated clinical models to fast-track senior biostatistician positions.`
+      }
+    };
+    const currentRadar = domainRadars[profileKey] || domainRadars['tech'];
 
     return `
       <div class="space-y-8">
@@ -1161,7 +2848,12 @@ const UI = {
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
-              <h3 class="font-bold text-lg text-slate-900">Resume AI Studio</h3>
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold text-lg text-slate-900">Resume AI Studio</h3>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 font-bold border border-indigo-200">
+                  ${p.field}
+                </span>
+              </div>
               <p class="text-xs text-slate-500">Generate tailored ATS-compliant resumes, inspect deep diagnostics, or upload new revisions</p>
             </div>
 
@@ -1189,7 +2881,7 @@ const UI = {
                   </div>
                   <div>
                     <h4 class="font-bold text-sm text-slate-900">${state.applicant.manualUploadedFileName || p.resumeName}</h4>
-                    <p class="text-xs text-slate-500">Last scanned: Today • 100% Parsable by Workday, Taleo & Greenhouse ATS</p>
+                    <p class="text-xs text-slate-500">Domain: <strong>${p.domain}</strong> • 100% Parsable by Workday, Taleo & Greenhouse ATS</p>
                   </div>
                 </div>
                 <div class="flex gap-2">
@@ -1206,51 +2898,41 @@ const UI = {
               <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
                   <p class="text-slate-500 text-xs font-medium">Overall ATS Score</p>
-                  <p class="text-2xl font-black text-emerald-600 mt-1">92/100</p>
-                  <p class="text-[10px] text-emerald-700 mt-0.5">Top 5% candidate</p>
+                  <p class="text-2xl font-black text-emerald-600 mt-1">${p.atsScore}/100</p>
+                  <p class="text-[10px] text-emerald-700 mt-0.5">Top candidate in ${profileKey.toUpperCase()}</p>
                 </div>
                 <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
                   <p class="text-slate-500 text-xs font-medium">Quantified Metrics</p>
-                  <p class="text-2xl font-black text-indigo-600 mt-1">88%</p>
-                  <p class="text-[10px] text-slate-500 mt-0.5">7 metrics found</p>
+                  <p class="text-2xl font-black text-indigo-600 mt-1">92%</p>
+                  <p class="text-[10px] text-slate-500 mt-0.5">${p.completedFreelance.length * 3 + 2} metrics verified</p>
                 </div>
                 <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
                   <p class="text-slate-500 text-xs font-medium">ATS Keyword Density</p>
-                  <p class="text-2xl font-black text-indigo-600 mt-1">95%</p>
-                  <p class="text-[10px] text-slate-500 mt-0.5">Matches 94% job reqs</p>
+                  <p class="text-2xl font-black text-indigo-600 mt-1">96%</p>
+                  <p class="text-[10px] text-slate-500 mt-0.5">Matches ${p.domainSkills.length} core reqs</p>
                 </div>
                 <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
-                  <p class="text-slate-500 text-xs font-medium">Formatting & Sections</p>
-                  <p class="text-2xl font-black text-emerald-600 mt-1">94%</p>
+                  <p class="text-slate-500 text-xs font-medium">Formatting & Structure</p>
+                  <p class="text-2xl font-black text-emerald-600 mt-1">98%</p>
                   <p class="text-[10px] text-slate-500 mt-0.5">Standard single column</p>
                 </div>
               </div>
 
-              <!-- 3 Detailed Breakdown Categories: Strengths, Weaknesses, Suggestions (NO rewrite button) -->
+              <!-- 3 Detailed Breakdown Categories: Strengths, Weaknesses, Suggestions -->
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                 <!-- 1. Strengths Detected -->
                 <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/60 space-y-3">
                   <div class="flex items-center justify-between border-b border-emerald-200/60 pb-2">
                     <h5 class="font-bold text-emerald-950 uppercase tracking-wider text-[11px]">Strengths Detected</h5>
-                    <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold text-[10px]">4 Verified</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold text-[10px]">${diag.strengths.length} Verified</span>
                   </div>
                   <ul class="space-y-2 text-slate-700 leading-relaxed">
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-emerald-600 font-bold mt-0.5">✓</span>
-                      <span><strong>Strong Action Verbs:</strong> High density of executive impact verbs ("Engineered", "Fine-tuned", "Benchmarked", "Containerized").</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-emerald-600 font-bold mt-0.5">✓</span>
-                      <span><strong>Quantified Metrics:</strong> Measurable outcomes documented ("reduced latency by 32%", "98.2% tabular accuracy", "doubled throughput").</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-emerald-600 font-bold mt-0.5">✓</span>
-                      <span><strong>Domain Alignment:</strong> Deep learning and PyTorch skills directly align with top 5% AI industry demand.</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-emerald-600 font-bold mt-0.5">✓</span>
-                      <span><strong>ATS Compatibility:</strong> Single-column layout with clean standard headers parsable by Workday and Greenhouse.</span>
-                    </li>
+                    ${diag.strengths.map(s => `
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-emerald-600 font-bold mt-0.5">✓</span>
+                        <span><strong>${s.title}:</strong> ${s.desc}</span>
+                      </li>
+                    `).join('')}
                   </ul>
                 </div>
 
@@ -1258,43 +2940,31 @@ const UI = {
                 <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/60 space-y-3">
                   <div class="flex items-center justify-between border-b border-amber-200/60 pb-2">
                     <h5 class="font-bold text-amber-950 uppercase tracking-wider text-[11px]">Weaknesses Detected</h5>
-                    <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">3 Identified</span>
+                    <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">${diag.weaknesses.length} Identified</span>
                   </div>
                   <ul class="space-y-2 text-slate-700 leading-relaxed">
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-amber-600 font-bold mt-0.5">⚠</span>
-                      <span><strong>Hardware Acceleration Gaps:</strong> Lacks explicit mentions of TensorRT-LLM, Triton Server, or CUDA kernel optimizations.</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-amber-600 font-bold mt-0.5">⚠</span>
-                      <span><strong>Cluster Scale Ambiguity:</strong> Lists Docker and Kubernetes, but lacks quantified node or GPU cluster counts.</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-amber-600 font-bold mt-0.5">⚠</span>
-                      <span><strong>Summary Lead:</strong> Executive summary is slightly generic and could emphasize low-latency inference milestones earlier.</span>
-                    </li>
+                    ${diag.weaknesses.map(w => `
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-amber-600 font-bold mt-0.5">⚠</span>
+                        <span><strong>${w.title}:</strong> ${w.desc}</span>
+                      </li>
+                    `).join('')}
                   </ul>
                 </div>
 
-                <!-- 3. Actionable Suggestions (Pure Diagnostics - No apply rewrite button) -->
+                <!-- 3. Actionable Suggestions -->
                 <div class="p-4 rounded-xl border border-indigo-200 bg-indigo-50/60 space-y-3">
                   <div class="flex items-center justify-between border-b border-indigo-200/60 pb-2">
                     <h5 class="font-bold text-indigo-950 uppercase tracking-wider text-[11px]">Actionable Suggestions</h5>
                     <span class="px-2 py-0.5 rounded bg-indigo-200 text-indigo-900 font-bold text-[10px]">High Impact</span>
                   </div>
                   <ul class="space-y-2 text-slate-700 leading-relaxed">
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-indigo-600 font-bold mt-0.5">→</span>
-                      <span><strong>Quantify Tokens/Sec:</strong> Add token generation throughput benchmarks to your Llama-3 fine-tuning project bullets.</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-indigo-600 font-bold mt-0.5">→</span>
-                      <span><strong>Add Production Links:</strong> Embed clickable GitHub repository links and Hugging Face model cards for your multi-modal agent.</span>
-                    </li>
-                    <li class="flex items-start gap-1.5">
-                      <span class="text-indigo-600 font-bold mt-0.5">→</span>
-                      <span><strong>Specify Hardware Target:</strong> Mention testbed environments (e.g. NVIDIA A100 / RTX 4090 or Apple Silicon M-series).</span>
-                    </li>
+                    ${diag.suggestions.map(s => `
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-indigo-600 font-bold mt-0.5">→</span>
+                        <span><strong>${s.title}:</strong> ${s.desc}</span>
+                      </li>
+                    `).join('')}
                   </ul>
                 </div>
               </div>
@@ -1306,7 +2976,7 @@ const UI = {
               <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
                 <div class="flex items-center justify-between border-b border-slate-200 pb-2">
                   <h4 class="font-bold text-xs uppercase tracking-wider text-indigo-700">
-                    Auto-Detected Profile Information
+                    Auto-Detected Profile Information (${p.field})
                   </h4>
                   <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">
                     Synced with Profile & Skills
@@ -1316,12 +2986,12 @@ const UI = {
                   <div>
                     <span class="text-slate-400 block text-[10px]">Candidate Details</span>
                     <p class="font-bold text-slate-800">${p.name} (${p.email})</p>
-                    <p class="text-slate-600 text-[11px]">${p.phone} • ${p.location}</p>
+                    <p class="text-slate-600 text-[11px]">${p.phone} • ${p.role}</p>
                   </div>
                   <div>
                     <span class="text-slate-400 block text-[10px]">Education & Credentials</span>
-                    <p class="font-bold text-slate-800">IIT Bombay (CSE, 8.9 CGPA)</p>
-                    <p class="text-slate-600 text-[11px]">Rank #142 / 12,400 in AI & ML Assessment</p>
+                    <p class="font-bold text-slate-800 line-clamp-1">${p.education}</p>
+                    <p class="text-slate-600 text-[11px]">Rank #${p.rankings[0].rank} / ${p.rankings[0].total.toLocaleString()} in ${p.rankings[0].domain}</p>
                   </div>
                   <div>
                     <span class="text-slate-400 block text-[10px]">Verified Technical Skills</span>
@@ -1339,27 +3009,22 @@ const UI = {
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                   <div>
                     <label class="font-bold text-slate-700 block mb-1">Target Job Title / Domain</label>
-                    <input type="text" id="builder-target-role" value="Senior Generative AI Engineer" class="w-full border border-slate-200 rounded-xl px-3 py-2 font-medium focus:outline-indigo-600"/>
+                    <input type="text" id="builder-target-role" value="${p.role}" class="w-full border border-slate-200 rounded-xl px-3 py-2 font-medium focus:outline-indigo-600"/>
                   </div>
                   <div>
-                    <label class="font-bold text-slate-700 block mb-1">Target Industry / Specialization</label>
-                    <select class="w-full border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium">
-                      <option selected>Generative AI & LLM Systems</option>
-                      <option>Autonomous Agents & Robotics</option>
-                      <option>FinTech AI & Risk Modeling</option>
-                      <option>Healthcare & Biomedical AI</option>
-                    </select>
+                    <label class="font-bold text-slate-700 block mb-1">Target Industry Specialization</label>
+                    <input type="text" class="w-full border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium focus:outline-indigo-600" value="${p.domain}"/>
                   </div>
                   <div>
                     <label class="font-bold text-slate-700 block mb-1">Primary Achievement to Emphasize</label>
-                    <input type="text" id="builder-target-highlight" value="High-throughput model serving with Triton, vLLM, and LoRA fine-tuning" class="w-full border border-slate-200 rounded-xl px-3 py-2 font-medium focus:outline-indigo-600"/>
+                    <input type="text" id="builder-target-highlight" value="Verified proficiencies in ${p.domainSkills.slice(0, 3).join(', ')} and ${p.completedFreelance.length} delivered client projects" class="w-full border border-slate-200 rounded-xl px-3 py-2 font-medium focus:outline-indigo-600"/>
                   </div>
                   <div>
                     <label class="font-bold text-slate-700 block mb-1">Resume Tone & Framing</label>
                     <select class="w-full border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium">
-                      <option selected>High-Impact Engineering (Quantified Metrics & Scale)</option>
-                      <option>Research & Academic (Papers, Benchmarks & Theory)</option>
-                      <option>Fast-Paced Startup (Full-Stack AI & Rapid Delivery)</option>
+                      <option selected>High-Impact Professional (Quantified Metrics & Scale)</option>
+                      <option>Academic & Research (Papers, Benchmarks & Theory)</option>
+                      <option>Fast-Paced Industry Leader (Rapid Execution & Delivery)</option>
                     </select>
                   </div>
                 </div>
@@ -1367,7 +3032,7 @@ const UI = {
                 <div class="flex items-center gap-2 pt-1 text-xs">
                   <input type="checkbox" id="builder-include-scores" checked class="w-4 h-4 accent-indigo-600"/>
                   <label for="builder-include-scores" class="text-slate-700 font-semibold cursor-pointer">
-                    Include verified portal test rankings (#142 / 12,400) and GitHub/LeetCode benchmarks in resume
+                    Include verified portal test rankings (#${p.rankings[0].rank} / ${p.rankings[0].total.toLocaleString()}) and badges in resume
                   </label>
                 </div>
               </div>
@@ -1376,7 +3041,7 @@ const UI = {
               <div class="p-4 rounded-xl bg-indigo-50/70 border border-indigo-100 text-xs space-y-2">
                 <h5 class="font-bold text-indigo-900">AI Resume Blueprint Overview:</h5>
                 <p class="text-indigo-800 leading-relaxed">
-                  The AI engine will construct a single-column, 100% ATS-compliant document incorporating your verified IIT Bombay background, top 1.1% algorithmic test scores, 3 delivered freelance contracts, and STAR-formatted bullet points highlighting LoRA fine-tuning and OCR vector pipelines.
+                  The AI engine will construct a single-column, 100% ATS-compliant document incorporating your verified credentials from ${p.education}, top ${p.rankings[0].percentile} domain benchmark score, ${p.completedFreelance.length} delivered contracts, and STAR-formatted bullet points highlighting your ${p.domainSkills.slice(0, 4).join(', ')} proficiencies.
                 </p>
               </div>
 
@@ -1399,55 +3064,42 @@ const UI = {
               <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 font-sans text-xs space-y-4 text-slate-800 shadow-inner">
                 <div class="border-b border-slate-300 pb-3 text-center space-y-1">
                   <h4 class="text-xl font-black text-slate-900 tracking-wide uppercase">${p.name}</h4>
-                  <p class="text-slate-600 text-[11px]">${p.email} • ${p.phone} • linkedin.com/in/arjunkawade • github.com/arjunkawade • arjun.dev</p>
-                  <p class="text-indigo-700 font-bold text-[11px]">Specialization: Machine Learning Systems & Generative AI Infrastructure</p>
+                  <p class="text-slate-600 text-[11px]">${p.email} • ${p.phone} • ${p.socials.linkedin} • ${p.socials.portfolio}</p>
+                  <p class="text-indigo-700 font-bold text-[11px]">Specialization: ${p.role}</p>
                 </div>
 
                 <div class="space-y-1">
                   <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Professional Summary</h5>
                   <p class="text-slate-700 leading-relaxed">
-                    AI/ML Engineer with strong mathematical foundations in deep learning, transformer architectures, and low-latency inference serving. Demonstrated track record building vision-language models, fine-tuning Llama-3 with LoRA, and deploying Triton/vLLM endpoints. Authored 1 IEEE paper; ranked in the top 1.1% on global competitive coding benchmarks.
+                    ${p.role} with verified academic foundations in ${p.domain}. Demonstrated track record delivering high-impact projects in ${p.domainSkills.slice(0, 4).join(', ')}. Ranked top ${p.rankings[0].percentile} on national skill leaderboards (#${p.rankings[0].rank} / ${p.rankings[0].total.toLocaleString()}) with ${p.completedFreelance.length} delivered enterprise client engagements.
                   </p>
                 </div>
 
                 <div class="space-y-1">
-                  <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Technical Competencies</h5>
-                  <p><strong>Languages & Core:</strong> Python, C++, TypeScript, SQL, CUDA C++ (Basics)</p>
-                  <p><strong>ML & AI Frameworks:</strong> PyTorch, TensorFlow, Hugging Face Transformers, LangChain, LlamaIndex, vLLM, Triton</p>
-                  <p><strong>Vector & Cloud Tools:</strong> Pinecone, Milvus, ChromaDB, Docker, Kubernetes, Azure AI Platform, FastAPI</p>
+                  <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Verified Core Competencies</h5>
+                  <p><strong>Domain proficiencies:</strong> ${p.domainSkills.join(', ')}</p>
+                  <p><strong>Transferable Skills:</strong> ${p.commonSkills.join(', ')}</p>
                 </div>
 
                 <div class="space-y-2">
-                  <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Key Engineering Projects</h5>
-                  <div>
-                    <div class="flex justify-between font-bold text-slate-800">
-                      <span>Multi-Modal Document Parsing Agent with Vector Search</span>
-                      <span>PyTorch, FastAPI, Pinecone</span>
+                  <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Key Projects & Deliverables</h5>
+                  ${p.completedFreelance.map(f => `
+                    <div>
+                      <div class="flex justify-between font-bold text-slate-800">
+                        <span>${f.title}</span>
+                        <span class="text-emerald-700">${f.budget} • ${f.rating}</span>
+                      </div>
+                      <p class="text-slate-600 text-[11px] mt-0.5">${f.review} (Client: <strong>${f.client}</strong>)</p>
                     </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-0.5 mt-0.5">
-                      <li>Engineered end-to-end OCR and vision-language extraction pipeline, processing 10,000+ invoices/hour with 98.2% tabular accuracy.</li>
-                      <li>Implemented hybrid dense-sparse vector indexing, cutting document retrieval p95 latency from 450ms to 68ms.</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <div class="flex justify-between font-bold text-slate-800">
-                      <span>Fine-Tuned Llama-3-8B Legal Reasoning Engine</span>
-                      <span>LoRA, PEFT, ChromaDB</span>
-                    </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-0.5 mt-0.5">
-                      <li>Fine-tuned Llama-3 on 25,000 legal contracts using QLoRA; reduced domain hallucination rates by 41% on custom benchmarks.</li>
-                      <li>Containerized serving layer with vLLM, doubling token generation throughput under concurrent client load.</li>
-                    </ul>
-                  </div>
+                  `).join('')}
                 </div>
 
                 <div class="space-y-1">
                   <h5 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-0.5">Education & Honors</h5>
                   <div class="flex justify-between">
-                    <span class="font-bold">B.Tech in Computer Science & Engineering, IIT Bombay</span>
-                    <span>2022 - 2026 | CGPA: 8.9 / 10</span>
+                    <span class="font-bold">${p.education}</span>
                   </div>
-                  <p class="text-slate-600">Global Rank #142 / 12,400 in AI & ML Domain Assessment • Daily Quest Streak: 8 Days</p>
+                  <p class="text-slate-600">Global Rank #${p.rankings[0].rank} / ${p.rankings[0].total.toLocaleString()} in ${p.rankings[0].domain} • Daily Streak: 8 Days</p>
                 </div>
               </div>
             </div>
@@ -1499,7 +3151,12 @@ const UI = {
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
-              <h3 class="font-bold text-lg text-slate-900">AI Skill Gap Analysis Studio</h3>
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold text-lg text-slate-900">AI Skill Gap Analysis Studio</h3>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 font-bold border border-indigo-200">
+                  Target: ${p.role}
+                </span>
+              </div>
               <p class="text-xs text-slate-500">Compare any Job Description or Job ID against your current resume and skills to reveal gap areas and personalized learning paths</p>
             </div>
 
@@ -1517,11 +3174,11 @@ const UI = {
           <!-- Input Controls -->
           ${gapMode === 'id' ? `
             <div class="flex flex-col sm:flex-row items-center gap-3">
-              <input type="text" id="target-id-input" placeholder="e.g. JOB-MSFT-901 or INT-MSFT-101" value="JOB-MSFT-901" class="text-xs border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-indigo-600 w-full sm:w-64 font-mono font-bold"/>
+              <input type="text" id="target-id-input" placeholder="e.g. ${recJobs[0] ? recJobs[0].id : 'JOB-MSFT-901'}" value="${recJobs[0] ? recJobs[0].id : 'JOB-MSFT-901'}" class="text-xs border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-indigo-600 w-full sm:w-64 font-mono font-bold"/>
               <button onclick="UI.runComprehensiveGapAnalysis()" class="w-full sm:w-auto px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition shadow-xs">
                 Run Gap Analysis on ID
               </button>
-              <span class="text-xs text-slate-400">Try: <code class="text-indigo-600 font-bold cursor-pointer" onclick="document.getElementById('target-id-input').value='JOB-MSFT-901'">JOB-MSFT-901</code> or <code class="text-indigo-600 font-bold cursor-pointer" onclick="document.getElementById('target-id-input').value='JOB-RZP-402'">JOB-RZP-402</code></span>
+              <span class="text-xs text-slate-400">Available: ${recJobs.map(j => `<code class="text-indigo-600 font-bold cursor-pointer" onclick="document.getElementById('target-id-input').value='${j.id}'">${j.id}</code>`).join(' or ')}</span>
             </div>
           ` : `
             <div class="space-y-3">
@@ -1540,28 +3197,22 @@ const UI = {
             <!-- Matched Skills -->
             <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4 space-y-2">
               <div class="flex justify-between items-center">
-                <span class="text-xs font-bold text-emerald-900">Your Matched Skills (5)</span>
-                <span class="text-xs font-black text-emerald-700">78% Match</span>
+                <span class="text-xs font-bold text-emerald-900">Your Matched Skills (${gap.matchedCount})</span>
+                <span class="text-xs font-black text-emerald-700">${gap.matchPct} Match</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">Python</span>
-                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">PyTorch</span>
-                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">FastAPI</span>
-                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">Docker</span>
-                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">Computer Vision / NLP</span>
+                ${gap.matched.map(s => `<span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-md font-semibold">${s}</span>`).join('')}
               </div>
             </div>
 
             <!-- Missing Skills -->
             <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 space-y-2">
               <div class="flex justify-between items-center">
-                <span class="text-xs font-bold text-amber-900">Missing Skills / Gaps Identified (3)</span>
+                <span class="text-xs font-bold text-amber-900">Missing Skills / Gaps Identified (${gap.missingCount})</span>
                 <span class="text-xs font-semibold text-amber-700">Needs Action</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-md font-semibold">Triton Inference Server</span>
-                <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-md font-semibold">TensorRT-LLM / vLLM</span>
-                <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-md font-semibold">Kubernetes (K8s)</span>
+                ${gap.missing.map(s => `<span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-md font-semibold">${s}</span>`).join('')}
               </div>
             </div>
           </div>
@@ -1577,14 +3228,12 @@ const UI = {
               <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
                 <h5 class="font-bold text-slate-900">Recommended Certifications</h5>
                 <div class="space-y-1.5 text-slate-600">
-                  <div class="p-2 bg-white rounded-lg border border-slate-100">
-                    <p class="font-bold text-slate-800">NVIDIA DLI: Large Language Model Serving</p>
-                    <p class="text-[11px] text-slate-500">Est: 2 weeks • Covers Triton & TensorRT</p>
-                  </div>
-                  <div class="p-2 bg-white rounded-lg border border-slate-100">
-                    <p class="font-bold text-slate-800">AWS Certified Machine Learning (MLS-C01)</p>
-                    <p class="text-[11px] text-slate-500">Est: 4 weeks • SageMaker & Cloud ML</p>
-                  </div>
+                  ${gap.certifications.map(c => `
+                    <div class="p-2 bg-white rounded-lg border border-slate-100">
+                      <p class="font-bold text-slate-800">${c.title}</p>
+                      <p class="text-[11px] text-slate-500">${c.desc}</p>
+                    </div>
+                  `).join('')}
                 </div>
               </div>
 
@@ -1592,14 +3241,12 @@ const UI = {
               <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
                 <h5 class="font-bold text-slate-900">Curated Courses & Learning Path</h5>
                 <div class="space-y-1.5 text-slate-600">
-                  <div class="p-2 bg-white rounded-lg border border-slate-100">
-                    <p class="font-bold text-slate-800">Vector Databases & Agentic RAG</p>
-                    <p class="text-[11px] text-slate-500">DeepLearning.AI • Free (10 hours)</p>
-                  </div>
-                  <div class="p-2 bg-white rounded-lg border border-slate-100">
-                    <p class="font-bold text-slate-800">High-Throughput Inference with vLLM</p>
-                    <p class="text-[11px] text-slate-500">Open Source Course • 1 week</p>
-                  </div>
+                  ${gap.courses.map(c => `
+                    <div class="p-2 bg-white rounded-lg border border-slate-100">
+                      <p class="font-bold text-slate-800">${c.title}</p>
+                      <p class="text-[11px] text-slate-500">${c.desc}</p>
+                    </div>
+                  `).join('')}
                 </div>
               </div>
 
@@ -1607,11 +3254,11 @@ const UI = {
               <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
                 <h5 class="font-bold text-slate-900">Portfolio Project to Build</h5>
                 <div class="p-2.5 bg-white rounded-lg border border-slate-100 space-y-1">
-                  <p class="font-bold text-indigo-700">"Triton & vLLM Streaming Gateway"</p>
+                  <p class="font-bold text-indigo-700">${gap.project.title}</p>
                   <p class="text-slate-600 text-[11px] leading-relaxed">
-                    Deploy a local Dockerized Triton inference container with KV cache quantization, exposing an OpenAI-compatible streaming API.
+                    ${gap.project.desc}
                   </p>
-                  <span class="text-[10px] font-bold text-emerald-700">Estimated Effort: ~1 weekend</span>
+                  <span class="text-[10px] font-bold text-emerald-700">${gap.project.effort}</span>
                 </div>
               </div>
             </div>
@@ -1625,22 +3272,22 @@ const UI = {
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
-              <h3 class="font-bold text-lg text-slate-900">Recommendations</h3>
+              <h3 class="font-bold text-lg text-slate-900">Curated Opportunities</h3>
               <p class="text-xs text-slate-500">
-                Opportunities specifically curated for your verified proficiencies: <strong class="text-indigo-600">PyTorch, Python, LLM Tuning, FastAPI, Computer Vision</strong>
+                Matched to your verified proficiencies: <strong class="text-indigo-600">${p.domainSkills.slice(0, 5).join(', ')}</strong>
               </p>
             </div>
 
-            <!-- Category Switcher: Clean text only, no emojis -->
+            <!-- Category Switcher -->
             <div class="inline-flex p-1 bg-slate-100 rounded-xl text-xs font-bold">
               <button onclick="UI.setRecommendationCategory('freelance')" class="px-3.5 py-1.5 rounded-lg transition ${recCat === 'freelance' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'}">
-                Freelance Projects (3)
+                Freelance Projects (${recFreelance.length})
               </button>
               <button onclick="UI.setRecommendationCategory('internships')" class="px-3.5 py-1.5 rounded-lg transition ${recCat === 'internships' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'}">
-                Internships (3)
+                Internships (${recInternships.length})
               </button>
               <button onclick="UI.setRecommendationCategory('jobs')" class="px-3.5 py-1.5 rounded-lg transition ${recCat === 'jobs' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'}">
-                Jobs (3)
+                Jobs (${recJobs.length})
               </button>
             </div>
           </div>
@@ -1648,201 +3295,75 @@ const UI = {
           <!-- Category Renderings: Clean cards with click-to-modal -->
           ${recCat === 'freelance' ? `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <!-- Freelance 1 -->
-              <div onclick="UI.openFreelanceDetailModal('PROJ-FL-01')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Fixed Budget</span>
-                    <span class="text-xs font-black text-emerald-600">96% Skill Fit</span>
+              ${recFreelance.map(proj => `
+                <div onclick="UI.openFreelanceDetailModal('${proj.id}')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                  <div class="space-y-2 text-xs">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">${proj.id}</span>
+                      <span class="text-xs font-black text-emerald-600">${proj.matchScore}% Skill Fit</span>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900">${proj.title}</h4>
+                    <p class="text-[11px] text-slate-500">${proj.client} • ${proj.duration}</p>
+                    <p class="text-slate-600 line-clamp-2 leading-relaxed">${proj.description}</p>
+                    <div class="flex flex-wrap gap-1 pt-1">
+                      ${proj.requiredSkills.map(s => `<span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">${s}</span>`).join('')}
+                    </div>
+                    <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full scope & AI analysis</p>
                   </div>
-                  <h4 class="font-bold text-sm text-slate-900">Fine-tune Llama 3 for Legal RAG</h4>
-                  <p class="text-[11px] text-slate-500">LegalTech Corp • 3 weeks project</p>
-                  <p class="text-slate-600 line-clamp-2">Fine-tune Llama-3-8B on specialized contract legal datasets with LoRA and benchmark on hallucination metrics.</p>
-                  <div class="flex flex-wrap gap-1 pt-1">
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">Llama 3</span>
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">PyTorch</span>
+                  <div onclick="event.stopPropagation()">
+                    <p class="text-base font-black text-slate-900 mb-2">${proj.budget} <span class="text-xs font-normal text-slate-500">(${proj.type})</span></p>
+                    <button onclick="UI.openAiProposalModal('${proj.title}', '${proj.budget}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center">
+                      Submit AI Proposal
+                    </button>
                   </div>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full scope & AI analysis</p>
                 </div>
-                <div onclick="event.stopPropagation()">
-                  <p class="text-base font-black text-slate-900 mb-2">$1,400</p>
-                  <button onclick="UI.openAiProposalModal('Fine-tune Llama 3 for Legal RAG', '$1,400')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center">
-                    Submit AI Proposal
-                  </button>
-                </div>
-              </div>
-
-              <!-- Freelance 2 -->
-              <div onclick="UI.openFreelanceDetailModal('PROJ-FL-02')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Milestone Based</span>
-                    <span class="text-xs font-black text-emerald-600">93% Skill Fit</span>
-                  </div>
-                  <h4 class="font-bold text-sm text-slate-900">Multi-Modal Document OCR Extraction</h4>
-                  <p class="text-[11px] text-slate-500">FinTech Venture Labs • 2 weeks project</p>
-                  <p class="text-slate-600 line-clamp-2">Build a vision-language OCR agent to parse multi-column financial statements into structured JSON schemas.</p>
-                  <div class="flex flex-wrap gap-1 pt-1">
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">FastAPI</span>
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">Vision LLM</span>
-                  </div>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full scope & AI analysis</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <p class="text-base font-black text-slate-900 mb-2">$1,800</p>
-                  <button onclick="UI.openAiProposalModal('Multi-Modal Document OCR Extraction', '$1,800')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center">
-                    Submit AI Proposal
-                  </button>
-                </div>
-              </div>
-
-              <!-- Freelance 3 -->
-              <div onclick="UI.openFreelanceDetailModal('PROJ-FL-03')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Fixed Budget</span>
-                    <span class="text-xs font-black text-emerald-600">91% Skill Fit</span>
-                  </div>
-                  <h4 class="font-bold text-sm text-slate-900">Interactive Next.js SaaS Analytics UI</h4>
-                  <p class="text-[11px] text-slate-500">CloudMetrics Inc • 3 weeks project</p>
-                  <p class="text-slate-600 line-clamp-2">Develop a responsive dashboard in Next.js 15, Tailwind, and Recharts with mock WebSocket feeds.</p>
-                  <div class="flex flex-wrap gap-1 pt-1">
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">Next.js 15</span>
-                    <span class="text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600 font-semibold">Tailwind</span>
-                  </div>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full scope & AI analysis</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <p class="text-base font-black text-slate-900 mb-2">$2,200</p>
-                  <button onclick="UI.openAiProposalModal('Interactive Next.js SaaS Analytics UI', '$2,200')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center">
-                    Submit AI Proposal
-                  </button>
-                </div>
-              </div>
+              `).join('')}
             </div>
           ` : recCat === 'internships' ? `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <!-- Internship 1 -->
-              <div onclick="UI.openPostDetailModal('INT-MSFT-101', 'internship')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">INT-MSFT-101</span>
-                    <span class="text-xs font-black text-emerald-600">96% Match</span>
+              ${recInternships.map(intern => `
+                <div onclick="UI.openPostDetailModal('${intern.id}', 'internship')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                  <div class="space-y-2 text-xs">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] font-mono font-bold text-indigo-700">${intern.id}</span>
+                      <span class="text-xs font-black text-emerald-600">${intern.matchScore}% Match</span>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900">${intern.title}</h4>
+                    <p class="text-[11px] text-slate-500">${intern.company} • ${intern.mode} (${intern.location})</p>
+                    <p class="text-slate-600 line-clamp-2 leading-relaxed">${intern.description}</p>
+                    <p class="font-bold text-slate-800">${intern.stipend}</p>
+                    <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                   </div>
-                  <h4 class="font-bold text-sm text-slate-900">AI Research Intern (GenAI)</h4>
-                  <p class="text-[11px] text-slate-500">Microsoft • Bangalore / Hybrid</p>
-                  <p class="text-slate-600 line-clamp-2">Collaborate on Azure AI Research on synthetic data generation and fine-tuned LLM agents.</p>
-                  <p class="font-bold text-slate-800">Stipend: ₹80,000 / mo</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Microsoft AI Research Intern')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
-
-              <!-- Internship 2 -->
-              <div onclick="UI.openPostDetailModal('INT-GOOG-102', 'internship')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">INT-GOOG-102</span>
-                    <span class="text-xs font-black text-emerald-600">92% Match</span>
+                  <div onclick="event.stopPropagation()">
+                    <button onclick="UI.applyOneClick('${intern.company} ${intern.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
+                      One-Click Apply
+                    </button>
                   </div>
-                  <h4 class="font-bold text-sm text-slate-900">Software Engineering Intern</h4>
-                  <p class="text-[11px] text-slate-500">Google • Hyderabad, India</p>
-                  <p class="text-slate-600 line-clamp-2">Build distributed systems and algorithmically robust pipelines serving millions of users.</p>
-                  <p class="font-bold text-slate-800">Stipend: ₹1,10,000 / mo</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                 </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Google SWE Intern')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
-
-              <!-- Internship 3 -->
-              <div onclick="UI.openPostDetailModal('INT-AMZN-103', 'internship')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">INT-AMZN-103</span>
-                    <span class="text-xs font-black text-emerald-600">85% Match</span>
-                  </div>
-                  <h4 class="font-bold text-sm text-slate-900">Cloud & DevOps Intern</h4>
-                  <p class="text-[11px] text-slate-500">Amazon AWS • Remote</p>
-                  <p class="text-slate-600 line-clamp-2">Container orchestration with Docker and Terraform infrastructure provisioning.</p>
-                  <p class="font-bold text-slate-800">Stipend: ₹75,000 / mo</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Amazon AWS Intern')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
+              `).join('')}
             </div>
           ` : `
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <!-- Job 1 -->
-              <div onclick="UI.openPostDetailModal('JOB-MSFT-901', 'job')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">JOB-MSFT-901</span>
-                    <span class="text-xs font-black text-emerald-600">95% Match</span>
+              ${recJobs.map(job => `
+                <div onclick="UI.openPostDetailModal('${job.id}', 'job')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                  <div class="space-y-2 text-xs">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] font-mono font-bold text-indigo-700">${job.id}</span>
+                      <span class="text-xs font-black text-emerald-600">${job.matchScore}% Match</span>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900">${job.title}</h4>
+                    <p class="text-[11px] text-slate-500">${job.company} • ${job.location}</p>
+                    <p class="text-slate-600 line-clamp-2 leading-relaxed">${job.description}</p>
+                    <p class="font-bold text-slate-800">${job.salary}</p>
+                    <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                   </div>
-                  <h4 class="font-bold text-sm text-slate-900">Applied AI Engineer</h4>
-                  <p class="text-[11px] text-slate-500">Microsoft • Azure AI Platform</p>
-                  <p class="text-slate-600 line-clamp-2">Deploy large language models at scale with low-latency retrieval architectures.</p>
-                  <p class="font-bold text-slate-800">₹24 - ₹36 LPA</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Microsoft Applied AI Engineer')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
-
-              <!-- Job 2 -->
-              <div onclick="UI.openPostDetailModal('JOB-RZP-402', 'job')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">JOB-RZP-402</span>
-                    <span class="text-xs font-black text-emerald-600">91% Match</span>
+                  <div onclick="event.stopPropagation()">
+                    <button onclick="UI.applyOneClick('${job.company} ${job.title}')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
+                      One-Click Apply
+                    </button>
                   </div>
-                  <h4 class="font-bold text-sm text-slate-900">Machine Learning Engineer</h4>
-                  <p class="text-[11px] text-slate-500">Razorpay • Risk & Fraud ML</p>
-                  <p class="text-slate-600 line-clamp-2">Real-time fraud prevention systems evaluating transaction streams in milliseconds.</p>
-                  <p class="font-bold text-slate-800">₹20 - ₹28 LPA</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
                 </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Razorpay ML Engineer')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
-
-              <!-- Job 3 -->
-              <div onclick="UI.openPostDetailModal('JOB-GOOG-301', 'job')" class="bg-slate-50/60 rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[10px] font-mono font-bold text-indigo-700">JOB-GOOG-301</span>
-                    <span class="text-xs font-black text-emerald-600">89% Match</span>
-                  </div>
-                  <h4 class="font-bold text-sm text-slate-900">Deep Learning Software Engineer</h4>
-                  <p class="text-[11px] text-slate-500">Google • DeepMind / Systems</p>
-                  <p class="text-slate-600 line-clamp-2">Optimize transformer architectures on distributed TPU pods with memory efficiency.</p>
-                  <p class="font-bold text-slate-800">₹30 - ₹45 LPA</p>
-                  <p class="text-[10px] text-indigo-600 font-semibold pt-1">Click card to view full description & AI fit</p>
-                </div>
-                <div onclick="event.stopPropagation()">
-                  <button onclick="UI.applyOneClick('Google Deep Learning Engineer')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
-                    One-Click Apply
-                  </button>
-                </div>
-              </div>
+              `).join('')}
             </div>
           `}
         </div>
@@ -1854,9 +3375,9 @@ const UI = {
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
-              <h3 class="font-bold text-lg text-slate-900">Future Market Scope & Predictions</h3>
+              <h3 class="font-bold text-lg text-slate-900">Future Market Scope & Predictions (${p.field})</h3>
               <p class="text-xs text-slate-500">
-                Predictive industry demand modeling based on 250,000+ technical job descriptions, tech venture capital allocations, and verified market trends (2026 - 2028)
+                Predictive industry demand modeling based on 250,000+ job descriptions, global venture capital allocations, and verified market trends (2026 - 2028)
               </p>
             </div>
             <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
@@ -1866,98 +3387,41 @@ const UI = {
 
           <!-- Growth Velocity Forecast Cards with Real-Life News & Citations -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- 1. Autonomous Agentic Swarms -->
-            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70 space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-bold text-slate-900">Autonomous Agentic Swarms & Tool Calling</span>
-                <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+186% Demand</span>
+            ${futureSkills.map((fs, idx) => `
+              <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70 space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm font-bold text-slate-900">${fs.title}</span>
+                  <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">${fs.growth}</span>
+                </div>
+                <p class="text-xs text-slate-600 font-medium">${fs.tools}</p>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div class="${idx === 0 ? 'bg-indigo-600' : 'bg-blue-600'} h-2 rounded-full" style="width: ${idx === 0 ? '94%' : '86%'}"></div>
+                </div>
+                <p class="text-xs font-semibold text-slate-800">Projected Entry CTC: <strong>${fs.ctc}</strong></p>
+                
+                <!-- Real-Life News Citation -->
+                <div class="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-600 space-y-1">
+                  <p class="font-bold text-slate-800">Industry Evidence & Citation:</p>
+                  <p class="italic text-slate-600">${fs.citation}</p>
+                </div>
               </div>
-              <p class="text-xs text-slate-600">LangGraph, CrewAI, AutoGen & Multi-Agent Consensus Architecture</p>
-              <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div class="bg-indigo-600 h-2 rounded-full" style="width: 94%"></div>
-              </div>
-              <p class="text-xs font-semibold text-slate-800">Projected Entry CTC: <strong>₹24 - ₹38 LPA ($175k - $210k)</strong></p>
-              
-              <!-- Real-Life News Citation -->
-              <div class="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-600 space-y-1">
-                <p class="font-bold text-slate-800">Industry News & Evidence Citation:</p>
-                <p class="italic text-slate-600">"Enterprise adoption of multi-agent autonomous swarms grew by 210% following commercial rollouts of Anthropic Computer Use and OpenAI Operator. Software architectures are shifting from code generation to autonomous verification workflows." — Bloomberg Tech & Gartner 2026 Emerging Tech Report</p>
-              </div>
-            </div>
-
-            <!-- 2. Edge AI & SLMs -->
-            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70 space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-bold text-slate-900">Edge AI & Small Language Models (SLMs)</span>
-                <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+142% Demand</span>
-              </div>
-              <p class="text-xs text-slate-600">Apple MLX, ONNX Runtime, NPU Compilation, 4-bit Quantization (AWQ/GPTQ)</p>
-              <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div class="bg-blue-600 h-2 rounded-full" style="width: 86%"></div>
-              </div>
-              <p class="text-xs font-semibold text-slate-800">Projected Entry CTC: <strong>₹20 - ₹34 LPA ($160k - $190k)</strong></p>
-              
-              <!-- Real-Life News Citation -->
-              <div class="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-600 space-y-1">
-                <p class="font-bold text-slate-800">Industry News & Evidence Citation:</p>
-                <p class="italic text-slate-600">"With Apple M-series neural engines and Qualcomm Snapdragon X Elite NPUs becoming standard in enterprise laptops, 65% of enterprise AI workloads are projected to execute on-device by 2027 to eliminate cloud inference API costs." — Reuters & Apple Silicon Briefing</p>
-              </div>
-            </div>
-
-            <!-- 3. AI Safety & Red-Teaming -->
-            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70 space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-bold text-slate-900">AI Safety, Model Alignment & Red-Teaming</span>
-                <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+110% Demand</span>
-              </div>
-              <p class="text-xs text-slate-600">Prompt Injection Defense, Model Watermarking, Statutory AI Governance</p>
-              <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div class="bg-purple-600 h-2 rounded-full" style="width: 78%"></div>
-              </div>
-              <p class="text-xs font-semibold text-slate-800">Projected Entry CTC: <strong>₹18 - ₹32 LPA ($155k - $185k)</strong></p>
-              
-              <!-- Real-Life News Citation -->
-              <div class="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-600 space-y-1">
-                <p class="font-bold text-slate-800">Industry News & Evidence Citation:</p>
-                <p class="italic text-slate-600">"The formal enactment of EU AI Act high-risk compliance penalties (up to €35M or 7% global revenue) has mandated dedicated AI Safety and red-teaming divisions across all global enterprise software providers." — Financial Times & Stanford AI Index</p>
-              </div>
-            </div>
-
-            <!-- 4. High-Throughput Inference Engineering -->
-            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70 space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-bold text-slate-900">High-Throughput Inference Engineering</span>
-                <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+168% Demand</span>
-              </div>
-              <p class="text-xs text-slate-600">Triton Inference Server, TensorRT-LLM, PagedAttention, vLLM Clusters</p>
-              <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div class="bg-indigo-600 h-2 rounded-full" style="width: 91%"></div>
-              </div>
-              <p class="text-xs font-semibold text-slate-800">Projected Entry CTC: <strong>₹26 - ₹40 LPA ($180k - $220k)</strong></p>
-              
-              <!-- Real-Life News Citation -->
-              <div class="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-600 space-y-1">
-                <p class="font-bold text-slate-800">Industry News & Evidence Citation:</p>
-                <p class="italic text-slate-600">"Over 82% of enterprise GenAI operational expenditure is currently consumed by inference serving rather than training. Engineers proficient in vLLM and Triton serve up to 5x higher tokens-per-watt, commanding top-tier salaries." — SemiAnalysis & NVIDIA GTC</p>
-              </div>
-            </div>
+            `).join('')}
           </div>
 
-          <!-- Market Demand Radar: Accelerating vs Commoditizing Skills (No emojis) -->
+          <!-- Market Demand Radar: Accelerating vs Commoditizing Skills -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/60 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="font-bold text-emerald-900 flex items-center gap-1.5">
                   <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  High-Velocity Accelerating Skills (Invest Time Here)
+                  High-Velocity Accelerating Skills (${p.domain})
                 </span>
                 <span class="font-bold text-emerald-700">Expanding</span>
               </div>
               <ul class="space-y-1.5 text-slate-700">
-                <li class="flex items-center gap-2">✓ <strong>High-Throughput Inference Engines:</strong> Triton, TensorRT-LLM, vLLM</li>
-                <li class="flex items-center gap-2">✓ <strong>Hybrid Dense & Sparse Search:</strong> BM25 + Vector Embeddings</li>
-                <li class="flex items-center gap-2">✓ <strong>Model Parameter Efficient Tuning:</strong> LoRA, QLoRA, GaLore</li>
-                <li class="flex items-center gap-2">✓ <strong>Multi-Agent Orchestration:</strong> Tool calling, human-in-the-loop flows</li>
+                ${currentRadar.accel.map(item => `
+                  <li class="flex items-center gap-2">✓ <strong>${item.split('(')[0]}:</strong> ${item.includes('(') ? item.split('(')[1].replace(')', '') : 'High Industry Value'}</li>
+                `).join('')}
               </ul>
             </div>
 
@@ -1970,10 +3434,9 @@ const UI = {
                 <span class="font-bold text-rose-700">Commoditizing</span>
               </div>
               <ul class="space-y-1.5 text-slate-700">
-                <li class="flex items-center gap-2">🔻 <strong>Manual Web Scrapers & Parsers:</strong> Now replaced by multimodal vision agents</li>
-                <li class="flex items-center gap-2">🔻 <strong>Boilerplate CRUD Without AI:</strong> Standard endpoints auto-generated by AI</li>
-                <li class="flex items-center gap-2">🔻 <strong>Basic Keyword-Only SQL Search:</strong> Replaced by vector similarity search</li>
-                <li class="flex items-center gap-2">🔻 <strong>Manual Data Annotation:</strong> Replaced by synthetic LLM generation & RLHF</li>
+                ${currentRadar.commo.map(item => `
+                  <li class="flex items-center gap-2">🔻 <strong>${item.split('(')[0]}:</strong> ${item.includes('(') ? item.split('(')[1].replace(')', '') : 'Replaced by AI / Automation'}</li>
+                `).join('')}
               </ul>
             </div>
           </div>
@@ -1981,9 +3444,9 @@ const UI = {
           <!-- Strategic Advice Banner -->
           <div class="p-4 rounded-xl bg-indigo-50 border border-indigo-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
             <div class="space-y-0.5">
-              <p class="font-bold text-indigo-900">Strategic Career Future-Proofing Advice for Arjun:</p>
+              <p class="font-bold text-indigo-900">Strategic Career Future-Proofing Advice for ${p.name}:</p>
               <p class="text-indigo-700">
-                You already possess a top-tier PyTorch and deep learning foundation. To position yourself for the top compensation bracket in 2027+, build 1 project deploying an open-source model to an edge device with Triton and write a blog on your findings.
+                ${currentRadar.advice}
               </p>
             </div>
             <button onclick="UI.toggleChatbot()" class="whitespace-nowrap px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold transition shadow-xs">
@@ -2010,12 +3473,12 @@ const UI = {
             </span>
             <h2 class="text-2xl font-black">Portal Assessments & Daily Challenges</h2>
             <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
-              Take company and college assessment tests, improve your domain rankings, complete daily coding quests, and earn verified badges visible to hiring managers.
+              Take company and college assessment tests, improve your domain rankings, complete daily challenges, and earn verified badges visible to hiring managers.
             </p>
           </div>
           <div class="flex gap-4 text-center">
             <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20 min-w-[100px]">
-              <p class="text-2xl font-black text-indigo-300">#142</p>
+              <p class="text-2xl font-black text-indigo-300">#${p.rankings[0].rank}</p>
               <p class="text-[10px] text-slate-300">Global Rank</p>
             </div>
             <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20 min-w-[100px]">
@@ -2023,7 +3486,7 @@ const UI = {
               <p class="text-[10px] text-slate-300">Daily Quest Streak</p>
             </div>
             <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20 min-w-[100px]">
-              <p class="text-2xl font-black text-amber-300">4 / 4</p>
+              <p class="text-2xl font-black text-amber-300">${p.badges.length} Badges</p>
               <p class="text-[10px] text-slate-300">Verified Badges</p>
             </div>
           </div>
@@ -2070,78 +3533,238 @@ const UI = {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Test 1 -->
-            <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
-              <div class="space-y-2 text-xs">
-                <div class="flex justify-between items-center">
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Company Assessment</span>
-                  <span class="text-[10px] font-bold text-slate-500">45 Mins</span>
-                </div>
-                <h4 class="font-bold text-sm text-slate-900">Microsoft GenAI Engineering Screening</h4>
-                <p class="text-slate-600">30 Questions covering Transformer Attention, PyTorch autograd mechanics, and Triton inference serving.</p>
-                <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
-                  <div class="flex justify-between">
-                    <span>Cutoff Required:</span>
-                    <strong>80%</strong>
+            ${state.selectedDiscipline === 'finance' ? `
+              <!-- Finance Test 1 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Financial Modeling</span>
+                    <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
                   </div>
-                  <div class="flex justify-between">
-                    <span>Your Previous Score:</span>
-                    <strong class="text-emerald-600">92% (Passed)</strong>
+                  <h4 class="font-bold text-sm text-slate-900">Goldman Sachs DCF & Equity Valuation</h4>
+                  <p class="text-slate-600">Three-statement financial model, dynamic sensitivity analysis, and discounted cash flow valuation.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>80%</strong></div>
+                    <div class="flex justify-between"><span>Status:</span><strong class="text-indigo-600">Assigned by Recruiter</strong></div>
                   </div>
                 </div>
+                <button onclick="alert('Starting Goldman Sachs Financial Assessment (Spreadsheet & Modeling Mode)...')" class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
+                  Start Financial Test →
+                </button>
               </div>
-              <button onclick="alert('You have already qualified for this assessment with 92% score! Recruiter notified.');" class="w-full py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold shadow-xs">
-                View Qualification Certificate
-              </button>
-            </div>
 
-            <!-- Test 2 -->
-            <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
-              <div class="space-y-2 text-xs">
-                <div class="flex justify-between items-center">
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">College Assessment</span>
-                  <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
-                </div>
-                <h4 class="font-bold text-sm text-slate-900">IIT Bombay AI Research Aptitude Test</h4>
-                <p class="text-slate-600">Theoretical assessment on Convex Optimization, Matrix Decomposition, and Statistical Learning Theory.</p>
-                <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
-                  <div class="flex justify-between">
-                    <span>Cutoff Required:</span>
-                    <strong>85%</strong>
+              <!-- Finance Test 2 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Regulatory Audit</span>
+                    <span class="text-[10px] font-bold text-slate-500">45 Mins</span>
                   </div>
-                  <div class="flex justify-between">
-                    <span>Your Previous Score:</span>
-                    <strong class="text-indigo-600">89% (Passed)</strong>
+                  <h4 class="font-bold text-sm text-slate-900">SEBI & Corporate Credit Risk Benchmark</h4>
+                  <p class="text-slate-600">Evaluating debt-service coverage ratios, Basel III norms, and corporate working capital cycles.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>75%</strong></div>
+                    <div class="flex justify-between"><span>Previous Score:</span><strong class="text-emerald-600">86% (Passed)</strong></div>
                   </div>
                 </div>
+                <button onclick="alert('Viewing SEBI Credit Benchmark Dossier...')" class="w-full py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">
+                  Review Credit Dossier
+                </button>
               </div>
-              <button onclick="alert('Dossier attached to IIT Bombay Academic Office!');" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
-                Review Academic Dossier
-              </button>
-            </div>
+            ` : state.selectedDiscipline === 'design' ? `
+              <!-- Design Test 1 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Design Systems</span>
+                    <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">Figma Labs Token Architecture & Heuristics</h4>
+                  <p class="text-slate-600">Component tokenization, WCAG 2.1 AAA accessibility audits, and design-to-code auto-layout specs.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>85%</strong></div>
+                    <div class="flex justify-between"><span>Status:</span><strong class="text-indigo-600">Portfolio Review Active</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Opening Figma Interactive Design Challenge...')" class="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
+                  Start Design Challenge →
+                </button>
+              </div>
 
-            <!-- Test 3: Daily Quest -->
-            <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+              <!-- Design Test 2 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800">UX Research</span>
+                    <span class="text-[10px] font-bold text-slate-500">45 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">Zomato Mobile Usability & Micro-Interactions</h4>
+                  <p class="text-slate-600">Checkout friction analysis, motion curve specifications, and qualitative usability test rubrics.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>80%</strong></div>
+                    <div class="flex justify-between"><span>Previous Score:</span><strong class="text-emerald-600">91% (Qualified)</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Viewing UX Interaction Rubric...')" class="w-full py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">
+                  View Qualified Badge
+                </button>
+              </div>
+            ` : state.selectedDiscipline === 'law' ? `
+              <!-- Law Test 1 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Tech Law & IP</span>
+                    <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">DPDP Act 2023 & Cross-Border Data Audit</h4>
+                  <p class="text-slate-600">Compliance analysis under Indian Digital Personal Data Protection Act, consent architectures, and penalty rubrics.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>80%</strong></div>
+                    <div class="flex justify-between"><span>Status:</span><strong class="text-amber-600">Pending Candidate Action</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Starting DPDP Legal Case Assessment...')" class="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
+                  Start Legal Assessment →
+                </button>
+              </div>
+
+              <!-- Law Test 2 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">Contract Forensics</span>
+                    <span class="text-[10px] font-bold text-slate-500">50 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">AZB Technology Procurement Due Diligence</h4>
+                  <p class="text-slate-600">Identifying ambiguous indemnification, intellectual property warranties, and dispute escalation clauses.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>84%</strong></div>
+                    <div class="flex justify-between"><span>Score:</span><strong class="text-emerald-600">88% (Passed)</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Reviewing Legal Procurement Credentials...')" class="w-full py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">
+                  View Legal Dossier
+                </button>
+              </div>
+            ` : state.selectedDiscipline === 'healthcare' ? `
+              <!-- Healthcare Test 1 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">Biostatistics & CDISC</span>
+                    <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">Apollo HealthTech Survival Analysis & Clinical Trials</h4>
+                  <p class="text-slate-600">Kaplan-Meier survival curves, log-rank significance testing, and CDISC SDTM/ADaM dataset structures.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>80%</strong></div>
+                    <div class="flex justify-between"><span>Status:</span><strong class="text-teal-700">Ready to Launch</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Starting Apollo HealthTech Biostatistics Assessment...')" class="w-full py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
+                  Start Clinical Test →
+                </button>
+              </div>
+
+              <!-- Healthcare Test 2 -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-cyan-100 text-cyan-800">Genomics & NGS</span>
+                    <span class="text-[10px] font-bold text-slate-500">45 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">Biocon Research NGS Variant Calling Benchmark</h4>
+                  <p class="text-slate-600">FASTQ preprocessing, BWA read alignment, GATK variant calling, and RNA-Seq pathway analysis.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between"><span>Cutoff Required:</span><strong>80%</strong></div>
+                    <div class="flex justify-between"><span>Score:</span><strong class="text-emerald-600">90% (Passed)</strong></div>
+                  </div>
+                </div>
+                <button onclick="alert('Viewing Biocon Genomic Research Benchmark Dossier...')" class="w-full py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">
+                  Review Genomic Dossier
+                </button>
+              </div>
+            ` : `
+              <!-- Test 1: Company Assessment -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Company Assessment</span>
+                    <span class="text-[10px] font-bold text-slate-500">45 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">Microsoft GenAI Engineering Screening</h4>
+                  <p class="text-slate-600">30 Questions covering Transformer Attention, PyTorch autograd mechanics, and Triton inference serving.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between">
+                      <span>Cutoff Required:</span>
+                      <strong>80%</strong>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Your Previous Score:</span>
+                      <strong class="text-emerald-600">92% (Passed)</strong>
+                    </div>
+                  </div>
+                </div>
+                <button onclick="alert('You have already qualified for this assessment with 92% score! Recruiter notified.');" class="w-full py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold shadow-xs">
+                  View Qualification Certificate
+                </button>
+              </div>
+
+              <!-- Test 2: College Assessment -->
+              <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">College Assessment</span>
+                    <span class="text-[10px] font-bold text-slate-500">60 Mins</span>
+                  </div>
+                  <h4 class="font-bold text-sm text-slate-900">IIT Bombay AI Research Aptitude Test</h4>
+                  <p class="text-slate-600">Theoretical assessment on Convex Optimization, Matrix Decomposition, and Statistical Learning Theory.</p>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                    <div class="flex justify-between">
+                      <span>Cutoff Required:</span>
+                      <strong>85%</strong>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Your Previous Score:</span>
+                      <strong class="text-indigo-600">89% (Passed)</strong>
+                    </div>
+                  </div>
+                </div>
+                <button onclick="alert('Dossier attached to IIT Bombay Academic Office!');" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
+                  Review Academic Dossier
+                </button>
+              </div>
+            `}
+
+            <!-- Live Daily Quest (Monaco-Style Interactive Coding Sandbox) -->
+            <div class="p-5 rounded-2xl border-2 border-amber-300/80 bg-gradient-to-br from-amber-50/70 to-orange-50/50 space-y-4 flex flex-col justify-between shadow-xs">
               <div class="space-y-2 text-xs">
                 <div class="flex justify-between items-center">
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Daily Quest Streak #9</span>
-                  <span class="text-[10px] font-bold text-amber-600">Expires in 6 hrs</span>
+                  <span class="text-[10px] font-black px-2 py-0.5 rounded bg-amber-200 text-amber-900 flex items-center gap-1">
+                    <span>⚡</span> Daily Quest Streak #${state.applicant.profile.rankings[1].score > 92 ? '9' : '8'}
+                  </span>
+                  <span class="text-[10px] font-bold text-amber-700">Monaco Engine</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900">Dynamic Programming: Tree Rerooting</h4>
-                <p class="text-slate-600">Solve today's algorithmic puzzle in Python or C++ to maintain your streak and earn +50 skill XP.</p>
-                <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] space-y-1">
+                <h4 class="font-extrabold text-sm text-slate-900 flex items-center gap-1.5">
+                  <span>Dynamic Programming: Tree Rerooting</span>
+                </h4>
+                <p class="text-slate-600 leading-relaxed">
+                  Solve today's $O(N)$ tree distance rerooting challenge in our embedded, proctored code editor. Supports Python, C++, Java & TypeScript.
+                </p>
+                <div class="p-2.5 bg-white/90 rounded-xl border border-amber-200 text-[11px] space-y-1">
                   <div class="flex justify-between">
-                    <span>XP Reward:</span>
-                    <strong class="text-amber-600">+50 XP & Streak +1</strong>
+                    <span class="text-slate-500">Reward:</span>
+                    <strong class="text-amber-700">+50 XP & Streak +1 Day</strong>
                   </div>
                   <div class="flex justify-between">
-                    <span>Difficulty:</span>
-                    <strong class="text-indigo-600">Hard (LeetCode Style)</strong>
+                    <span class="text-slate-500">Security:</span>
+                    <strong class="text-emerald-700">🔒 Proctored & Anti-Paste Guard</strong>
                   </div>
                 </div>
               </div>
-              <button onclick="alert('Daily Quest opened in live code editor! Good luck!');" class="w-full py-2 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-bold transition shadow-xs">
-                Start Daily Challenge →
+              <button onclick="UI.openCodingAssessmentModal('dp-tree-reroot')" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black rounded-xl text-xs transition shadow-md flex items-center justify-center gap-2">
+                <span>⚡ Open Live Monaco Sandbox →</span>
               </button>
             </div>
           </div>
@@ -2155,17 +3778,20 @@ const UI = {
   // -------------------------------------------------------------
   templateApplicantFreelance() {
     const p = state.applicant.profile;
+    const disc = state.selectedDiscipline;
+    const items = disc === 'all' ? state.freelanceDatabase : state.freelanceDatabase.filter(f => f.discipline === disc);
+
     return `
       <div class="space-y-6">
         <!-- Top Stats Banner -->
         <div class="bg-gradient-to-r from-indigo-900 to-blue-950 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="space-y-2">
             <span class="text-xs px-3 py-1 rounded-full bg-white/10 font-semibold inline-flex items-center gap-1.5">
-              <span>💼</span> Verified Freelancer Portfolio
+              <span>💼</span> Verified Freelancer Portfolio • ${p.field}
             </span>
             <h2 class="text-2xl font-black">Recommended Freelance Projects & Contracts</h2>
             <p class="text-xs text-indigo-200 max-w-xl leading-relaxed">
-              High-value client contracts matched to your PyTorch, Vision LLM, and Next.js proficiencies. Submit AI-tailored proposals with verified leaderboard badges.
+              High-value client contracts matched to your ${p.domainSkills.slice(0, 3).join(', ')} proficiencies. Submit AI-tailored proposals with verified leaderboard badges.
             </p>
           </div>
           <div class="flex gap-4 text-center">
@@ -2178,7 +3804,7 @@ const UI = {
               <p class="text-[10px] text-indigo-200">Client Rating</p>
             </div>
             <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20 min-w-[100px]">
-              <p class="text-2xl font-black text-indigo-300">3 / 3</p>
+              <p class="text-2xl font-black text-indigo-300">${p.completedFreelance.length} / ${p.completedFreelance.length}</p>
               <p class="text-[10px] text-indigo-200">Delivered On-Time</p>
             </div>
           </div>
@@ -2186,18 +3812,21 @@ const UI = {
 
         <!-- Available Project Opportunities Grid -->
         <div class="space-y-4">
-          <div class="flex items-center justify-between bg-white p-4 rounded-xl border border-slate-200">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200">
             <div>
               <h3 class="font-bold text-base text-slate-900">Recommended Freelance Gigs</h3>
               <p class="text-xs text-slate-500">Click any card to inspect full requirements or generate an AI proposal</p>
             </div>
-            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-lg">
-              ${state.freelanceDatabase.length} Live Openings
-            </span>
+            <div class="flex items-center gap-2">
+              ${disc !== 'all' ? `<span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-xs">Field: ${disc.toUpperCase()}</span>` : ''}
+              <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-lg">
+                ${items.length} Live Openings
+              </span>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            ${state.freelanceDatabase.map(proj => `
+            ${items.map(proj => `
               <div onclick="UI.openFreelanceDetailModal('${proj.id}')" class="bg-white rounded-2xl p-5 border border-slate-200 space-y-4 hover:border-indigo-400 hover:shadow-md transition cursor-pointer flex flex-col justify-between">
                 <div class="space-y-2 text-xs">
                   <div class="flex justify-between items-center">
@@ -2248,6 +3877,11 @@ const UI = {
   // Requirement 2: Every internship/job has ID, clickable description & AI analysis button
   // -------------------------------------------------------------
   templateApplicantInternships() {
+    const disc = state.selectedDiscipline;
+    const items = disc === 'all'
+      ? state.internshipsDatabase
+      : state.internshipsDatabase.filter(i => i.discipline === disc);
+
     return `
       <div class="space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200">
@@ -2255,13 +3889,16 @@ const UI = {
             <h3 class="font-bold text-base text-slate-900">Internship Listings with Unique IDs</h3>
             <p class="text-xs text-slate-500">Click any card for full description, or run AI Skill & Test Gap analysis</p>
           </div>
-          <div class="text-xs text-slate-500 font-semibold">
-            Showing ${state.internshipsDatabase.length} Verified Internships
+          <div class="flex items-center gap-2">
+            ${disc !== 'all' ? `<span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-xs">Field: ${disc.toUpperCase()}</span>` : ''}
+            <div class="text-xs text-slate-500 font-semibold">
+              Showing ${items.length} of ${state.internshipsDatabase.length} Verified Internships
+            </div>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          ${state.internshipsDatabase.map(intern => `
+          ${items.map(intern => `
             <div onclick="UI.openPostDetailModal('${intern.id}', 'internship')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-indigo-400 hover:shadow-md transition cursor-pointer space-y-4">
               <div class="flex justify-between items-start">
                 <div>
@@ -2308,6 +3945,11 @@ const UI = {
   },
 
   templateApplicantJobs() {
+    const disc = state.selectedDiscipline;
+    const items = disc === 'all'
+      ? state.jobsDatabase
+      : state.jobsDatabase.filter(j => j.discipline === disc);
+
     return `
       <div class="space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200">
@@ -2315,13 +3957,16 @@ const UI = {
             <h3 class="font-bold text-base text-slate-900">Full-Time, Remote & Academic Jobs</h3>
             <p class="text-xs text-slate-500">Every post features a unique ID for copy-paste analysis or instant 1-click AI comparison</p>
           </div>
-          <div class="text-xs text-slate-500 font-semibold">
-            Showing ${state.jobsDatabase.length} Jobs
+          <div class="flex items-center gap-2">
+            ${disc !== 'all' ? `<span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-xs">Field: ${disc.toUpperCase()}</span>` : ''}
+            <div class="text-xs text-slate-500 font-semibold">
+              Showing ${items.length} of ${state.jobsDatabase.length} Jobs
+            </div>
           </div>
         </div>
 
         <div class="space-y-4">
-          ${state.jobsDatabase.map(job => `
+          ${items.map(job => `
             <div onclick="UI.openPostDetailModal('${job.id}', 'job')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-indigo-400 hover:shadow-md transition cursor-pointer space-y-4">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
@@ -2480,10 +4125,12 @@ const UI = {
   templateApplicantOrganisations() {
     const filter = state.applicant.orgFilter;
     const pType = state.applicant.personaType;
+    const disc = state.selectedDiscipline;
 
     const filteredList = state.organisationsDatabase.filter(org => {
-      if (filter === 'company') return org.type === 'company';
-      if (filter === 'college') return org.type === 'college';
+      if (filter === 'company' && org.type !== 'company') return false;
+      if (filter === 'college' && org.type !== 'college') return false;
+      if (disc !== 'all' && org.discipline && org.discipline !== disc) return false;
       return true;
     });
 
@@ -2492,11 +4139,14 @@ const UI = {
         <!-- Filter Header -->
         <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <h3 class="font-bold text-lg text-slate-900">
-              ${pType === 'academician' ? 'Colleges & Academic Institutions (For Academicians & Faculty)' : 'Companies & Employers (For Students & Job Seekers)'}
-            </h3>
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-lg text-slate-900">
+                ${pType === 'academician' ? 'Colleges & Academic Institutions (For Academicians & Faculty)' : 'Companies & Employers (For Students & Job Seekers)'}
+              </h3>
+              ${disc !== 'all' ? `<span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-xs">Field: ${disc.toUpperCase()}</span>` : ''}
+            </div>
             <p class="text-xs text-slate-500">
-              Explore recruitment processes, campus visits, faculty openings, and hiring culture insights.
+              Explore recruitment processes, campus visits, faculty openings, and hiring culture insights. Showing ${filteredList.length} verified organisations.
             </p>
           </div>
 
@@ -2691,6 +4341,55 @@ const UI = {
                 Update
               </button>
             </div>
+          </div>
+        </div>
+
+        <!-- 1.5 Student Pre-Flight Credential & DigiLocker Verifier -->
+        <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 rounded-2xl p-6 text-white shadow-xl space-y-5 border border-indigo-500/30">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-400/30 flex items-center gap-1">
+                  <span>🛡️</span> 3-Tier Pre-Flight Audit
+                </span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-bold border border-indigo-400/30">
+                  DigiLocker & Sovereign Ledger Ready
+                </span>
+              </div>
+              <h3 class="text-xl font-black">Pre-Submission Credential & Certificate Integrity Verifier</h3>
+              <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
+                Pre-verify your earned certificates before enterprise recruiters review your profile. Test your credentials against cryptographic EXIF metadata checks, Error Level Analysis (ELA), and official registry ledgers to attach an unforgeable verified seal.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/10 text-xs shrink-0">
+              <div class="text-right">
+                <p class="text-[10px] text-slate-400 font-semibold uppercase">Candidate Trust Rating</p>
+                <p class="text-sm font-black text-emerald-400 flex items-center gap-1 justify-end">
+                  <span>✓</span> High Integrity (99.8%)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Scanner Selector & Action -->
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex-1 w-full space-y-1">
+              <label class="text-[11px] font-bold text-indigo-200 uppercase tracking-wider">Select Certificate to Audit & Authenticate:</label>
+              <select id="student-preflight-cert-select" onchange="UI.selectPreflightCert(this.value)" class="w-full bg-slate-900/95 text-white text-xs border border-white/20 rounded-xl p-2.5 focus:outline-none focus:border-indigo-400 font-medium">
+                <option value="stanford-ai" ${state.studentPreflight.selectedCert === 'stanford-ai' ? 'selected' : ''}>Stanford_DeepLearning_Specialization.pdf (Issued: Stanford Online / Coursera)</option>
+                <option value="aws-cloud" ${state.studentPreflight.selectedCert === 'aws-cloud' ? 'selected' : ''}>AWS_Certified_Solutions_Architect.pdf (Issued: Amazon Web Services)</option>
+                <option value="google-tampered" ${state.studentPreflight.selectedCert === 'google-tampered' ? 'selected' : ''}>Google_Data_Analytics_Professional.pdf [Sample Flagged: Photoshop Layer Alteration]</option>
+              </select>
+            </div>
+
+            <button onclick="UI.runStudentPreflightScan()" id="btn-preflight-scan" class="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-black rounded-xl text-xs transition shadow-lg flex items-center justify-center gap-2 whitespace-nowrap">
+              <span>⚡ Run Pre-Flight Integrity Scan</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Scan Progress & Result Container -->
+          <div id="student-preflight-result-container">
+            ${this.renderPreflightReport()}
           </div>
         </div>
 
@@ -3385,6 +5084,11 @@ const UI = {
             </span>
           </div>
 
+          <!-- Multi-Disciplinary Domain Switcher (All Fields Filter) -->
+          <div class="hidden xl:flex items-center gap-1 bg-slate-800/90 p-1 rounded-xl border border-slate-700 text-xs">
+            ${this.renderDisciplinePills('dark')}
+          </div>
+
           <div class="flex items-center gap-3 text-xs">
             <button onclick="UI.setPersona('applicant')" class="hidden sm:inline-flex items-center gap-1 text-slate-300 hover:text-white font-semibold bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl transition">
               <span>← Switch to Applicant Mode</span>
@@ -3555,6 +5259,38 @@ const UI = {
             </button>
             <button onclick="UI.openBroadcastModal()" class="px-3.5 py-2 border border-purple-200 bg-purple-50 text-purple-700 font-bold rounded-xl hover:bg-purple-100 transition">
               Send Broadcast Update
+            </button>
+          </div>
+        </div>
+
+        <!-- 3.5 AI Credential Integrity & Anti-Tamper Radar -->
+        <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-purple-950 text-white rounded-2xl p-5 shadow-sm border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-purple-500/30 text-purple-300 font-mono text-[10px] font-bold border border-purple-400/30">AI Forensic Engine Active</span>
+              <h4 class="font-black text-sm tracking-tight text-white flex items-center gap-1.5">
+                <span>🛡️</span> Candidate Credential Integrity & Tamper Radar
+              </h4>
+            </div>
+            <p class="text-xs text-slate-300 max-w-2xl">
+              Automated 3-tier inspection running on applicant certificates: Direct Issuer Registry Lookups, PDF Metadata Forensics (Photoshop/Canva layer detection), and Assessment Competence Cross-Checks.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+            <div class="text-center px-3 py-1.5 bg-white/10 rounded-xl border border-white/10 flex-1 md:flex-initial">
+              <span class="text-[10px] text-slate-300 block">Scanned</span>
+              <span class="font-black text-sm text-white">6 Cohort Apps</span>
+            </div>
+            <div class="text-center px-3 py-1.5 bg-emerald-500/20 rounded-xl border border-emerald-500/30 flex-1 md:flex-initial">
+              <span class="text-[10px] text-emerald-300 block">Verified Genuine</span>
+              <span class="font-black text-sm text-emerald-400">5 (83.3%)</span>
+            </div>
+            <div class="text-center px-3 py-1.5 bg-rose-500/20 rounded-xl border border-rose-500/30 flex-1 md:flex-initial animate-pulse">
+              <span class="text-[10px] text-rose-300 block">Tamper Alert</span>
+              <span class="font-black text-sm text-rose-400">1 Flagged</span>
+            </div>
+            <button onclick="UI.filterByFlaggedCredentials()" class="px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs shadow-sm transition whitespace-nowrap w-full md:w-auto">
+              Audit Flagged (1) →
             </button>
           </div>
         </div>
@@ -3946,10 +5682,23 @@ const UI = {
               ${state.organisation.applicants.filter(a => a.oppId === opp.id).map(app => `
                 <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div class="space-y-1">
-                    <div class="flex items-center gap-2">
+                    <div class="flex flex-wrap items-center gap-2">
                       <span class="font-mono font-bold text-[10px] px-2 py-0.5 rounded bg-white text-slate-700 border">${app.id}</span>
                       <h5 class="font-bold text-sm text-slate-900">${app.name}</h5>
                       <span class="text-xs font-black px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">${app.matchScore}% Match Score</span>
+                      ${app.credentialTrust === 'verified' ? `
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1">
+                          <span>🛡️</span> Verified (100% Genuine)
+                        </span>
+                      ` : app.credentialTrust === 'flagged' ? `
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200 flex items-center gap-1 animate-pulse">
+                          <span>⚠️</span> Tamper Risk Alert
+                        </span>
+                      ` : `
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">
+                          Self-Reported
+                        </span>
+                      `}
                     </div>
                     <p class="text-slate-500">${app.education} • Applied: ${app.appliedDate}</p>
                     <div class="flex flex-wrap gap-1 pt-1">
@@ -3961,6 +5710,9 @@ const UI = {
                   <div class="flex items-center gap-2">
                     <button onclick="UI.openApplicantDrawer('${app.id}')" class="px-3 py-1.5 border border-slate-200 bg-white hover:bg-slate-100 rounded-lg font-bold">
                       View Resume
+                    </button>
+                    <button onclick="UI.openApplicantDrawer('${app.id}')" class="px-3 py-1.5 border ${app.credentialTrust === 'flagged' ? 'border-rose-300 bg-rose-50 text-rose-700 hover:bg-rose-100' : 'border-purple-200 bg-purple-50 text-purple-700 hover:bg-purple-100'} rounded-lg font-bold">
+                      Audit Credentials
                     </button>
                     <button onclick="UI.shortlistCandidate('${app.id}')" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold">
                       Shortlist
@@ -4150,12 +5902,14 @@ const UI = {
     const q = (state.organisation.applicantSearchQuery || '').toLowerCase();
     const oppFilter = state.organisation.applicantOppFilter || 'all';
     const statusFilter = state.organisation.applicantStatusFilter || 'all';
+    const trustFilter = state.organisation.applicantTrustFilter || 'all';
 
     const filtered = apps.filter(a => {
       const matchSearch = a.name.toLowerCase().includes(q) || a.id.toLowerCase().includes(q) || a.role.toLowerCase().includes(q);
       const matchOpp = oppFilter === 'all' || a.oppId === oppFilter;
       const matchStatus = statusFilter === 'all' || a.status.toLowerCase() === statusFilter.toLowerCase();
-      return matchSearch && matchOpp && matchStatus;
+      const matchTrust = trustFilter === 'all' || (a.credentialTrust || 'unverified') === trustFilter;
+      return matchSearch && matchOpp && matchStatus && matchTrust;
     });
 
     return `
@@ -4185,6 +5939,14 @@ const UI = {
                 <option value="shortlisted" ${statusFilter === 'shortlisted' ? 'selected' : ''}>Shortlisted</option>
                 <option value="qualified" ${statusFilter === 'qualified' ? 'selected' : ''}>Qualified</option>
               </select>
+
+              <!-- Credential Integrity & Anti-Fraud Filter -->
+              <select id="filter-trust" onchange="UI.filterApplicants()" class="border border-slate-200 rounded-xl px-3 py-2 bg-slate-50 font-medium text-slate-700">
+                <option value="all">All Integrity Levels</option>
+                <option value="verified" ${trustFilter === 'verified' ? 'selected' : ''}>🛡️ Verified Genuine (100%)</option>
+                <option value="flagged" ${trustFilter === 'flagged' ? 'selected' : ''}>⚠️ Tamper Risk (Flagged)</option>
+                <option value="unverified" ${trustFilter === 'unverified' ? 'selected' : ''}>Self-Reported / In Review</option>
+              </select>
             </div>
           </div>
         </div>
@@ -4203,6 +5965,7 @@ const UI = {
                   <th class="p-3.5">Candidate</th>
                   <th class="p-3.5">Applied Role</th>
                   <th class="p-3.5">Status</th>
+                  <th class="p-3.5">Credential Integrity</th>
                   <th class="p-3.5">Applied Date</th>
                   <th class="p-3.5">Match Score</th>
                   <th class="p-3.5">Current Round</th>
@@ -4221,6 +5984,21 @@ const UI = {
                       <span class="px-2.5 py-0.5 rounded-full font-bold text-[10px] ${app.status === 'Qualified' ? 'bg-emerald-100 text-emerald-800' : app.status === 'Shortlisted' ? 'bg-purple-100 text-purple-800' : 'bg-amber-100 text-amber-800'}">
                         ${app.status}
                       </span>
+                    </td>
+                    <td class="p-3.5">
+                      ${app.credentialTrust === 'verified' ? `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-bold text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200">
+                          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 100% Genuine
+                        </span>
+                      ` : app.credentialTrust === 'flagged' ? `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-bold text-[10px] bg-rose-50 text-rose-700 border border-rose-200 animate-pulse">
+                          <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> ⚠️ Tamper Risk
+                        </span>
+                      ` : `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-bold text-[10px] bg-slate-100 text-slate-600 border border-slate-200">
+                          <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Self-Reported
+                        </span>
+                      `}
                     </td>
                     <td class="p-3.5 text-slate-500">${app.appliedDate}</td>
                     <td class="p-3.5 font-black text-emerald-600">${app.matchScore}%</td>
@@ -4247,15 +6025,25 @@ const UI = {
     const search = document.getElementById('applicant-search-box');
     const opp = document.getElementById('filter-opp');
     const status = document.getElementById('filter-status');
+    const trust = document.getElementById('filter-trust');
 
     state.organisation.applicantSearchQuery = search ? search.value : '';
     state.organisation.applicantOppFilter = opp ? opp.value : 'all';
     state.organisation.applicantStatusFilter = status ? status.value : 'all';
+    state.organisation.applicantTrustFilter = trust ? trust.value : 'all';
 
     const content = document.getElementById('org-tab-content');
     if (content && state.organisation.activeTab === 'applicants') {
       content.innerHTML = this.templateOrgApplicants();
     }
+  },
+
+  filterByFlaggedCredentials() {
+    state.organisation.applicantSearchQuery = '';
+    state.organisation.applicantOppFilter = 'all';
+    state.organisation.applicantStatusFilter = 'all';
+    state.organisation.applicantTrustFilter = 'flagged';
+    this.switchOrgTab('applicants');
   },
 
   openApplicantDrawer(id) {
@@ -4301,7 +6089,140 @@ const UI = {
               <p><strong>Matched Skills:</strong> <span class="text-emerald-700 font-semibold">${app.matchedSkills.join(', ')}</span></p>
               <p><strong>Missing Skills:</strong> <span class="text-amber-700 font-semibold">${app.missingSkills.join(', ')}</span></p>
               <p><strong>Projects:</strong> ${(app.projects || []).join(' • ')}</p>
-              <p><strong>Certifications:</strong> ${(app.certifications || []).join(' • ')}</p>
+            </div>
+
+            <!-- Verified Credentials & Forensic Authenticity Audit Studio -->
+            <div class="p-4 rounded-xl border ${
+              app.credentialTrust === 'verified' ? 'bg-emerald-50/40 border-emerald-200' :
+              app.credentialTrust === 'flagged' ? 'bg-rose-50/50 border-rose-300' :
+              'bg-slate-50 border-slate-200'
+            } space-y-3">
+              <div class="flex items-center justify-between border-b ${
+                app.credentialTrust === 'flagged' ? 'border-rose-200' : 'border-slate-200'
+              } pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">${app.credentialTrust === 'verified' ? '🛡️' : app.credentialTrust === 'flagged' ? '⚠️' : '⏳'}</span>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-xs">Verified Credentials & Forensic Audit</h4>
+                    <p class="text-[10px] text-slate-500">3-Tier Verification: Registry API, PDF Forensics, & Competence Cross-Check</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
+                    app.credentialTrust === 'verified' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' :
+                    app.credentialTrust === 'flagged' ? 'bg-rose-100 text-rose-800 border border-rose-300 animate-pulse' :
+                    'bg-slate-200 text-slate-700'
+                  }">
+                    ${app.credentialTrust === 'verified' ? '100% Genuine' :
+                      app.credentialTrust === 'flagged' ? 'Tamper Risk Alert' : 'Pending Review'}
+                  </span>
+                  <p class="text-[10px] text-slate-500 font-semibold mt-0.5">Trust Score: ${app.trustScore || 80}%</p>
+                </div>
+              </div>
+
+              <!-- List of Certificates with Forensic Breakdown -->
+              <div class="space-y-3 pt-1">
+                ${(app.certifications || []).map((cert, cIdx) => `
+                  <div class="bg-white rounded-xl border border-slate-200 p-3.5 space-y-3 shadow-2xs">
+                    <!-- Cert Header -->
+                    <div class="flex items-start justify-between gap-3">
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2 h-2 rounded-full ${cert.status === 'verified' ? 'bg-emerald-500' : cert.status === 'flagged' ? 'bg-rose-500' : 'bg-amber-500'}"></span>
+                          <h5 class="font-bold text-slate-900 text-xs">${cert.title}</h5>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-0.5">${cert.issuer} • Issued: ${cert.issueDate}</p>
+                        <p class="text-[10px] font-mono text-slate-400 mt-0.5">Credential ID: <strong class="text-slate-700">${cert.credentialId}</strong></p>
+                      </div>
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
+                        cert.status === 'verified' ? 'bg-emerald-100 text-emerald-800' :
+                        cert.status === 'flagged' ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-700'
+                      }">
+                        ${cert.status === 'verified' ? 'Verified Authentic' : cert.status === 'flagged' ? 'Tamper Flagged' : 'Self-Reported'}
+                      </span>
+                    </div>
+
+                    <!-- Flag Alert Box (If Flagged) -->
+                    ${cert.status === 'flagged' && cert.flagReasons ? `
+                      <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg space-y-1.5 text-rose-900 text-[11px]">
+                        <p class="font-bold flex items-center gap-1 text-rose-950">
+                          <span>🚨 Forensic Tampering Flags Detected:</span>
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-rose-800 text-[11px] leading-relaxed">
+                          ${cert.flagReasons.map(r => `<li>${r}</li>`).join('')}
+                        </ul>
+                      </div>
+                    ` : ''}
+
+                    <!-- 3-Tier Forensic Inspection Card -->
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/80 space-y-2 text-[11px]">
+                      <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+                        <span class="font-bold text-slate-800">Forensic Audit Results</span>
+                        <span class="text-[10px] font-mono text-slate-500">Audit ID: AUD-${cIdx + 1}092</span>
+                      </div>
+
+                      <!-- 1. Digital Registry -->
+                      <div class="flex items-center justify-between">
+                        <span class="text-slate-500">1. Issuer Registry / Public API:</span>
+                        <span class="font-semibold ${cert.issuerVerified ? 'text-emerald-700' : 'text-rose-700'}">
+                          ${cert.issuerVerified ? '✓ Verified in Official Registry' : '✗ Record Not Found on Issuer DB'}
+                        </span>
+                      </div>
+
+                      <!-- 2. PDF File Forensics -->
+                      <div class="space-y-1 pt-1 border-t border-slate-200/60 text-[10px]">
+                        <div class="flex items-center justify-between">
+                          <span class="text-slate-500">2. PDF Rendering Engine:</span>
+                          <span class="font-mono font-semibold ${cert.fileMetadata?.tamperingDetected ? 'text-rose-700' : 'text-slate-800'}">
+                            ${cert.fileMetadata?.engine || 'Standard PDF Engine'}
+                          </span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-slate-500">Creation vs Mod Timestamp:</span>
+                          <span class="${cert.fileMetadata?.tamperingDetected ? 'text-rose-700 font-semibold' : 'text-slate-600'}">
+                            ${cert.fileMetadata?.modifiedDate || 'Clean'}
+                          </span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-slate-500">Vector / Layer Analysis:</span>
+                          <span class="${cert.fileMetadata?.tamperingDetected ? 'text-rose-700 font-semibold' : 'text-emerald-700 font-semibold'}">
+                            ${cert.fileMetadata?.layerCheck || 'Clean Vector Stream'}
+                          </span>
+                        </div>
+                      </div>
+
+                      <!-- 3. Competence Cross-Check -->
+                      <div class="flex items-center justify-between pt-1 border-t border-slate-200/60">
+                        <span class="text-slate-500">3. Platform Assessment Check:</span>
+                        <span class="font-semibold ${cert.status === 'flagged' ? 'text-rose-700' : 'text-emerald-700'}">
+                          ${cert.competenceCheck?.score || 'N/A'} (${cert.competenceCheck?.alignment || 'Evaluated'})
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Certificate Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                      <button onclick="UI.verifyCertAtSource('${cert.credentialId}', '${cert.issuer.replace(/'/g, "\\'")}', '${app.name.replace(/'/g, "\\'")}', '${cert.title.replace(/'/g, "\\'")}', '${cert.status}')" class="px-2.5 py-1.5 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 rounded-lg font-bold text-[11px] flex items-center gap-1 shadow-2xs">
+                        <span>Verify at Source</span>
+                        <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                      </button>
+
+                      ${cert.status === 'flagged' ? `
+                        <button onclick="UI.requestDigitalBadge('${app.id}', '${cert.title.replace(/'/g, "\\'")}')" class="px-2.5 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold text-[11px]">
+                          Request Digital Badge Link
+                        </button>
+                        <button onclick="UI.flagCandidateFraud('${app.id}', '${cert.title.replace(/'/g, "\\'")}')" class="px-2.5 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-lg font-bold text-[11px]">
+                          Flag as Fraudulent
+                        </button>
+                      ` : `
+                        <button onclick="UI.markCertVerified('${app.id}', '${cert.title.replace(/'/g, "\\'")}')" class="px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-lg font-bold text-[11px]">
+                          ✓ Confirm Verified
+                        </button>
+                      `}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
             </div>
 
             <!-- Current Application Round Status -->
@@ -4385,6 +6306,137 @@ const UI = {
       app.status = 'Qualified';
       alert(`${app.name} progressed to ${app.currentRound}!`);
       this.switchOrgTab('applicants');
+    }
+  },
+
+  // -------------------------------------------------------------
+  // Forensic Certificate Verification Modals & Action Handlers
+  // -------------------------------------------------------------
+  verifyCertAtSource(credId, issuer, candidateName, certTitle, status) {
+    let modal = document.getElementById('cert-verify-modal-container');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'cert-verify-modal-container';
+      document.body.appendChild(modal);
+    }
+
+    const isVerified = status === 'verified';
+
+    modal.innerHTML = `
+      <div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden border border-slate-200 animate-scale-up">
+          <!-- Modal Header -->
+          <div class="p-4 ${isVerified ? 'bg-emerald-700' : 'bg-rose-700'} text-white flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xl">${isVerified ? '🛡️' : '⚠️'}</span>
+              <div>
+                <h4 class="font-black text-sm">Official Issuer Credential Registry</h4>
+                <p class="text-[10px] text-white/80">${issuer}</p>
+              </div>
+            </div>
+            <button onclick="UI.closeCertVerifyModal()" class="text-white hover:text-slate-200 font-bold text-xl">×</button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="p-5 space-y-4 text-xs">
+            <div class="p-3.5 rounded-xl ${isVerified ? 'bg-emerald-50 border border-emerald-200' : 'bg-rose-50 border border-rose-200'} space-y-1">
+              <span class="text-[10px] font-bold uppercase tracking-wider ${isVerified ? 'text-emerald-800' : 'text-rose-800'}">
+                Registry Verification Lookup Result
+              </span>
+              <p class="font-extrabold text-sm ${isVerified ? 'text-emerald-900' : 'text-rose-900'}">
+                ${isVerified ? '✓ Authenticity Confirmed by Official Authority' : '✗ Credential Record Not Found in Issuer Database'}
+              </p>
+              <p class="text-[11px] ${isVerified ? 'text-emerald-700' : 'text-rose-700'}">
+                ${isVerified ? 
+                  'The digital signature and cryptographic public key match the issuing institution’s secure repository.' : 
+                  'System queried the official registry for this ID. No certificate has ever been issued under this credential number for this applicant.'}
+              </p>
+            </div>
+
+            <!-- Verification Metadata Fields -->
+            <div class="space-y-2 border border-slate-200 rounded-xl p-3.5 bg-slate-50 text-[11px]">
+              <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                <span class="text-slate-500 font-medium">Candidate Name:</span>
+                <span class="font-bold text-slate-800">${candidateName}</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                <span class="text-slate-500 font-medium">Certificate Title:</span>
+                <span class="font-bold text-slate-800">${certTitle}</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                <span class="text-slate-500 font-medium">Credential ID:</span>
+                <span class="font-mono font-bold ${isVerified ? 'text-emerald-700' : 'text-rose-700'}">${credId}</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                <span class="text-slate-500 font-medium">Registry Status:</span>
+                <span class="font-bold ${isVerified ? 'text-emerald-700' : 'text-rose-700'}">${isVerified ? 'Active & Validated (SHA-256)' : 'Invalid / Record Missing'}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Issuing Authority:</span>
+                <span class="font-bold text-slate-800">${issuer}</span>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-500 bg-slate-100 p-2.5 rounded-lg border border-slate-200">
+              <strong>Audit Recommendation:</strong> ${isVerified ? 
+                'This credential has been verified as authentic. You may proceed with candidate advancement.' : 
+                'Do not consider this certificate as proof of skill. Request the candidate provide an official Credly / DigiLocker verification URL or flag this application.'}
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="p-3.5 bg-slate-50 border-t border-slate-200 flex justify-end gap-2">
+            <button onclick="UI.closeCertVerifyModal()" class="px-4 py-2 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800">
+              Close Inspection
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  closeCertVerifyModal() {
+    const modal = document.getElementById('cert-verify-modal-container');
+    if (modal) modal.innerHTML = '';
+  },
+
+  markCertVerified(appId, certTitle) {
+    const app = state.organisation.applicants.find(a => a.id === appId);
+    if (app) {
+      const cert = (app.certifications || []).find(c => c.title === certTitle);
+      if (cert) {
+        cert.status = 'verified';
+        cert.issuerVerified = true;
+        cert.trustScore = 99;
+      }
+      app.credentialTrust = 'verified';
+      alert(`Certificate "${certTitle}" marked as Verified Genuine!`);
+      this.openApplicantDrawer(appId);
+      const content = document.getElementById('org-tab-content');
+      if (content && state.organisation.activeTab === 'applicants') {
+        content.innerHTML = this.templateOrgApplicants();
+      }
+    }
+  },
+
+  flagCandidateFraud(appId, certTitle) {
+    const app = state.organisation.applicants.find(a => a.id === appId);
+    if (app) {
+      app.credentialTrust = 'flagged';
+      app.status = 'Rejected';
+      app.notes += ` | [FRAUD ALERT] Disqualified due to verified forged certificate: "${certTitle}" (Adobe Photoshop tampering confirmed).`;
+      alert(`Application for ${app.name} has been rejected and flagged for credential forgery.`);
+      this.closeApplicantDrawer();
+      this.switchOrgTab('applicants');
+    }
+  },
+
+  requestDigitalBadge(appId, certTitle) {
+    const app = state.organisation.applicants.find(a => a.id === appId);
+    if (app) {
+      alert(`Automated message sent to ${app.name}: "Please provide an official Credly, Coursera, or DigiLocker public badge link for ${certTitle}."`);
+      this.closeApplicantDrawer();
+      this.switchOrgTab('messages');
     }
   },
 
@@ -4975,6 +7027,658 @@ const UI = {
             <button onclick="alert('Exporting complete company data bundle (ZIP)...');" class="px-4 py-2 border border-slate-200 font-bold rounded-xl hover:bg-slate-50">Export Data</button>
           </div>
         </div>
+      </div>
+    `;
+  },
+
+  // -------------------------------------------------------------
+  // Multi-Disciplinary Discipline Switcher Methods
+  // -------------------------------------------------------------
+  renderDisciplinePills(theme = 'light') {
+    const d = state.selectedDiscipline;
+    const disciplines = [
+      { id: 'all', label: 'All Fields', icon: '🌐' },
+      { id: 'tech', label: 'Tech & AI', icon: '💻' },
+      { id: 'finance', label: 'Commerce & Finance', icon: '📈' },
+      { id: 'design', label: 'UI/UX Design', icon: '🎨' },
+      { id: 'law', label: 'Law & Governance', icon: '⚖️' },
+      { id: 'healthcare', label: 'Healthcare & Bio', icon: '🧬' }
+    ];
+
+    if (theme === 'dark') {
+      return disciplines.map(item => `
+        <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? 'bg-purple-600 text-white shadow-xs' : 'text-slate-300 hover:text-white hover:bg-slate-700/60'}">
+          <span>${item.icon}</span>
+          <span>${item.label}</span>
+        </button>
+      `).join('');
+    }
+
+    return disciplines.map(item => `
+      <button onclick="UI.setDisciplineFilter('${item.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${d === item.id ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'}">
+        <span>${item.icon}</span>
+        <span>${item.label}</span>
+      </button>
+    `).join('');
+  },
+
+  setDisciplineFilter(discipline) {
+    state.selectedDiscipline = discipline;
+    const profileKey = discipline === 'all' ? 'tech' : discipline;
+    if (disciplineProfiles[profileKey]) {
+      state.applicant.profile = JSON.parse(JSON.stringify(disciplineProfiles[profileKey]));
+    }
+    if (fieldJDs[profileKey]) {
+      state.applicant.pastedJobDescription = fieldJDs[profileKey];
+    }
+    state.applicant.manualUploadedFileName = null;
+
+    const mentorGreetings = {
+      tech: 'Hello Arjun! I am your AI Career Mentor for Tech & AI Systems. Ask me about LLM fine-tuning, system design, or interview prep!',
+      finance: 'Hello Arjun! I am your Quantitative Finance Career Mentor. Ask me about DCF modeling, private equity, or SEBI certifications!',
+      design: 'Hello Arjun! I am your Product & Design Systems Mentor. Ask me about WCAG AAA compliance, token architectures, or portfolio feedback!',
+      law: 'Hello Arjun! I am your Tech & Corporate Law Mentor. Ask me about the DPDP Act 2023, contract drafting, or moot court prep!',
+      healthcare: 'Hello Arjun! I am your Clinical Bioinformatics Mentor. Ask me about CDISC SDTM schemas, survival analysis, or genomics research!'
+    };
+    if (state.applicant.chatMessages && state.applicant.chatMessages.length > 0) {
+      state.applicant.chatMessages[0].text = mentorGreetings[profileKey] || mentorGreetings['tech'];
+    }
+
+    if (state.currentPersona === 'applicant' || state.currentPersona === 'organisation') {
+      this.renderPersonaView();
+    }
+  },
+
+  // -------------------------------------------------------------
+  // Student Pre-Flight Certificate Verifier Methods
+  // -------------------------------------------------------------
+  selectPreflightCert(certKey) {
+    state.studentPreflight.selectedCert = certKey;
+    state.studentPreflight.scanCompleted = false;
+    state.studentPreflight.auditReport = null;
+    const container = document.getElementById('student-preflight-result-container');
+    if (container) container.innerHTML = this.renderPreflightReport();
+  },
+
+  runStudentPreflightScan() {
+    const certKey = state.studentPreflight.selectedCert;
+    const cert = studentCertificates[certKey] || studentCertificates['stanford-ai'];
+    const btn = document.getElementById('btn-preflight-scan');
+    const container = document.getElementById('student-preflight-result-container');
+
+    state.studentPreflight.isScanning = true;
+    state.studentPreflight.progress = 10;
+    state.studentPreflight.currentStage = 'Stage 1: Extracting PDF XMP metadata & digital signature stream...';
+
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = `<span class="inline-block animate-spin">⏳</span> Scanning Credential...`;
+    }
+
+    if (container) {
+      container.innerHTML = `
+        <div class="p-5 bg-white/5 rounded-xl border border-white/10 space-y-3 animate-pulse">
+          <div class="flex justify-between text-xs font-mono text-indigo-200">
+            <span id="preflight-status-text">Stage 1: Extracting PDF XMP metadata & digital signature stream...</span>
+            <span id="preflight-percent-text">25%</span>
+          </div>
+          <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+            <div id="preflight-progress-bar" class="bg-gradient-to-r from-indigo-400 to-emerald-400 h-2 rounded-full transition-all duration-300" style="width: 25%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    setTimeout(() => {
+      const statusText = document.getElementById('preflight-status-text');
+      const percentText = document.getElementById('preflight-percent-text');
+      const progressBar = document.getElementById('preflight-progress-bar');
+      if (statusText) statusText.innerText = 'Stage 2: Running OpenCV Error Level Analysis (ELA) on raster layers...';
+      if (percentText) percentText.innerText = '65%';
+      if (progressBar) progressBar.style.width = '65%';
+    }, 600);
+
+    setTimeout(() => {
+      const statusText = document.getElementById('preflight-status-text');
+      const percentText = document.getElementById('preflight-percent-text');
+      const progressBar = document.getElementById('preflight-progress-bar');
+      if (statusText) statusText.innerText = 'Stage 3: Querying DigiLocker India & Credly Sovereign Public Registry...';
+      if (percentText) percentText.innerText = '90%';
+      if (progressBar) progressBar.style.width = '90%';
+    }, 1200);
+
+    setTimeout(() => {
+      state.studentPreflight.isScanning = false;
+      state.studentPreflight.scanCompleted = true;
+      state.studentPreflight.auditReport = cert;
+
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = `<span>⚡ Run Pre-Flight Integrity Scan</span>`;
+      }
+
+      if (container) {
+        container.innerHTML = this.renderPreflightReport();
+      }
+    }, 1800);
+  },
+
+  renderPreflightReport() {
+    const { scanCompleted, auditReport } = state.studentPreflight;
+    if (!scanCompleted || !auditReport) {
+      return `
+        <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-slate-300 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">📋</span>
+            <div>
+              <p class="font-bold text-white">Pre-Flight Audit Pending</p>
+              <p class="text-[11px] text-slate-400">Click 'Run Pre-Flight Integrity Scan' to execute cryptographic EXIF, ELA, and registry verification.</p>
+            </div>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400">Ready to audit</span>
+        </div>
+      `;
+    }
+
+    if (auditReport.isGenuine) {
+      return `
+        <div class="p-5 rounded-xl bg-emerald-950/40 border-2 border-emerald-500/40 space-y-4 shadow-inner">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-emerald-500/20 pb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500 text-slate-950 font-black text-xl flex items-center justify-center shadow-md">
+                ✓
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-black text-sm text-white">${auditReport.title}</h4>
+                  <span class="text-[10px] font-black px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">VERIFIED GENUINE</span>
+                </div>
+                <p class="text-xs text-emerald-200">${auditReport.issuer} • Credential ID: ${auditReport.credentialId}</p>
+              </div>
+            </div>
+            <div class="text-right text-xs">
+              <span class="text-[10px] text-slate-400">DigiLocker Seal</span>
+              <p class="font-mono text-emerald-300 font-bold text-xs">#DL-2026-89421</p>
+            </div>
+          </div>
+
+          <!-- 3-Tier Inspection Breakdown -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">1. File & Metadata Forensics</span>
+              <p class="text-emerald-300 font-bold flex items-center gap-1"><span>✓</span> Clean Vector Stream</p>
+              <p class="text-[11px] text-slate-300">${auditReport.metadata.tamperDetail}</p>
+            </div>
+            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">2. Error Level Analysis (ELA)</span>
+              <p class="text-emerald-300 font-bold flex items-center gap-1"><span>✓</span> ${auditReport.ela.score}</p>
+              <p class="text-[11px] text-slate-300">${auditReport.ela.detail}</p>
+            </div>
+            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">3. Sovereign Registry Audit</span>
+              <p class="text-emerald-300 font-bold flex items-center gap-1"><span>✓</span> Official Record Matches</p>
+              <p class="text-[11px] text-slate-300">Issued To: ${auditReport.registry.issuedTo} • Verified on ${auditReport.registry.issuer}</p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/30 flex items-center justify-between text-xs">
+            <span class="text-emerald-200">✨ <strong>Pre-Flight Clear:</strong> This certificate is stamped with an official TalentVerse verification hash and will bypass recruiter manual audits.</span>
+            <span class="font-mono text-[10px] text-emerald-300 truncate max-w-xs">Hash: ${auditReport.registry.verifiedHash.substring(0, 18)}...</span>
+          </div>
+        </div>
+      `;
+    } else {
+      return `
+        <div class="p-5 rounded-xl bg-rose-950/50 border-2 border-rose-500/50 space-y-4 shadow-inner">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-rose-500/20 pb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-rose-600 text-white font-black text-xl flex items-center justify-center shadow-md">
+                ⚠️
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-black text-sm text-white">${auditReport.title}</h4>
+                  <span class="text-[10px] font-black px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40">AUDIT FAILED (TAMPER DETECTED)</span>
+                </div>
+                <p class="text-xs text-rose-200">${auditReport.issuer} • Claimed ID: ${auditReport.credentialId}</p>
+              </div>
+            </div>
+            <div class="text-right text-xs">
+              <span class="text-[10px] text-rose-400 font-bold">Tamper Severity</span>
+              <p class="font-mono text-rose-300 font-bold text-xs">Critical (100% Recruiter Flag)</p>
+            </div>
+          </div>
+
+          <!-- 3-Tier Inspection Breakdown -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-black/30 p-3 rounded-lg border border-rose-500/20 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">1. File & Metadata Forensics</span>
+              <p class="text-rose-400 font-bold flex items-center gap-1"><span>✗</span> Photoshop Layer Anomaly</p>
+              <p class="text-[11px] text-rose-200">${auditReport.metadata.tamperDetail}</p>
+            </div>
+            <div class="bg-black/30 p-3 rounded-lg border border-rose-500/20 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">2. Error Level Analysis (ELA)</span>
+              <p class="text-rose-400 font-bold flex items-center gap-1"><span>✗</span> ${auditReport.ela.score}</p>
+              <p class="text-[11px] text-rose-200">${auditReport.ela.detail}</p>
+            </div>
+            <div class="bg-black/30 p-3 rounded-lg border border-rose-500/20 space-y-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold">3. Sovereign Registry Audit</span>
+              <p class="text-rose-400 font-bold flex items-center gap-1"><span>✗</span> Record Mismatch</p>
+              <p class="text-[11px] text-rose-200">${auditReport.registry.issuedTo}</p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-rose-500/10 rounded-lg border border-rose-500/30 flex items-center justify-between text-xs">
+            <span class="text-rose-200">🛑 <strong>Security Recommendation:</strong> Do NOT attach this document to job or internship applications. Submitting manipulated credentials triggers permanent platform blacklisting.</span>
+          </div>
+        </div>
+      `;
+    }
+  },
+
+  // -------------------------------------------------------------
+  // Live Monaco Interactive Coding Sandbox Modal Methods
+  // -------------------------------------------------------------
+  openCodingAssessmentModal(challengeId = 'dp-tree-reroot') {
+    state.codingModal.isOpen = true;
+    state.codingModal.challengeId = challengeId;
+    state.codingModal.pasteWarning = false;
+    state.codingModal.isRunning = false;
+    state.codingModal.consoleOutput = null;
+
+    if (!state.codingModal.code) {
+      state.codingModal.code = codingChallenge.templates[state.codingModal.language];
+    }
+
+    // Start timer interval if not already running
+    if (state.codingModal.timerInterval) clearInterval(state.codingModal.timerInterval);
+    state.codingModal.timerInterval = setInterval(() => {
+      if (state.codingModal.timeLeft > 0) {
+        state.codingModal.timeLeft--;
+        const timerEl = document.getElementById('coding-timer-display');
+        if (timerEl) {
+          const mins = Math.floor(state.codingModal.timeLeft / 60);
+          const secs = state.codingModal.timeLeft % 60;
+          timerEl.innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+      }
+    }, 1000);
+
+    let modal = document.getElementById('coding-assessment-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'coding-assessment-modal';
+      modal.className = 'fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 overflow-hidden';
+      document.body.appendChild(modal);
+    }
+
+    modal.innerHTML = this.templateCodingAssessmentModal();
+    modal.classList.remove('hidden');
+  },
+
+  closeCodingAssessmentModal() {
+    state.codingModal.isOpen = false;
+    if (state.codingModal.timerInterval) {
+      clearInterval(state.codingModal.timerInterval);
+      state.codingModal.timerInterval = null;
+    }
+    const modal = document.getElementById('coding-assessment-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  },
+
+  setCodingLanguage(lang) {
+    state.codingModal.language = lang;
+    state.codingModal.code = codingChallenge.templates[lang] || '';
+    state.codingModal.consoleOutput = null;
+    const modal = document.getElementById('coding-assessment-modal');
+    if (modal) {
+      modal.innerHTML = this.templateCodingAssessmentModal();
+    }
+  },
+
+  handleCodeEditorInput(value) {
+    state.codingModal.code = value;
+  },
+
+  handleCodePasteGuard(event) {
+    event.preventDefault();
+    state.codingModal.pasteWarning = true;
+    const banner = document.getElementById('paste-guard-warning');
+    if (banner) {
+      banner.classList.remove('hidden');
+      setTimeout(() => {
+        banner.classList.add('hidden');
+      }, 4000);
+    }
+  },
+
+  setCodingTestCaseTab(tabIndex) {
+    state.codingModal.testCaseTab = tabIndex;
+    const modal = document.getElementById('coding-assessment-modal');
+    if (modal) {
+      modal.innerHTML = this.templateCodingAssessmentModal();
+    }
+  },
+
+  runCodeExecution() {
+    state.codingModal.isRunning = true;
+    const btn = document.getElementById('btn-run-code');
+    if (btn) {
+      btn.innerHTML = `<span class="inline-block animate-spin">⏳</span> Compiling in Judge0 Sandbox...`;
+    }
+
+    setTimeout(() => {
+      state.codingModal.isRunning = false;
+      state.codingModal.consoleOutput = {
+        status: 'Accepted',
+        runtime: '18 ms',
+        memory: '14.2 MB',
+        passedCount: 2,
+        totalCount: 2,
+        cases: [
+          { id: 1, name: 'Sample Case 1', passed: true, input: 'n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]', expected: '[8, 12, 6, 10, 10, 10]', actual: '[8, 12, 6, 10, 10, 10]', time: '12ms' },
+          { id: 2, name: 'Sample Case 2', passed: true, input: 'n = 1, edges = []', expected: '[0]', actual: '[0]', time: '6ms' }
+        ]
+      };
+
+      const modal = document.getElementById('coding-assessment-modal');
+      if (modal) {
+        modal.innerHTML = this.templateCodingAssessmentModal();
+      }
+    }, 450);
+  },
+
+  submitCodingSolution() {
+    const btn = document.getElementById('btn-submit-code');
+    if (btn) {
+      btn.innerHTML = `<span class="inline-block animate-spin">⚡</span> Evaluating Full Test Suite...`;
+    }
+
+    setTimeout(() => {
+      // Award points & update streak
+      state.applicant.profile.rankings[1].score = 96; // Algorithm score up to 96
+      state.applicant.profile.rankings[1].rank = 136; // Rank up
+
+      // Close coding modal
+      this.closeCodingAssessmentModal();
+
+      // Show celebratory badge modal
+      const celebModal = document.createElement('div');
+      celebModal.id = 'coding-success-modal';
+      celebModal.className = 'fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4';
+      celebModal.innerHTML = `
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-6 shadow-2xl border-2 border-emerald-500/40 transform transition-all scale-100">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white text-3xl font-black flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
+            🏆
+          </div>
+          <div class="space-y-2">
+            <span class="text-xs font-black uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              100% TEST SUITE PASSED
+            </span>
+            <h3 class="text-2xl font-black text-slate-900">Dynamic Programming Mastered!</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              All 3 test cases passed in Judge0 sandbox. Your solution has been cryptographically signed and added to your verified profile credentials.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs">
+            <div>
+              <p class="text-[10px] text-slate-400 font-bold">XP EARNED</p>
+              <p class="text-lg font-black text-amber-600">+50 XP</p>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-400 font-bold">NEW STREAK</p>
+              <p class="text-lg font-black text-emerald-600">9 Days 🔥</p>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-400 font-bold">GLOBAL RANK</p>
+              <p class="text-lg font-black text-indigo-600">#136</p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-left text-[11px] text-emerald-900 space-y-0.5">
+            <p class="font-bold flex items-center gap-1"><span>🛡️</span> Verified Credential Issued</p>
+            <p class="font-mono text-[10px] text-emerald-700">Hash: 0x9b4c8a2e10f39485... • Recruiter Visible</p>
+          </div>
+
+          <button onclick="document.getElementById('coding-success-modal').remove(); UI.renderApplicantTab('tests');" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-black rounded-xl text-xs transition shadow-md">
+            Return to Leaderboard & Assessments →
+          </button>
+        </div>
+      `;
+      document.body.appendChild(celebModal);
+    }, 700);
+  },
+
+  templateCodingAssessmentModal() {
+    const mins = Math.floor(state.codingModal.timeLeft / 60);
+    const secs = state.codingModal.timeLeft % 60;
+    const timeFormatted = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    const code = state.codingModal.code || codingChallenge.templates[state.codingModal.language];
+    const lineCount = code.split('\n').length;
+    const lineNumbers = Array.from({ length: Math.max(lineCount, 22) }, (_, i) => i + 1).join('\n');
+    const selectedTab = state.codingModal.testCaseTab;
+    const currentCase = codingChallenge.testCases[selectedTab];
+    const output = state.codingModal.consoleOutput;
+
+    return `
+      <div class="w-full max-w-7xl h-[92vh] bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl flex flex-col overflow-hidden text-slate-100 font-sans">
+        
+        <!-- Header Bar -->
+        <div class="bg-slate-950 px-6 py-3.5 border-b border-slate-800 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-indigo-600 text-white font-black text-xs flex items-center justify-center shadow-xs">
+              IDE
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-black text-sm text-white">${codingChallenge.title}</h3>
+                <span class="text-[10px] font-black px-2 py-0.5 rounded ${codingChallenge.difficultyColor}">
+                  ${codingChallenge.difficulty}
+                </span>
+                <span class="text-[10px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">
+                  ${codingChallenge.benchmark}
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-400">Time Limit: ${codingChallenge.timeLimit} • Memory Limit: ${codingChallenge.memoryLimit}</p>
+            </div>
+          </div>
+
+          <!-- Proctoring Pill -->
+          <div class="hidden md:flex items-center gap-2 bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-[11px] px-3 py-1 rounded-full font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>🔒 Proctored Environment: Fullscreen Enforced • Paste Guard Active • 0 Flags</span>
+          </div>
+
+          <!-- Timer & Close -->
+          <div class="flex items-center gap-3">
+            <div class="bg-slate-800/90 border border-slate-700 px-3 py-1 rounded-xl text-center">
+              <span class="text-[9px] text-slate-400 uppercase font-bold block leading-none">Time Remaining</span>
+              <span id="coding-timer-display" class="font-mono font-black text-xs text-amber-400">${timeFormatted}</span>
+            </div>
+            <button onclick="UI.closeCodingAssessmentModal()" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center font-bold text-sm transition">
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Anti-Paste Warning Banner (Hidden by default) -->
+        <div id="paste-guard-warning" class="hidden bg-rose-950/90 border-b border-rose-600/50 px-4 py-2 text-rose-200 text-xs font-bold flex items-center justify-between transition">
+          <div class="flex items-center gap-2">
+            <span class="text-base">⚠️</span>
+            <span>Anti-Cheat Notice: External clipboard paste blocked by Proctoring Guard. Candidates are evaluated on raw algorithmic implementation.</span>
+          </div>
+          <span class="text-[10px] font-mono text-rose-400">FLAG_ID: PG-001</span>
+        </div>
+
+        <!-- Main Body: Left Brief + Right Monaco IDE -->
+        <div class="flex-1 grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+          
+          <!-- Left Pane: Problem Description (5 cols) -->
+          <div class="lg:col-span-5 border-r border-slate-800 p-6 overflow-y-auto space-y-5 bg-slate-900/60 text-xs">
+            <div class="space-y-2">
+              <h4 class="font-black text-sm text-slate-200">Problem Statement</h4>
+              <div class="text-slate-300 leading-relaxed space-y-2">
+                ${codingChallenge.description}
+              </div>
+            </div>
+
+            <!-- Example 1 -->
+            <div class="space-y-1.5">
+              <h5 class="font-bold text-slate-300 text-xs">Example 1:</h5>
+              <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 font-mono text-[11px] space-y-1">
+                <div><span class="text-slate-500">Input:</span> <span class="text-emerald-400">${codingChallenge.example1.input}</span></div>
+                <div><span class="text-slate-500">Output:</span> <span class="text-indigo-300">${codingChallenge.example1.output}</span></div>
+                <div class="pt-1 text-[10px] text-slate-400 leading-relaxed"><span class="text-slate-500">Explanation:</span> ${codingChallenge.example1.explanation}</div>
+              </div>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="space-y-1.5">
+              <h5 class="font-bold text-slate-300 text-xs">Example 2:</h5>
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[11px] space-y-1">
+                <div><span class="text-slate-500">Input:</span> <span class="text-emerald-400">${codingChallenge.example2.input}</span></div>
+                <div><span class="text-slate-500">Output:</span> <span class="text-indigo-300">${codingChallenge.example2.output}</span></div>
+              </div>
+            </div>
+
+            <!-- Constraints -->
+            <div class="space-y-2 pt-2 border-t border-slate-800/80">
+              <h5 class="font-bold text-slate-300 text-xs">Constraints:</h5>
+              <ul class="list-disc pl-4 space-y-1 text-slate-400 font-mono text-[11px]">
+                ${codingChallenge.constraints.map(c => `<li>${c}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Pane: Monaco Code Editor + Test Console (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col overflow-hidden bg-slate-950">
+            
+            <!-- Editor Toolbar -->
+            <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-400 font-bold text-[11px]">Language:</span>
+                <select onchange="UI.setCodingLanguage(this.value)" class="bg-slate-950 text-indigo-300 text-xs border border-slate-700 rounded-lg px-2.5 py-1 font-mono font-bold focus:outline-none focus:border-indigo-500">
+                  <option value="python" ${state.codingModal.language === 'python' ? 'selected' : ''}>Python 3.12 (CPython)</option>
+                  <option value="cpp" ${state.codingModal.language === 'cpp' ? 'selected' : ''}>C++ 20 (GCC 13.2)</option>
+                  <option value="java" ${state.codingModal.language === 'java' ? 'selected' : ''}>Java 17 (OpenJDK)</option>
+                  <option value="javascript" ${state.codingModal.language === 'javascript' ? 'selected' : ''}>TypeScript 5.4 (Node.js)</option>
+                </select>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button onclick="UI.setCodingLanguage(state.codingModal.language)" class="text-slate-400 hover:text-white text-[11px] font-bold px-2 py-1 rounded hover:bg-slate-800 transition">
+                  ↺ Reset Code
+                </button>
+                <span class="text-slate-700">|</span>
+                <span class="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
+                  <span>●</span> Monaco LSP Ready
+                </span>
+              </div>
+            </div>
+
+            <!-- Code Editor Workspace (Line Numbers + Textarea) -->
+            <div class="flex-1 flex overflow-hidden relative">
+              <!-- Line Numbers Gutter -->
+              <pre class="bg-slate-950 text-slate-600 select-none py-3 px-3 text-right font-mono text-[11px] leading-5 border-r border-slate-800/80 overflow-hidden min-w-[45px]">${lineNumbers}</pre>
+              
+              <!-- Code Textarea -->
+              <textarea 
+                id="monaco-code-textarea"
+                oninput="UI.handleCodeEditorInput(this.value)"
+                onpaste="UI.handleCodePasteGuard(event)"
+                spellcheck="false"
+                class="flex-1 bg-slate-950 text-emerald-300 font-mono text-[11px] leading-5 p-3 resize-none focus:outline-none selection:bg-indigo-600 selection:text-white"
+              >${code}</textarea>
+            </div>
+
+            <!-- Bottom Console & Test Runner Pane -->
+            <div class="h-56 bg-slate-900 border-t border-slate-800 flex flex-col text-xs">
+              
+              <!-- Test Cases Tabs -->
+              <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mr-1">Test Cases:</span>
+                  ${codingChallenge.testCases.map((tc, idx) => `
+                    <button onclick="UI.setCodingTestCaseTab(${idx})" class="px-2.5 py-1 rounded-lg text-xs font-bold transition font-mono ${selectedTab === idx ? 'bg-indigo-600 text-white shadow-xs' : 'bg-slate-800 text-slate-400 hover:text-white'}">
+                      Case ${idx + 1}
+                    </button>
+                  `).join('')}
+                </div>
+
+                <div class="text-[10px] font-mono text-slate-400">
+                  Judge0 Engine • Sandbox Mode
+                </div>
+              </div>
+
+              <!-- Test Case Body / Output Diff -->
+              <div class="flex-1 p-4 overflow-y-auto bg-slate-900/80 font-mono text-[11px] space-y-2">
+                ${output ? `
+                  <!-- Output Display from Run Code -->
+                  <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-bold border border-emerald-800">
+                        ${output.status}
+                      </span>
+                      <span class="text-slate-400 text-xs">Runtime: <strong>${output.runtime}</strong></span>
+                      <span class="text-slate-400 text-xs">• Memory: <strong>${output.memory}</strong></span>
+                    </div>
+                    <span class="text-emerald-400 text-xs font-bold">Passed ${output.passedCount}/${output.totalCount} Sample Cases</span>
+                  </div>
+
+                  <div class="space-y-1 text-slate-300">
+                    <p class="text-[10px] text-slate-500 uppercase font-bold">Case ${selectedTab + 1} Input:</p>
+                    <pre class="bg-slate-950 p-2 rounded border border-slate-800 text-slate-300">${currentCase.input}</pre>
+                    
+                    <div class="grid grid-cols-2 gap-2 pt-1">
+                      <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Your Output:</p>
+                        <pre class="bg-slate-950 p-2 rounded border border-emerald-900/50 text-emerald-400">${currentCase.expected}</pre>
+                      </div>
+                      <div>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold">Expected Output:</p>
+                        <pre class="bg-slate-950 p-2 rounded border border-slate-800 text-slate-300">${currentCase.expected}</pre>
+                      </div>
+                    </div>
+                  </div>
+                ` : `
+                  <!-- Default Test Case Input View -->
+                  <div class="space-y-1">
+                    <span class="text-[10px] text-slate-400 uppercase font-bold">Case ${selectedTab + 1} Parameters:</span>
+                    <pre class="bg-slate-950 p-2.5 rounded-lg border border-slate-800 text-slate-300">${currentCase.input}</pre>
+                  </div>
+                  <div class="space-y-1">
+                    <span class="text-[10px] text-slate-400 uppercase font-bold">Expected Output:</span>
+                    <pre class="bg-slate-950 p-2.5 rounded-lg border border-slate-800 text-emerald-400">${currentCase.expected}</pre>
+                  </div>
+                `}
+              </div>
+
+              <!-- Action Buttons Footer -->
+              <div class="bg-slate-950 px-4 py-3 border-t border-slate-800 flex items-center justify-between">
+                <div class="text-[11px] text-slate-400 flex items-center gap-1.5">
+                  <span>ℹ️</span>
+                  <span>Executing code compiles on an isolated Docker container with gVisor sandbox.</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <button id="btn-run-code" onclick="UI.runCodeExecution()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition border border-slate-700 flex items-center gap-1.5">
+                    <span>▶ Run Code</span>
+                  </button>
+                  <button id="btn-submit-code" onclick="UI.submitCodingSolution()" class="px-5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-black text-xs transition shadow-lg flex items-center gap-1.5">
+                    <span>⚡ Submit Solution</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     `;
   }
