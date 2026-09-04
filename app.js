@@ -10,7 +10,7 @@
  * 6. Dedicated Settings tab with Saved Items (Jobs, Internships, Projects), Security, and Privacy features
  */
 
-// Multi-Disciplinary Master Candidate Personas (Engineering, Commerce, Design, Law, Healthcare)
+// Multi-Disciplinary Master Candidate Personas (Engineering , Commerce, Design, Law, Healthcare)
 const disciplineProfiles = {
   tech: {
     name: 'Arjun Kawade',
