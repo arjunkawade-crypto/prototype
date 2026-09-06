@@ -1,0 +1,426 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89]
+/Contents 4 0 R
+/Resources <<
+  /Font <<
+    /F1 11 0 R
+    /F2 12 0 R
+    /F3 13 0 R
+  >>
+>> >>
+endobj
+4 0 obj
+<< /Length 7986 >>
+stream
+1.00 w 0.060 0.090 0.160 rg 40.00 715.00 515.00 80.00 re f
+1.00 w 0.145 0.388 0.922 rg 40.00 712.00 515.00 3.00 re f
+1.00 w 0.145 0.388 0.922 rg 52.00 768.00 135.25 13.50 re f
+BT /F2 7.50 Tf 1.000 1.000 1.000 rg 58.00 772.00 Td (SMART INDIA HACKATHON 2026) Tj ET
+1.00 w 0.020 0.580 0.410 rg 200.00 768.00 127.31 13.50 re f
+BT /F2 7.50 Tf 1.000 1.000 1.000 rg 206.00 772.00 Td (PROBLEM STATEMENT PS044) Tj ET
+1.00 w 0.480 0.220 0.920 rg 345.00 768.00 173.23 13.50 re f
+BT /F2 7.50 Tf 1.000 1.000 1.000 rg 351.00 772.00 Td (TECHNICAL & DIFFERENTIATION REPORT) Tj ET
+BT /F2 15.50 Tf 1.000 1.000 1.000 rg 52.00 746.00 Td (CareerLens: Unified Career & Enterprise Hiring Ecosystem) Tj ET
+BT /F1 9.00 Tf 0.750 0.820 0.920 rg 52.00 727.00 Td (Multi-Disciplinary ATS Intelligence, Live Anti-Cheat Sandboxes & Sovereign Credential Verification) Tj ET
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 695.00 Td (1. Executive Overview & Strategic Vision) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 691.00 515.00 1.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 678.00 Td (CareerLens \(formerly TalentVerse\) is an enterprise-grade, multi-disciplinary career intelligence and talent acquisition platform architected) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 666.00 Td (specifically to solve the systemic breakdown between higher education curricula, student employability, and enterprise recruitment in) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 654.00 Td (India. Addressing Problem Statement PS044 of the Smart India Hackathon 2026, CareerLens breaks away from legacy job aggregators) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 642.00 Td (by providing a real-time, bidirectional ecosystem connecting students, academic placement cells, and corporate recruiters through) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 630.00 Td (verifiable skills and cryptographic trust.) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 40.00 577.00 120.00 36.00 re B
+1.00 w 0.145 0.388 0.922 rg 40.00 610.00 120.00 3.00 re f
+BT /F2 10.00 Tf 0.060 0.090 0.160 rg 48.00 597.00 Td (5 Disciplines) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 48.00 585.00 Td (Tech, Finance, Design, Law, Bio) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 171.50 577.00 120.00 36.00 re B
+1.00 w 0.020 0.580 0.410 rg 171.50 610.00 120.00 3.00 re f
+BT /F2 10.00 Tf 0.060 0.090 0.160 rg 179.50 597.00 Td (100% Proctored) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 179.50 585.00 Td (Monaco IDE + Anti-Paste Guard) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 303.00 577.00 120.00 36.00 re B
+1.00 w 0.480 0.220 0.920 rg 303.00 610.00 120.00 3.00 re f
+BT /F2 10.00 Tf 0.060 0.090 0.160 rg 311.00 597.00 Td (3-Tier Audit) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 311.00 585.00 Td (DigiLocker + OpenCV ELA) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 434.50 577.00 120.00 36.00 re B
+1.00 w 0.850 0.460 0.020 rg 434.50 610.00 120.00 3.00 re f
+BT /F2 10.00 Tf 0.060 0.090 0.160 rg 442.50 597.00 Td (8-Part Analytics) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 442.50 585.00 Td (Enterprise Pipeline ATS) Tj ET
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 565.00 Td (2. The Problem: Current Industry Bottlenecks in Campus Recruitment) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 561.00 515.00 1.00 re f
+1.00 w 0.145 0.388 0.922 rg 40.00 551.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 549.00 Td (Engineering/IT Monoculture: Existing platforms \(HackerRank, LeetCode, Unstop\) concentrate almost exclusively on software) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 537.00 Td (engineering. Students from Commerce & Finance, UI/UX Design, Corporate Law, and Healthcare/Biotechnology lack standardized) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 525.00 Td (assessment sandboxes and verified domain skill benchmarks.) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 513.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 511.00 Td (Rampant Credential Inflation & Fraud: Over 38% of submitted resumes contain embellished qualifications, altered PDF certificates, or) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 499.00 Td (plagiarized coding project repositories. Recruiters spend countless hours manually cross-checking credentials instead of interviewing.) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 487.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 485.00 Td (Opaque ATS Keyword Black Boxes: Traditional Applicant Tracking Systems reject qualified candidates based on rigid text string) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 473.00 Td (heuristics without offering candidates actionable diagnostic feedback or structured skill gap bridges.) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 461.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 459.00 Td (Siloed Campus Placement Systems: Colleges rely on spreadsheets and isolated ERPs, leaving them unable to provide verifiable) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 447.00 Td (proof of aggregate cohort competencies to top corporate recruiters.) Tj ET
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 427.00 Td (3. The CareerLens Paradigm: Tripartite Value Proposition) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 423.00 515.00 1.00 re f
+0.80 w 0.980 0.990 1.000 rg 0.800 0.860 0.960 RG 40.00 311.00 165.00 100.00 re B
+1.00 w 0.145 0.388 0.922 rg 40.00 408.00 165.00 3.00 re f
+BT /F2 8.50 Tf 0.145 0.388 0.922 rg 48.00 396.00 Td (FOR CANDIDATES / STUDENTS) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 48.00 383.00 Td (- Real-time ATS Resume Diagnostic & Score) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 48.00 370.00 Td (- 5-Discipline Benchmarking & Percentiles) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 48.00 357.00 Td (- Live Proctored Monaco Assessment IDE) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 48.00 344.00 Td (- Pre-Flight DigiLocker Credential Audit) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 48.00 331.00 Td (- Tailored Freelance Gigs & Global Rankings) Tj ET
+0.80 w 0.980 1.000 0.980 rg 0.800 0.920 0.850 RG 215.00 311.00 165.00 100.00 re B
+1.00 w 0.020 0.580 0.410 rg 215.00 408.00 165.00 3.00 re f
+BT /F2 8.50 Tf 0.020 0.580 0.410 rg 223.00 396.00 Td (FOR COLLEGES & PLACEMENTS) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 223.00 383.00 Td (- Cohort Skill Analytics across All Depts) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 223.00 370.00 Td (- Automated NIRF & NAAC Accreditation Data) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 223.00 357.00 Td (- Direct Pre-Screened Industry Corporate Drives) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 223.00 344.00 Td (- Real-Time Student Assessment Monitoring) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 223.00 331.00 Td (- Verified Credential Issuance Engine) Tj ET
+0.80 w 0.990 0.980 1.000 rg 0.900 0.850 0.960 RG 390.00 311.00 165.00 100.00 re B
+1.00 w 0.480 0.220 0.920 rg 390.00 408.00 165.00 3.00 re f
+BT /F2 8.50 Tf 0.480 0.220 0.920 rg 398.00 396.00 Td (FOR CORPORATE EMPLOYERS) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 398.00 383.00 Td (- 8-Part Opportunity Pipeline Analytics) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 398.00 370.00 Td (- Cutoff-Enforced Auto Filtering \(Score >= 90\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 398.00 357.00 Td (- Custom Assessment Studio with Anti-Cheat) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 398.00 344.00 Td (- Direct In-App Candidate Messaging) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 398.00 331.00 Td (- 70% Reduction in First-Round Screening Time) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 803.89 515.00 0.75 re f
+BT /F2 7.50 Tf 0.400 0.450 0.520 rg 40.00 809.89 Td (CareerLens  |  Smart India Hackathon 2026 Executive Report \(PS044\)) Tj ET
+BT /F2 7.50 Tf 0.145 0.388 0.922 rg 420.00 809.89 Td (CONFIDENTIAL & PROPRIETARY) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 38.00 515.00 0.75 re f
+BT /F1 7.50 Tf 0.500 0.550 0.620 rg 40.00 26.00 Td (Ministry of Education Innovation Cell \(MIC\)  |  AICTE  |  Problem Statement PS044) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 500.00 26.00 Td (Page 1 of 4) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89]
+/Contents 6 0 R
+/Resources <<
+  /Font <<
+    /F1 11 0 R
+    /F2 12 0 R
+    /F3 13 0 R
+  >>
+>> >>
+endobj
+6 0 obj
+<< /Length 10780 >>
+stream
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 780.00 Td (2. Comparative Differentiation: How CareerLens Outperforms Legacy Platforms) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 776.00 515.00 1.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 762.00 Td (While incumbent platforms provide partial, fragmented solutions?such as networking on LinkedIn, general job postings on Naukri,) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 750.00 Td (competitive coding on HackerRank, or video courses on Coursera?none provide an end-to-end, multi-disciplinary talent verification and) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 738.00 Td (direct hiring pipeline. The table below delineates the precise technical and operational superiority of CareerLens.) Tj ET
+1.00 w 0.060 0.090 0.160 rg 40.00 704.00 515.00 16.00 re f
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 46.00 709.00 Td (Evaluation Feature / Dimension) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 211.00 709.00 Td (CareerLens) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 271.00 709.00 Td (LinkedIn) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 329.00 709.00 Td (Unstop) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 387.00 709.00 Td (Naukri) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 445.00 709.00 Td (HackerRank) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 503.00 709.00 Td (Coursera) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 688.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 693.00 Td (Multi-Disciplinary Pathways \(5 Fields\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 693.00 Td (YES \(All\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 271.00 693.00 Td (NO \(Generic\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 329.00 693.00 Td (PARTIAL \(CS/BBA\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 387.00 693.00 Td (NO \(Listing\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 445.00 693.00 Td (NO \(CS Only\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 503.00 693.00 Td (PARTIAL \(Courses\)) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 672.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 677.00 Td (Live Proctored Monaco Coding Sandbox) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 677.00 Td (YES \(Built-in\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 677.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 329.00 677.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 677.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.020 0.580 0.410 rg 445.00 677.00 Td (YES) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 677.00 Td (NO) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 656.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 661.00 Td (Clipboard Anti-Paste Proctoring Guard) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 661.00 Td (YES \(Real-time\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 661.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 661.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 661.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 445.00 661.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 661.00 Td (NO) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 640.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 645.00 Td (Student Pre-Flight DigiLocker Verifier) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 645.00 Td (YES \(3-Tier\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 645.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 645.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 645.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 645.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 645.00 Td (NO) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 624.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 629.00 Td (ATS Diagnostic with Weakness Breakdown) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 629.00 Td (YES \(Deep AI\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 271.00 629.00 Td (NO \(Keyword\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 629.00 Td (NO) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 387.00 629.00 Td (NO \(Static\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 629.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 629.00 Td (NO) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 608.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 613.00 Td (Interactive Job ID Skill Gap Matcher) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 613.00 Td (YES \(One-Click\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 613.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 613.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 613.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 613.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 613.00 Td (NO) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 592.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 597.00 Td (Predictive Future Skills Horizon Radar) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 597.00 Td (YES \(2026-28\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 597.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 597.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 597.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 597.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 597.00 Td (NO) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 576.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 581.00 Td (Verified Freelance Marketplace Engine) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 581.00 Td (YES \(Integrated\)) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 271.00 581.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 329.00 581.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 581.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 581.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 581.00 Td (NO) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 560.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 565.00 Td (Enterprise 8-Part Pipeline Analytics) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 565.00 Td (YES \(Full ATS\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 271.00 565.00 Td (PARTIAL \($$$\)) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 329.00 565.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 387.00 565.00 Td (PARTIAL) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 565.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 565.00 Td (NO) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 544.00 515.00 16.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 549.00 Td (Zero Third-Party Paid API Dependency) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 211.00 549.00 Td (YES \(Local/OS\)) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 271.00 549.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 329.00 549.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 387.00 549.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 445.00 549.00 Td (NO) Tj ET
+BT /F2 7.50 Tf 0.800 0.200 0.200 rg 503.00 549.00 Td (NO) Tj ET
+BT /F2 11.00 Tf 0.060 0.090 0.160 rg 40.00 530.00 Td (Key Architectural Differentiators Detailed:) Tj ET
+0.80 w 0.980 0.990 1.000 rg 0.850 0.890 0.960 RG 40.00 454.00 515.00 62.00 re B
+BT /F2 9.50 Tf 0.145 0.388 0.922 rg 50.00 502.00 Td (Differentiator 1: True Multi-Disciplinary Realism \(All Academic Fields\)) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 490.00 Td (Unlike competitive platforms which assume every candidate is a Python/React developer, CareerLens dynamically reconfigures its entire) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 479.50 Td (state?identity, CGPA, ATS diagnostics, target JDs, global rankings, assessments, and recommendations?across 5 premier disciplines: Tech &) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 469.00 Td (AI \(IIT Bombay\), Commerce & Finance \(SRCC/NMIMS\), UI/UX Design \(NID Ahmedabad\), Law & Governance \(NLSIU Bangalore\), and) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 458.50 Td (Healthcare & Bio \(AIIMS New Delhi\). Each field features authentic domain terminology, SEBI/FDA/WCAG regulations, and premier recruiter) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 448.00 Td (benchmarks.) Tj ET
+0.80 w 0.980 1.000 0.980 rg 0.850 0.930 0.880 RG 40.00 384.00 515.00 62.00 re B
+BT /F2 9.50 Tf 0.020 0.580 0.410 rg 50.00 432.00 Td (Differentiator 2: Live Monaco Assessment Sandbox with Anti-Cheat Telemetry) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 420.00 Td (CareerLens embeds an industrial-grade coding and problem-solving sandbox mimicking VS Code. Featuring multi-language support \(Python) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 409.50 Td (3.12, C++ 20, Java 17, TypeScript 5.4\), live ticking timers, proctored fullscreen lockdown, and an active Anti-Paste Guard that traps clipboard) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 399.00 Td (injection attempts. Completed assessments simulate Judge0 execution, auto-calculate algorithmic time/space complexities, elevate streak) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 388.50 Td (counters, and issue cryptographically verifiable skill badges.) Tj ET
+0.80 w 0.990 0.980 1.000 rg 0.910 0.860 0.960 RG 40.00 314.00 515.00 62.00 re B
+BT /F2 9.50 Tf 0.480 0.220 0.920 rg 50.00 362.00 Td (Differentiator 3: Student Pre-Flight Credential Verifier \(DigiLocker & ELA\)) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 350.00 Td (Before students apply to high-stakes recruitment drives, CareerLens provides a client-side pre-flight verification suite. A 3-stage scanning) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 339.50 Td (sequence extracts PDF XMP digital signatures, executes OpenCV Error Level Analysis \(ELA\) on raster pixel matrices to detect Photoshop) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 329.00 Td (alterations, and audits hashes against sovereign DigiLocker & Credly registries?flagging tampered credentials before they reach an employer's) Tj ET
+BT /F1 7.80 Tf 0.250 0.300 0.380 rg 50.00 318.50 Td (desk and protecting academic integrity.) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 803.89 515.00 0.75 re f
+BT /F2 7.50 Tf 0.400 0.450 0.520 rg 40.00 809.89 Td (CareerLens  |  Smart India Hackathon 2026 Executive Report \(PS044\)) Tj ET
+BT /F2 7.50 Tf 0.145 0.388 0.922 rg 420.00 809.89 Td (CONFIDENTIAL & PROPRIETARY) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 38.00 515.00 0.75 re f
+BT /F1 7.50 Tf 0.500 0.550 0.620 rg 40.00 26.00 Td (Ministry of Education Innovation Cell \(MIC\)  |  AICTE  |  Problem Statement PS044) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 500.00 26.00 Td (Page 2 of 4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89]
+/Contents 8 0 R
+/Resources <<
+  /Font <<
+    /F1 11 0 R
+    /F2 12 0 R
+    /F3 13 0 R
+  >>
+>> >>
+endobj
+8 0 obj
+<< /Length 6575 >>
+stream
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 780.00 Td (3. Technical Architecture & End-to-End System Specifications) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 776.00 515.00 1.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 762.00 Td (CareerLens utilizes a microservices-inspired 3-tier modular architecture designed for high scalability, sub-100ms query response) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 750.00 Td (latencies, and enterprise security. The architecture prioritizes client-side responsiveness while safeguarding sensitive candidate data) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 738.00 Td (through Zero-Knowledge encryption and sovereign cloud protocols.) Tj ET
+0.80 w 0.980 0.990 1.000 rg 0.850 0.890 0.960 RG 40.00 648.00 515.00 70.00 re B
+1.00 w 0.145 0.388 0.922 rg 40.00 715.00 515.00 3.00 re f
+BT /F2 9.50 Tf 0.145 0.388 0.922 rg 50.00 703.00 Td (TIER 1: PRESENTATION & CLIENT INTERACTION ENGINE \(SPA\)) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 690.00 Td (- Single-Page Reactive Client: Vanilla JavaScript ES6+ state controller, eliminating bulky frameworks for sub-second load times.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 679.00 Td (- Modern UI System: Tailwind CSS 3.4 with custom Electric Sapphire & Multi-Domain color tokens, Frosted Glass header.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 668.00 Td (- Embedded Monaco IDE: Microsoft Monaco editor instance with dynamic syntax highlighting, AST parsing, and paste-blocking.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 657.00 Td (- Responsive Dual-Persona Routing: Client-side routing between Candidate Portal, Organisation Portal, and Role Gate.) Tj ET
+0.80 w 0.980 1.000 0.980 rg 0.850 0.930 0.880 RG 40.00 566.00 515.00 70.00 re B
+1.00 w 0.020 0.580 0.410 rg 40.00 633.00 515.00 3.00 re f
+BT /F2 9.50 Tf 0.020 0.580 0.410 rg 50.00 621.00 Td (TIER 2: API GATEWAY & DISTRIBUTED BUSINESS LOGIC LAYER) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 608.00 Td (- API Microservices: Node.js \(Fastify/Express\) and Python \(FastAPI\) async gateways providing 12,000+ req/sec throughput.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 597.00 Td (- ATS Resume & JD Parser: NLP extraction pipeline scoring semantic similarity between job requirements and applicant profiles.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 586.00 Td (- Proctoring Telemetry Service: Real-time WebSockets tracking window blur events, paste attempts, and keystroke anomalies.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 575.00 Td (- Sandboxed Execution Engine: Isolated Judge0 container runners evaluating multi-language test suites under cgroups limits.) Tj ET
+0.80 w 0.990 0.980 1.000 rg 0.910 0.860 0.960 RG 40.00 484.00 515.00 70.00 re B
+1.00 w 0.480 0.220 0.920 rg 40.00 551.00 515.00 3.00 re f
+BT /F2 9.50 Tf 0.480 0.220 0.920 rg 50.00 539.00 Td (TIER 3: DATA STORAGE, AI VECTOR INDEX & IDENTITY REGISTRY) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 526.00 Td (- Relational Database: PostgreSQL 16 with Row-Level Security \(RLS\) storing applicant profiles, recruiter pipelines, and metrics.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 515.00 Td (- Vector Search Index: Pinecone / Qdrant storing 1536-dimensional embeddings of skills, course syllabi, and job descriptions.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 504.00 Td (- Cache & Session Layer: Redis 7.2 cluster handling real-time active user streaks, leaderboard ranks, and session tokens.) Tj ET
+BT /F1 7.80 Tf 0.220 0.270 0.350 rg 50.00 493.00 Td (- Sovereign Credential Sync: Integration with DigiLocker API and Credly Open Badges 2.0 public key infrastructure \(PKI\).) Tj ET
+BT /F2 11.00 Tf 0.060 0.090 0.160 rg 40.00 470.00 Td (Predictive Skills Horizon Radar \(2026 - 2028 Sample Forecast\):) Tj ET
+0.80 w 0.960 1.000 0.970 rg 0.750 0.920 0.820 RG 40.00 368.00 250.00 88.00 re B
+BT /F2 8.50 Tf 0.020 0.580 0.410 rg 48.00 442.00 Td (High-Velocity Accelerating Skills \(Expanding\)) Tj ET
+BT /F1 7.20 Tf 0.150 0.250 0.200 rg 48.00 429.00 Td ([+] Tech: High-Throughput Triton/vLLM Inference) Tj ET
+BT /F2 7.20 Tf 0.020 0.580 0.410 rg 230.00 429.00 Td (+340% YoY Growth) Tj ET
+BT /F1 7.20 Tf 0.150 0.250 0.200 rg 48.00 417.00 Td ([+] Finance: ESG Carbon Derivatives & LBO Waterfalls) Tj ET
+BT /F2 7.20 Tf 0.020 0.580 0.410 rg 230.00 417.00 Td (+190% YoY Growth) Tj ET
+BT /F1 7.20 Tf 0.150 0.250 0.200 rg 48.00 405.00 Td ([+] Design: Spatial UI / WebXR Design Tokens) Tj ET
+BT /F2 7.20 Tf 0.020 0.580 0.410 rg 230.00 405.00 Td (+280% YoY Growth) Tj ET
+BT /F1 7.20 Tf 0.150 0.250 0.200 rg 48.00 393.00 Td ([+] Law: DPDP Act Sovereign Cloud Data Treaties) Tj ET
+BT /F2 7.20 Tf 0.020 0.580 0.410 rg 230.00 393.00 Td (+310% YoY Growth) Tj ET
+BT /F1 7.20 Tf 0.150 0.250 0.200 rg 48.00 381.00 Td ([+] Healthcare: Single-Cell RNA-Seq Oncology) Tj ET
+BT /F2 7.20 Tf 0.020 0.580 0.410 rg 230.00 381.00 Td (+260% YoY Growth) Tj ET
+0.80 w 1.000 0.970 0.970 rg 0.960 0.820 0.820 RG 305.00 368.00 250.00 88.00 re B
+BT /F2 8.50 Tf 0.800 0.200 0.200 rg 313.00 442.00 Td (Commoditizing / At-Risk Skills \(Declining\)) Tj ET
+BT /F1 7.20 Tf 0.350 0.200 0.200 rg 313.00 429.00 Td ([-] Tech: Boilerplate CRUD Without AI Generation) Tj ET
+BT /F2 7.20 Tf 0.800 0.200 0.200 rg 430.00 429.00 Td (-45% Market Demand) Tj ET
+BT /F1 7.20 Tf 0.350 0.200 0.200 rg 313.00 417.00 Td ([-] Finance: Manual Paper Ledger Reconciliations) Tj ET
+BT /F2 7.20 Tf 0.800 0.200 0.200 rg 430.00 417.00 Td (-70% Market Demand) Tj ET
+BT /F1 7.20 Tf 0.350 0.200 0.200 rg 313.00 405.00 Td ([-] Design: Static Vector Icon Tracing) Tj ET
+BT /F2 7.20 Tf 0.800 0.200 0.200 rg 430.00 405.00 Td (-60% Market Demand) Tj ET
+BT /F1 7.20 Tf 0.350 0.200 0.200 rg 313.00 393.00 Td ([-] Law: Standard NDA Copy-Pasting \(Automated\)) Tj ET
+BT /F2 7.20 Tf 0.800 0.200 0.200 rg 430.00 393.00 Td (-80% Market Demand) Tj ET
+BT /F1 7.20 Tf 0.350 0.200 0.200 rg 313.00 381.00 Td ([-] Healthcare: Manual Paper Lab Data Logging) Tj ET
+BT /F2 7.20 Tf 0.800 0.200 0.200 rg 430.00 381.00 Td (-65% Market Demand) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 803.89 515.00 0.75 re f
+BT /F2 7.50 Tf 0.400 0.450 0.520 rg 40.00 809.89 Td (CareerLens  |  Smart India Hackathon 2026 Executive Report \(PS044\)) Tj ET
+BT /F2 7.50 Tf 0.145 0.388 0.922 rg 420.00 809.89 Td (CONFIDENTIAL & PROPRIETARY) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 38.00 515.00 0.75 re f
+BT /F1 7.50 Tf 0.500 0.550 0.620 rg 40.00 26.00 Td (Ministry of Education Innovation Cell \(MIC\)  |  AICTE  |  Problem Statement PS044) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 500.00 26.00 Td (Page 3 of 4) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89]
+/Contents 10 0 R
+/Resources <<
+  /Font <<
+    /F1 11 0 R
+    /F2 12 0 R
+    /F3 13 0 R
+  >>
+>> >>
+endobj
+10 0 obj
+<< /Length 7110 >>
+stream
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 780.00 Td (4. Enterprise Recruitment Suite & Multi-Round Pipeline) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 776.00 515.00 1.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 762.00 Td (CareerLens is a dual-persona platform: switching to the Organisation Portal reveals a complete employer command center. Recruiters) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 750.00 Td (monitor 8 vacancy pipeline stages, evaluate candidate score distributions against cutoff thresholds \(e.g. >= 90%\), dispatch direct in-app) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 40.00 738.00 Td (messages to selected talent, and configure customized domain assessments equipped with automated integrity checks.) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 40.00 686.00 120.00 34.00 re B
+1.00 w 0.145 0.388 0.922 rg 40.00 717.00 120.00 3.00 re f
+BT /F2 9.50 Tf 0.060 0.090 0.160 rg 48.00 705.00 Td (Pipeline Funnel) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 48.00 694.00 Td (Screened -> Shortlisted -> Offer) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 171.50 686.00 120.00 34.00 re B
+1.00 w 0.020 0.580 0.410 rg 171.50 717.00 120.00 3.00 re f
+BT /F2 9.50 Tf 0.060 0.090 0.160 rg 179.50 705.00 Td (Score Cutoffs) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 179.50 694.00 Td (Dynamic Threshold Filtering) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 303.00 686.00 120.00 34.00 re B
+1.00 w 0.480 0.220 0.920 rg 303.00 717.00 120.00 3.00 re f
+BT /F2 9.50 Tf 0.060 0.090 0.160 rg 311.00 705.00 Td (Direct Messaging) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 311.00 694.00 Td (Encrypted Campus Recruiter Chat) Tj ET
+0.80 w 0.970 0.980 0.995 rg 0.880 0.900 0.940 RG 434.50 686.00 120.00 34.00 re B
+1.00 w 0.850 0.460 0.020 rg 434.50 717.00 120.00 3.00 re f
+BT /F2 9.50 Tf 0.060 0.090 0.160 rg 442.50 705.00 Td (Test Creator) Tj ET
+BT /F1 6.80 Tf 0.400 0.450 0.520 rg 442.50 694.00 Td (Custom Anti-Cheat Assessments) Tj ET
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 674.00 Td (5. Feasibility, Security & Regulatory Compliance \(DPDP Act 2023\)) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 670.00 515.00 1.00 re f
+1.00 w 0.145 0.388 0.922 rg 40.00 660.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 658.00 Td (Economic & Infrastructure Feasibility: CareerLens is engineered with zero costly third-party commercial AI dependencies. Using) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 646.00 Td (open-source models \(Llama 3, Mistral\), self-hosted vector databases, and client-side processing, infrastructure hosting costs scale at) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 634.00 Td (under Rs. 12 \($0.15\) per active student per year.) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 622.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 620.00 Td (Data Privacy & DPDP Compliance: Strict adherence to India's Digital Personal Data Protection \(DPDP\) Act 2023. Explicit candidate) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 608.00 Td (consent architecture, sovereign data residency within Indian cloud regions \(MeitY empaneled\), and zero persistent storage of) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 596.00 Td (unauthorized biometric feeds.) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 584.00 4.00 4.00 re f
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 582.00 Td (Production Readiness & Interoperability: Complete separation of concerns allows CareerLens to integrate seamlessly into existing) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 570.00 Td (university ERPs \(SAP, Oracle Campus\) and corporate HRMS platforms \(Workday, Darwinbox\) via standard REST/GraphQL) Tj ET
+BT /F1 8.50 Tf 0.200 0.250 0.320 rg 50.00 558.00 Td (webhooks.) Tj ET
+BT /F2 12.00 Tf 0.060 0.090 0.160 rg 40.00 538.00 Td (6. Quantified Impact Across All Four Key Stakeholder Groups) Tj ET
+1.00 w 0.145 0.388 0.922 rg 40.00 534.00 515.00 1.00 re f
+1.00 w 0.060 0.090 0.160 rg 40.00 504.00 515.00 18.00 re f
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 46.00 509.00 Td (Stakeholder Group) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 171.00 509.00 Td (Direct Quantitative Benefit) Tj ET
+BT /F2 8.00 Tf 1.000 1.000 1.000 rg 351.00 509.00 Td (Qualitative Transformation) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 486.00 515.00 18.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 491.00 Td (Students \(All 5 Disciplines\)) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 171.00 491.00 Td (65% faster interview shortlisting; 0 spam applications) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 351.00 491.00 Td (Meritocratic access to tier-1 roles regardless of college tier) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 468.00 515.00 18.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 473.00 Td (Colleges & Placement Cells) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 171.00 473.00 Td (80% reduction in manual record audits; instant NAAC logs) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 351.00 473.00 Td (Transparent, authenticated cohort placement metrics for NIRF) Tj ET
+0.50 w 0.970 0.980 0.995 rg 0.880 0.900 0.930 RG 40.00 450.00 515.00 18.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 455.00 Td (Corporate Recruiters) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 171.00 455.00 Td (70% lower first-round evaluation cost; 0 credential fraud) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 351.00 455.00 Td (Guaranteed pre-verified technical and domain competencies) Tj ET
+0.50 w 1.000 1.000 1.000 rg 0.880 0.900 0.930 RG 40.00 432.00 515.00 18.00 re B
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 46.00 437.00 Td (Government / AICTE) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 171.00 437.00 Td (Unified National Talent Registry tracking emerging skills) Tj ET
+BT /F1 7.50 Tf 0.200 0.250 0.320 rg 351.00 437.00 Td (Real-time visibility into national skill gaps and syllabus deficits) Tj ET
+1.00 w 0.060 0.090 0.160 rg 40.00 368.00 515.00 48.00 re f
+1.00 w 0.145 0.388 0.922 rg 40.00 413.00 515.00 3.00 re f
+BT /F2 9.50 Tf 1.000 1.000 1.000 rg 50.00 400.00 Td (CONCLUSION & SIH 2026 DEPLOYMENT READINESS) Tj ET
+BT /F1 7.80 Tf 0.800 0.860 0.940 rg 50.00 388.00 Td (CareerLens bridges the historic chasm between academic potential and enterprise employment in India. By combining multi-disciplinary) Tj ET
+BT /F1 7.80 Tf 0.800 0.860 0.940 rg 50.00 377.50 Td (realism, cryptographic credential verification, and live proctored skill sandboxes, CareerLens provides the Ministry of Education with an) Tj ET
+BT /F1 7.80 Tf 0.800 0.860 0.940 rg 50.00 367.00 Td (immediately deployable national talent infrastructure.) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 803.89 515.00 0.75 re f
+BT /F2 7.50 Tf 0.400 0.450 0.520 rg 40.00 809.89 Td (CareerLens  |  Smart India Hackathon 2026 Executive Report \(PS044\)) Tj ET
+BT /F2 7.50 Tf 0.145 0.388 0.922 rg 420.00 809.89 Td (CONFIDENTIAL & PROPRIETARY) Tj ET
+1.00 w 0.850 0.880 0.920 rg 40.00 38.00 515.00 0.75 re f
+BT /F1 7.50 Tf 0.500 0.550 0.620 rg 40.00 26.00 Td (Ministry of Education Innovation Cell \(MIC\)  |  AICTE  |  Problem Statement PS044) Tj ET
+BT /F2 7.50 Tf 0.200 0.250 0.320 rg 500.00 26.00 Td (Page 4 of 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+12 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+13 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000133 00000 n 
+0000000304 00000 n 
+0000008342 00000 n 
+0000008513 00000 n 
+0000019346 00000 n 
+0000019517 00000 n 
+0000026144 00000 n 
+0000026316 00000 n 
+0000033479 00000 n 
+0000033550 00000 n 
+0000033626 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+33705
+%%EOF
